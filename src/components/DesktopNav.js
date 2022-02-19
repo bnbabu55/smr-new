@@ -20,6 +20,8 @@ const DesktopNav = ({ navMenu }) => {
         <Link to={subMenuItem?.path} activeClassName="active">
           {subMenuItem?.label}
         </Link>
+        {subMenuItem?.childItems?.nodes?.length > 0 &&
+          renderNavDropdown(subMenuItem?.childItems?.nodes)}
       </li>
     )
   }
@@ -121,9 +123,9 @@ const DesktopNav = ({ navMenu }) => {
               }
               return (
                 <li
-                  key={menuItem.id}
+                  key={menuItem?.id}
                   className={`py-1 text-white ${
-                    menuItem.childItems.nodes.length > 0
+                    menuItem?.childItems?.nodes?.length > 0
                       ? "group relative "
                       : ""
                   } `}
@@ -136,11 +138,11 @@ const DesktopNav = ({ navMenu }) => {
                     partiallyActive={menuItem?.label === "News" ? true : false}
                   >
                     {menuItem?.label}
-                    {menuItem.childItems.nodes.length > 0 && (
+                    {menuItem?.childItems?.nodes?.length > 0 && (
                       <i className="ml-1 h-[0.5em] w-[0.5em] inline-block align-middle border-l-[0.18em] border-l-solid border-l-white border-b-[0.18em] border-b-solid border-b-white -rotate-45 -mt-[0.25em] transition duration-150 ease-in-out group-hover:rotate-[225deg] group-hover:border-l-themeOrange-200 group-hover:border-b-themeOrange-200"></i>
                     )}
                   </Link>
-                  {menuItem.childItems.nodes.length > 0
+                  {menuItem?.childItems?.nodes?.length > 0
                     ? renderNavDropdown(menuItem?.childItems?.nodes)
                     : ""}
                 </li>
