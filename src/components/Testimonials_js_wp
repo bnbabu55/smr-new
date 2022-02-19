@@ -1,0 +1,156 @@
+import React from "react"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
+import parse from "html-react-parser"
+
+SwiperCore.use([Navigation, Pagination, Autoplay])
+
+const Testimonials = () => {
+  const { portfolios } = useStaticQuery(graphql`
+    query {
+      portfolios: allWpPortfolio(
+        limit: 100
+        filter: {portfolioDetails: {testimonial: {elemMatch: {testimonial: {ne: "null"}}}}}
+      ) {
+        nodes {
+          id
+          portfolioDetails {
+            testimonial {
+              name
+              position
+              testimonial
+            }
+            website
+            companyLogo {
+              altText
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 200
+                    placeholder: BLURRED
+                    quality: 90
+                    formats: [AUTO, WEBP]
+                  )
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  let filteredTestimonials = portfolios.nodes.filter(
+    portfolio => portfolio.Portfolio_Details.testimonial !== null
+  )
+
+  const testimonialsCount = filteredTestimonials.length
+
+  // let noLogo = filteredTestimonials.filter(
+  //   portfolio => portfolio.Portfolio_Details.companyLogo === null
+  // )
+
+  // console.log("noLogo: " + JSON.stringify(noLogo, null, 2))
+
+  if (testimonialsCount <= 0) {
+    return
+  }
+
+  return (
+    <div id="Testimonials" className="bg-white py-10 mx-auto">
+      <div className="container">
+        <h2 className="pb-5 text-center">
+          <Link
+            key="testi-link"
+            to="#"
+            className="font-BebasNeue text-themeBlue-600 text-5xl lg:text-7xl"
+          >
+            Testimonials
+            <span
+              key="testi-span"
+              className="font-Lato text-themeOrange-100 text-base lg:text-2xl pl-5 py-0"
+            >
+              read more...
+            </span>
+          </Link>
+        </h2>
+      </div>
+      <Swiper
+        slidesPerView={testimonialsCount > 3 ? 3 : testimonialsCount}
+        autoplay
+        loop={testimonialsCount > 3}
+        navigation={testimonialsCount > 3 ? true : false}
+        pagination={
+          testimonialsCount > 3 ? { clickable: true } : { clickable: false }
+        }
+        breakpoints={{
+          // when window width is >= 640px
+          240: {
+            width: 240,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 10,
+          },
+          // when window width is >= 768px
+          768: {
+            width: 768,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            width: 1024,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 20,
+          },
+        }}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={swiper => console.log(swiper)}
+        className="mx-auto"
+      >
+        <div className="swiper-button-prev"></div>
+        {filteredTestimonials.map(portfolio => {
+          return (
+            <SwiperSlide key={portfolio?.id} className="relative">
+              <div className="flex flex-col justify-center items-center border-themeGray-500 border-4 p-5">
+                <div
+                  style={{
+                    border: "solid 5px #a63f00",
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                  }}
+                  className="mb-12 shadow-themeShadow"
+                >
+                  <a href={portfolio?.Portfolio_Details?.website}>
+                    <GatsbyImage
+                      alt={portfolio?.Portfolio_Details?.companyLogo?.altText || ""}
+                      image={
+                        portfolio?.Portfolio_Details?.companyLogo?.localFile
+                          ?.childImageSharp.gatsbyImageData
+                      }
+                    />
+                  </a>
+                </div>
+                <div className="font-Lato text-base text-themeGray-400 text-center line-clamp-4">
+                  {portfolio?.Portfolio_Details?.testimonial?.testimonial}
+                </div>
+                <div className="font-NothingYouCouldDo font-bold text-2xl text-themeDarkBrown pt-8">
+                  {portfolio?.Portfolio_Details?.testimonial?.name}
+                </div>
+                <div className="font-Montserrat text-xl text-themeOrange-100">
+                  {portfolio?.Portfolio_Details?.testimonial?.position}
+                </div>
+              </div>
+            </SwiperSlide>
+          )
+        })}
+        <span className="swiper-button-next"></span>
+      </Swiper>
+    </div>
+  )
+}
+
+export default Testimonials

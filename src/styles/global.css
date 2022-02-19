@@ -1,0 +1,254 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Lusitana";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Lusitana"), local("Lusitana"),
+      url("/fonts/Lusitana-Regular.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Lusitana";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Lusitana"), local("Lusitana"),
+      url("/fonts/Lusitana-Bold.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/Raleway-Regular.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/Raleway-Medium.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/Raleway-SemiBold.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/Raleway-Bold.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 900;
+    src: url("/fonts/Raleway-Black.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  :root {
+    --transition-duration: 400ms;
+  }
+
+  body {
+    @apply font-Lusitana;
+    scroll-behavior: smooth;
+  }
+
+  body a {
+    @apply text-[#c01b31] underline;
+  }
+
+  body h1 {
+    @apply font-Raleway pb-5 text-2xl font-bold;
+  }
+}
+
+@layer utilities {
+  nav a {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    overflow: hidden;
+    background: linear-gradient(to right, #ffa800, #ffa800 50%, #ffffff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    text-decoration: none;
+  }
+
+  .footer-nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 800;
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(to right, #ffa800, #ffa800 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    text-decoration: none;
+  }
+
+  nav a:hover,
+  .footer-nav a:hover {
+    background-position: 0 100%;
+    text-decoration: underline;
+  }
+
+  nav a.active {
+    background: #ffa800;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+  }
+
+  .mobile-nav button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .mobile-nav .hamburger-icon {
+    transition: transform var(--transition-duration);
+  }
+  .mobile-nav .hamburger-icon .top {
+    stroke-dasharray: 40 160;
+    transition: stroke-dashoffset var(--transition-duration);
+  }
+  .mobile-nav .hamburger-icon .middle {
+    transform-origin: 50%;
+    transition: transform var(--transition-duration);
+  }
+  .mobile-nav .hamburger-icon .bottom {
+    stroke-dasharray: 40 85;
+    transition: stroke-dashoffset var(--transition-duration);
+  }
+  .mobile-nav .hamburger-icon.menuOpen {
+    transform: rotate(45deg);
+    color: #c01b31;
+  }
+  .mobile-nav .hamburger-icon.menuOpen .top,
+  .mobile-nav .hamburger-icon.menuOpen .bottom {
+    stroke-dashoffset: -64px;
+  }
+  .mobile-nav .hamburger-icon.menuOpen .middle {
+    transform: rotate(90deg);
+  }
+
+  .entry-content > p:first-child::first-letter {
+    font-size: 4em !important;
+    background-color: yellow;
+    line-height: 1;
+    font-weight: 900;
+    padding: 0.05em;
+    margin-right: 0.05em;
+    border: 5px solid;
+    float: left;
+  }
+
+  .entry-content > p:first-child::first-line {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .entry-content a {
+    color: #c01b31;
+  }
+
+  .main-content,
+  .sidebar {
+    padding: 0.95em;
+  }
+
+  .all-blogs,
+  .blog-article {
+    display: grid;
+    grid-template-columns: 1.5em 1fr 1.5em;
+    grid-template-areas: ". main ." ". side .";
+    grid-gap: 0px 5px;
+  }
+
+  @media only screen and (min-width: 860px) {
+    .all-blogs,
+    .blog-article {
+      grid-template-columns: 1.5em minmax(400px, 750px) minmax(200px, 300px) 1.5em;
+      grid-template-areas: ". main side .";
+    }
+  }
+  @media only screen and (min-width: 860px) {
+    .all-blogs,
+    .blog-article {
+      grid-template-columns: minmax(1.5em, 1fr) minmax(650px, 960px) 350px minmax(
+          1.5em,
+          1fr
+        );
+      grid-template-areas: ". main side .";
+    }
+  }
+
+  .main-content {
+    grid-area: main;
+  }
+
+  .sidebar {
+    grid-area: side;
+  }
+
+  .comparision-table tr:nth-child(even) {
+    @apply bg-gray-200;
+  }
+
+  .comparision-table tr:nth-child(od) {
+    @apply bg-white;
+  }
+
+  .comparision-table tr > td {
+    @apply py-2;
+  }
+
+  .comparision-table tr > th {
+    @apply text-themeOrange-400 py-5;
+  }
+
+  .comparision-table th:nth-child(1),
+  .comparision-table td:nth-child(1) {
+    @apply text-themeBlue-600 text-left pl-2 w-2/5;
+  }
+
+  .comparision-table td:nth-child(1) {
+    @apply text-xs md:text-sm;
+  }
+
+  #currentSlide {
+    position: relative;
+  }
+
+  #currentSlide::after {
+    content: "\275E";
+    font-size: 30em;
+    color: rgba(255, 0, 0, 0.15);
+    position: absolute;
+    top: -55%;
+    right: 0;
+  }
+}
