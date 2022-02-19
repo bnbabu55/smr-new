@@ -4,30 +4,122 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const MobileNav = ({ navMenu }) => {
   const [menuOpen, setMenuStatus] = useState()
+  const [activeMenus, setActiveMenus] = useState([])
 
-  function renderNavDropdown(dropdownMenu) {
-    return (
-      <ul className="flex flex-col">
-        {dropdownMenu.map(renderNavDropdownItem)}
-      </ul>
-    )
+  const clickHandler = () => {
+    setMenuStatus(!menuOpen)
   }
 
-  function renderNavDropdownItem(subMenuItem) {
+  const handleMenuClick = data => {
+    console.log(data)
+  }
+
+  const handleArrowClick = menuName => {
+    let newActiveMenus = [...activeMenus]
+
+    if (newActiveMenus.includes(menuName)) {
+      var index = newActiveMenus.indexOf(menuName)
+      if (index > -1) {
+        newActiveMenus.splice(index, 1)
+      }
+    } else {
+      newActiveMenus.push(menuName)
+    }
+
+    setActiveMenus(newActiveMenus)
+  }
+
+  const leftPadding = {
+    default: "pl-[18px]",
+    1: "pl-[18px]",
+    2: "pl-[36px]",
+    3: "pl-[54px]",
+    4: "pl-[72px]",
+    5: "pl-[90px]",
+    6: "pl-[108px]",
+    7: "pl-[126px]",
+    8: "pl-[144px]",
+    9: "pl-[162px]",
+    10: "pl-[180px]",
+  }
+
+  const ListMenu = ({ depth, data, hasSubMenu, menuName, menuIndex }) => {
+    const pathVar = data?.path
+    const anchorPosition = pathVar.indexOf("#")
+    let pageAnchor = ""
+    if (anchorPosition > 0 && "/" === data?.path) {
+      pageAnchor = data?.path + pathVar.substring(anchorPosition)
+    } else {
+      pageAnchor = data?.path
+    }
+
     return (
-      <li
-        key={subMenuItem?.id}
-        className="px-2 py-1 mx-2 text-sm font-bold text-white uppercase rounded font-Raleway"
-      >
-        <Link to={subMenuItem?.path} activeClassName="active">
-          {subMenuItem?.label}
-        </Link>
+      <li key={data.id}>
+        <div
+          depth={depth}
+          className={`flex items-center px-[18px] py-3 ${leftPadding[depth]}`}
+        >
+          <Link
+            to={pageAnchor}
+            className="block w-full cursor-pointer"
+            activeClassName="active"
+            partiallyActive={data?.label === "News" ? true : false}
+            onClick={() => handleMenuClick(data)}
+          >
+            {data?.label}
+          </Link>
+          {hasSubMenu && (
+            <button
+              className={`flex h-[25px] w-[35px] justify-center items-center cursor-pointer after:content-[''] after:w-0 after:h-0 after:border-x-4 after:border-solid after:border-x-transparent after:border-t-4 after:border-t-white ${
+                activeMenus.includes(menuName)
+                  ? "after:rotate-180"
+                  : "after:rotate-0"
+              }`}
+              onClick={() => handleArrowClick(menuName)}
+              toggle={activeMenus.includes(menuName).toString()}
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded={activeMenus.includes(menuName) ? "true" : "false"}
+            />
+          )}
+        </div>
+        {hasSubMenu && (
+          <SubMenu
+            depth={depth}
+            data={data.childItems.nodes}
+            toggle={activeMenus.includes(menuName).toString()}
+            menuIndex={menuIndex}
+          />
+        )}
       </li>
     )
   }
 
-  const clickHandler = () => {
-    setMenuStatus(!menuOpen)
+  const SubMenu = ({ depth, data, toggle, menuIndex }) => {
+    if (toggle === "false") {
+      return null
+    }
+
+    depth = depth + 1
+
+    return (
+      <ul>
+        {data.map((menu, index) => {
+          const menuName = `sidebar-submenu-${depth}-${menuIndex}-${index}`
+
+          return (
+            <ListMenu
+              depth={depth}
+              data={menu}
+              hasSubMenu={menu.submenu}
+              menuName={menuName}
+              key={menuName}
+              menuIndex={index}
+            />
+          )
+        })}
+      </ul>
+    )
   }
 
   return (
@@ -145,36 +237,19 @@ const MobileNav = ({ navMenu }) => {
           aria-label="Primary Navigation"
           className={`w-full mx-auto ${menuOpen ? "block" : "hidden"}`}
         >
-          <ul className="flex flex-col items-start justify-around pb-3 pl-3 text-base font-semibold font-Raleway">
-            {navMenu.map((menuItem, i) => {
-              const pathVar = menuItem?.path
-              const anchorPosition = pathVar.indexOf("#")
-              let pageAnchor = ""
-              if (anchorPosition > 0 && "/" === menuItem?.path) {
-                pageAnchor = menuItem?.path + pathVar.substring(anchorPosition)
-              } else {
-                pageAnchor = menuItem?.path
-              }
+          <ul className="p-0 m-0 text-base font-semibold list-none font-Raleway">
+            {navMenu.map((menuItem, index) => {
+              const depth = 1
+              const menuName = `sidebar-menu-${depth}-${index}`
               return (
-                <li
-                  key={menuItem.id}
-                  className={`py-1 text-white ${
-                    menuItem.childItems.nodes.length > 0
-                      ? "group relative "
-                      : ""
-                  } `}
-                >
-                  <Link
-                    to={pageAnchor}
-                    activeClassName="active"
-                    partiallyActive={menuItem?.label === "News" ? true : false}
-                  >
-                    {menuItem?.label}
-                  </Link>
-                  {menuItem.childItems.nodes.length > 0
-                    ? renderNavDropdown(menuItem?.childItems?.nodes)
-                    : ""}
-                </li>
+                <ListMenu
+                  depth={depth}
+                  data={menuItem}
+                  hasSubMenu={menuItem.childItems.nodes.length > 0}
+                  menuName={menuName}
+                  key={menuName}
+                  menuIndex={index}
+                />
               )
             })}
           </ul>
