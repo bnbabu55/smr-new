@@ -7,12 +7,14 @@ import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 import Testimonials from "../../components/Testimonials"
 import Statistics from "../../components/Statistics"
+import SMServices from "../../components/SMServices"
 
 const HomePage = ({ data: { page } }) => (
   <Layout>
     <Seo seoData={page?.seo} />
     <HeroBanner />
     <Statistics />
+    <SMServices />
     <Testimonials />
     <HomeNews />
     <HomePortfolio />

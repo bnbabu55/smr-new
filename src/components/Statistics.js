@@ -20,7 +20,8 @@ const Statistics = () => {
           <span className="text-base font-normal">professionals team</span>
         </p>
         <p className="text-5xl font-black">
-          248<span className="text-[#e55327]">+</span>
+          <CountUp start={0} end={248} delay={5} />{" "}
+          <span className="text-[#e55327]">+</span>
           <br />
           <span className="text-base font-normal">satisfied customers</span>
         </p>
@@ -31,7 +32,8 @@ const Statistics = () => {
           <span className="text-base font-normal">successful projects</span>
         </p>
         <p className="text-5xl font-black">
-          10<span className="text-[#e55327]">+</span>
+          <CountUp start={0} end={10} delay={5} />{" "}
+          <span className="text-[#e55327]">+</span>
           <br />
           <span className="text-base font-normal">years of experience</span>
         </p>
