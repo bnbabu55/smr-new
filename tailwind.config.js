@@ -32,6 +32,8 @@ module.exports = {
         themeYellow: {
           400: "#ed950d",
         },
+        facebookBlue: "#4267B2",
+        linkedInBlue: "#0072b1",
       },
       listStyleType: {
         tick: "✓",
