@@ -72,11 +72,11 @@ const SMServices = () => {
         <div className="text-center col-start-1 col-end-2 lg:col-end-4 row-start-1 row-end-2">
           <Link
             to={`/search-marketing-programs`}
-            className="text-themeOrange-400 text-5xl font-BebasNeue pt-8"
+            className="text-themeOrange-400 text-5xl font-Raleway pt-8"
           >
             Search Marketing SERVICES
           </Link>
-          <div className="service_top_text py-5 text-themeBlue-600 text-2xl font-Montserrat font-semibold uppercase text-center">
+          <div className="service_top_text py-5 text-themeBlue-600 text-2xl font-Lusitana font-semibold uppercase text-center">
             Industry Leading Digital Marketing Services
           </div>
         </div>
@@ -106,7 +106,7 @@ const SMServices = () => {
             >
               Search Marketing Program
             </Link>
-            <p className="text-themeGray-200 text-lg font-Lato">
+            <p className="text-themeGray-200 text-lg font-Raleway">
               SEO marketing solutions and all-inclusive Search Marketing
               programs that significantly increase keyword search rankings,
               ‘organic’ website visits, email inquiries and phone calls
@@ -139,7 +139,7 @@ const SMServices = () => {
             >
               Optimized Press Release
             </Link>
-            <p className="text-themeGray-200 text-lg font-Lato">
+            <p className="text-themeGray-200 text-lg font-Raleway">
               SEO ‘backlink’ building Press Releases are ‘optimized’ with
               keyword phrases and written in AP format with imbedded links
               generating traffic back to the corporate website
@@ -172,7 +172,7 @@ const SMServices = () => {
             >
               SEO Program Analytics
             </Link>
-            <p className="text-themeGray-200 text-lg font-Lato">
+            <p className="text-themeGray-200 text-lg font-Raleway">
               Real-time access to SEO marketing analytics for 24/7 program
               success tracking including website traffic generated, backlinks
               created, ranking position increases and Social Media activity
@@ -205,7 +205,7 @@ const SMServices = () => {
             >
               Social Media Management
             </Link>
-            <p className="text-themeGray-200 text-lg font-Lato">
+            <p className="text-themeGray-200 text-lg font-Raleway">
               Ongoing Social Media articles (Facebook, LinkedIn, Twitter,
               Google+) and Blog posts are written targeting the keyword phrases
               being promoted in the Search Marketing program

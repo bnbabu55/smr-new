@@ -47,7 +47,7 @@ const HomeNews = () => {
         return (
           <p
             itemProp="description"
-            className="mt-2 text-base text-justify font-Lato line-clamp-3"
+            className="mt-2 text-base text-justify font-Raleway line-clamp-3"
           >
             {domToReact(domNode.children, options)}
           </p>
@@ -67,20 +67,20 @@ const HomeNews = () => {
           <h2 className="pb-8">
             <Link
               to="/news"
-              className="text-5xl uppercase font-BebasNeue hover:underline"
+              className="text-5xl uppercase font-Raleway hover:underline"
             >
               Latest from the Blog
             </Link>
           </h2>
 
-          <p className="pb-8 text-lg text-center font-Lato">
+          <p className="pb-8 text-lg text-center font-Raleway">
             Stay Current on Search Marketing Resource events, industry news,
             recent projects, the latest design practices and online marketing
             advice - Opt In on our News Page and receive posts alerts to your
             email
           </p>
         </div>
-        <ul className="flex flex-col lg:flex-row gap-x-8">
+        <ul className="flex flex-col lg:flex-row lg:gap-x-8 gap-y-5">
           {homeNews.nodes.map((post, i) => {
             const featuredImage = {
               fluid:
@@ -120,7 +120,7 @@ const HomeNews = () => {
                     <Link
                       to={`/news${post?.uri}`}
                       itemProp="url"
-                      className="w-full text-lg font-bold text-left uppercase font-Montserrat"
+                      className="w-full text-lg font-bold text-left uppercase font-Lusitana"
                     >
                       {parse(title)}
                     </Link>
@@ -136,7 +136,7 @@ const HomeNews = () => {
                   <Link
                     to={`/news${post?.uri}`}
                     itemProp="url"
-                    className="flex justify-between w-full px-5 pb-5 text-lg font-bold text-left font-Montserrat"
+                    className="flex justify-between w-full px-5 pb-5 text-lg font-bold text-left font-Lusitana"
                   >
                     Blog {i + 1} <span>&rarr;</span>
                   </Link>

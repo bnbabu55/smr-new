@@ -68,12 +68,12 @@ const WebDesign = () => {
           <h3 className="py-5">
             <Link
               to={`/web-design-services`}
-              className="text-themeBlue-600 text-3xl font-Montserrat font-semibold uppercase"
+              className="text-themeBlue-600 text-3xl font-Lusitana font-semibold uppercase"
             >
               Web Design Services
             </Link>
           </h3>
-          <p className="text-themeGray-200 text-lg font-Lato pb-10 text-center">
+          <p className="text-themeGray-200 text-lg font-Raleway pb-10 text-center">
             Award winning search optimized website development services,
             professionally designed with industry leading graphics and
             functionality. Our site presentations focus on your target audience
@@ -82,7 +82,7 @@ const WebDesign = () => {
         </div>
         <div className="flex flex-col lg:flex-row justify-evenly pl-5 lg:pl-0">
           <ul>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -90,7 +90,7 @@ const WebDesign = () => {
               />
               <span className="pl-2">Mock Up Design Review</span>
             </li>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -98,7 +98,7 @@ const WebDesign = () => {
               />
               <span className="pl-2">Page Copy Writing</span>
             </li>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -106,7 +106,7 @@ const WebDesign = () => {
               />
               <span className="pl-2">Infographics Design</span>
             </li>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -116,7 +116,7 @@ const WebDesign = () => {
             </li>
           </ul>
           <ul>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -124,7 +124,7 @@ const WebDesign = () => {
               />
               <span className="pl-2">Dynamic Graphic Design</span>
             </li>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -132,7 +132,7 @@ const WebDesign = () => {
               />
               <span className="pl-2">HTML5 Project Coding</span>
             </li>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -140,7 +140,7 @@ const WebDesign = () => {
               />
               <span className="pl-2">Mobile Friendly Themes</span>
             </li>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -150,7 +150,7 @@ const WebDesign = () => {
             </li>
           </ul>
           <ul>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -158,7 +158,7 @@ const WebDesign = () => {
               />
               <span className="pl-2">Ecommerce Solutions</span>
             </li>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -166,7 +166,7 @@ const WebDesign = () => {
               />
               <span className="pl-2">Content Management</span>
             </li>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"
@@ -174,7 +174,7 @@ const WebDesign = () => {
               />
               <span className="pl-2">Database Engineering</span>
             </li>
-            <li className="font-Lato text-lg text-themeBlue-600 flex pb-3 items-center">
+            <li className="font-Raleway text-lg text-themeBlue-600 flex pb-3 items-center">
               <GatsbyImage
                 image={wdIcons.nodes[0].childImageSharp.gatsbyImageData}
                 alt="checkmark icon"

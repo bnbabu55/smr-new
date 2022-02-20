@@ -4,7 +4,7 @@ import VisibilitySensor from "react-visibility-sensor"
 
 const Statistics = () => {
   return (
-    <div id="statistics" className="py-16 mx-auto overflow-hidden bg-white">
+    <div id="statistics" className="py-32 mx-auto overflow-hidden bg-white">
       <div className="container flex flex-col items-center justify-between w-full gap-5 mx-auto text-center lg:flex-row lg:w-10/12 lg:px-10">
         <p className="text-5xl font-black">
           {/* <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>

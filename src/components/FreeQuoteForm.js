@@ -30,7 +30,7 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
     <div className="pt-10">
       <form
         id="free-quote"
-        className="text-gray-700 free-quote-form flex flex-col justify-center align-center m-10 font-Lato text-base"
+        className="text-gray-700 free-quote-form flex flex-col justify-center align-center m-10 font-Raleway text-base"
         onSubmit={async event => {
           event.preventDefault()
 
@@ -89,7 +89,7 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
             })
         }}
       >
-        <div className="font-Montserrat font-semibold text-xs text-red-600 pb-4">
+        <div className="font-Lusitana font-semibold text-xs text-red-600 pb-4">
           Required *
         </div>
         <div className="grid gap-y-6 lg:gap-y-6 lg:gap-x-6 grid-cols-1 lg:grid-cols-2">
@@ -289,7 +289,7 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
           </div>
           <button
             type="submit"
-            className="w-full text-white uppercase bg-themeOrange-400 rounded font-MontserratSemiBold px-8 py-2 tracking-wider text-base shadow-2xl mt-5 col-span-2"
+            className="w-full text-white uppercase bg-themeOrange-400 rounded font-LusitanaSemiBold px-8 py-2 tracking-wider text-base shadow-2xl mt-5 col-span-2"
           >
             Receive my free quote
           </button>
@@ -297,13 +297,13 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
       </form>
       <div id="response-message" style={{ padding: "20px" }}>
         {formResp.status === "loading" && (
-          <p className="font-Lato text-black">Sending....</p>
+          <p className="font-Raleway text-black">Sending....</p>
         )}
         {formResp.status === "error" && (
-          <p className="font-Lato text-red-600">{formResp.body_response}</p>
+          <p className="font-Raleway text-red-600">{formResp.body_response}</p>
         )}
         {formResp.status === "success" && (
-          <p className="font-Lato text-green-600">
+          <p className="font-Raleway text-green-600">
             Your form has been submitted successfully, thank you.
           </p>
         )}

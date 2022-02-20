@@ -11,28 +11,28 @@ const AccountingPage = ({ data: { page } }) => {
     <Layout className="overflow-x-hidden break-all">
       <Seo seoData={page?.seo} />
       <div>
-        <h1 className="w-11/12 mx-auto font-BebasNeue font-bold text-5xl text-themeOrange-400 text-center py-5">
+        <h1 className="w-11/12 mx-auto font-Raleway font-bold text-5xl text-themeOrange-400 text-center py-5">
           SEARCH MARKETING RESOURCE ACCOUNTING
         </h1>
         <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-y-5 lg:gap-x-5 py-8">
           <div>
-            <h2 className="font-Montserrat text-2xl text-themeBlue-600 pb-5">
+            <h2 className="font-Lusitana text-2xl text-themeBlue-600 pb-5">
               SERVICES PAYMENT
             </h2>
           </div>
         </div>
         <div className="w-11/12 contact-wrapper mx-auto border border-gray-700 rounded-lg">
           <div className="p-3">
-            <p className="pb-3 text-themeGray-200 text-sm lg:text-lg font-Lato text-left">
+            <p className="pb-3 text-themeGray-200 text-sm lg:text-lg font-Raleway text-left">
               We offer online payment for your convenience. Please include the
               invoice number(s) for which the payment is to be applied. You may
               add more than one invoice number, separate by commas.
             </p>
-            <p className="pb-3 text-themeGray-200 text-sm lg:text-lg font-Lato text-left">
+            <p className="pb-3 text-themeGray-200 text-sm lg:text-lg font-Raleway text-left">
               For continued monthly billings, you may opt in and click the
               'Recurring' icon.
             </p>
-            <p className="pb-3 text-themeGray-200 text-sm lg:text-lg font-Lato text-left">
+            <p className="pb-3 text-themeGray-200 text-sm lg:text-lg font-Raleway text-left">
               If have any questions, please contact{" "}
               <a
                 href="mailto:accounting@searchmarketingresource.com"
@@ -42,10 +42,10 @@ const AccountingPage = ({ data: { page } }) => {
               </a>
               .
             </p>
-            <p className="pb-3 text-themeGray-200 text-lg font-Lato text-left">
+            <p className="pb-3 text-themeGray-200 text-lg font-Raleway text-left">
               Thank you.
             </p>
-            <h3 className="pb-3 text-themeGray-200 text-sm lg:text-lg font-LatoBold text-left">
+            <h3 className="pb-3 text-themeGray-200 text-sm lg:text-lg font-Raleway font-bold text-left">
               Search Marketing Resource LLC
             </h3>
           </div>

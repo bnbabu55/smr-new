@@ -19,7 +19,7 @@ const BusinessDirectoryPage = ({
       <Seo seoData={page?.seo} />
       <div className="w-full mx-auto text-center py-10">
         <div className="w-11/12 mx-auto">
-          <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center pt-10">
+          <h1 className="text-themeOrange-400 text-5xl font-Raleway font-bold tracking-wide text-center pt-10">
             Business Directory Management
           </h1>
           <div className="py-10 text-themeGray-200 text-left text-lg">
@@ -35,7 +35,7 @@ const BusinessDirectoryPage = ({
           </div>
           <div className="flex justify-between py-5">
             <div></div>
-            <h2 className="font-MontserratSemiBold italic text-2xl text-themeBlue-600">
+            <h2 className="font-LusitanaSemiBold italic text-2xl text-themeBlue-600">
               We Partnered With Yext, The Industry Leading <br />
               Directory Management Software Provider
             </h2>
@@ -107,7 +107,7 @@ const BusinessDirectoryPage = ({
             </li>
           </ol>
         </div>
-        <h2 className="font-MontserratSemiBold italic text-2xl text-themeBlue-600 py-5">
+        <h2 className="font-LusitanaSemiBold italic text-2xl text-themeBlue-600 py-5">
           Search Marketing Resource 100% Manages, Maintains & Monitors
           <br />
           All Your Business Directory Listings
@@ -121,7 +121,7 @@ const BusinessDirectoryPage = ({
           present the company in the search results at all.
         </p>
         <div className="w-11/12 mx-auto">
-          <h2 className="font-MontserratBold text-2xl text-themeBlue-600 py-10">
+          <h2 className="font-LusitanaBold text-2xl text-themeBlue-600 py-10">
             ! YOUR COMPANY PLACED & MANAGED IN 50+ TOP DIRECTORIES !
           </h2>
           <div className="flex gap-x-5 items-center font-semibold text-lg italic text-themeOrange-400">
@@ -155,7 +155,7 @@ const BusinessDirectoryPage = ({
         </div>
 
         <div className="w-11/12 mx-auto py-5">
-          <h3 className="text-themeOrange-400 text-5xl font-BebasNeue tracking-wide text-center pt-10">
+          <h3 className="text-themeOrange-400 text-5xl font-Raleway tracking-wide text-center pt-10">
             EFFECTIVE SEO SERVICES
           </h3>
           <div className="flex flex-col lg:flex-row lg:gap-x-5 justify-center items-center">
@@ -175,14 +175,14 @@ const BusinessDirectoryPage = ({
               </p>
             </div>
             <form
-              className="flex-1 text-gray-700 contact-form flex flex-col justify-center align-center m-10 font-Lato text-base"
+              className="flex-1 text-gray-700 contact-form flex flex-col justify-center align-center m-10 font-Raleway text-base"
               id="scan-form"
               action="https://www.optimizelocation.com/partner/semresourcellc/listing-report.html"
               method="post"
               target="_blank"
               data-parsley-validate=""
             >
-              <h3 className="font-Montserrat font-bold tracking-wider text-base text-red uppercase bg-themeBlue-600 text-white py-2 mb-3 rounded">
+              <h3 className="font-Lusitana font-bold tracking-wider text-base text-red uppercase bg-themeBlue-600 text-white py-2 mb-3 rounded">
                 SCAN YOUR LISTINGS
               </h3>
               <div className="grid gap-3 grid-cols-3">
@@ -258,7 +258,7 @@ const BusinessDirectoryPage = ({
                 />
                 <button
                   type="submit"
-                  className="w-full text-white uppercase bg-themeOrange-400 rounded font-MontserratSemiBold px-8 py-2 tracking-wider text-base shadow-2xl mt-5 col-span-3"
+                  className="w-full text-white uppercase bg-themeOrange-400 rounded font-LusitanaSemiBold px-8 py-2 tracking-wider text-base shadow-2xl mt-5 col-span-3"
                   id="accept_shoot_confirm"
                 >
                   Run Now

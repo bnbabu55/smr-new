@@ -29,6 +29,12 @@ module.exports = {
           400: "#b95e02",
           700: "#7c3f02",
         },
+        themeYellow: {
+          400: "#ed950d",
+        },
+      },
+      listStyleType: {
+        tick: "✓",
       },
     },
   },

@@ -36,9 +36,9 @@ const SEOPlansPage = ({ data: { page, bgImage, googleImage, seoImages } }) => {
         {...image}
         preserveStackingContext
         id="SEOPlansPage"
-        className="w-full text-gray-800 font-LatoBlack py-16 flex flex-col gap-y-8 justify-center items-start border-b-4 border-themeGray-50 shadow-themeShadow mb-8"
+        className="w-full text-gray-800 font-RalewayBlack py-16 flex flex-col gap-y-8 justify-center items-start border-b-4 border-themeGray-50 shadow-themeShadow mb-8"
       >
-        <div className="text-themeBlue-600 text-2xl lg:text-7xl pl-12 lg:pl-28 font-LatoBold text-center">
+        <div className="text-themeBlue-600 text-2xl lg:text-7xl pl-12 lg:pl-28 font-Raleway font-bold text-center">
           We Place Your <br />
           Business In Front Of
         </div>
@@ -48,24 +48,24 @@ const SEOPlansPage = ({ data: { page, bgImage, googleImage, seoImages } }) => {
           className="lg:ml-60 ml-6"
           layout="intrinsic"
         />
-        <div className="text-themeOrange-400 text-sm lg:text-4xl pl-12 lg:pl-28 font-LatoLight text-center">
+        <div className="text-themeOrange-400 text-sm lg:text-4xl pl-12 lg:pl-28 font-RalewayLight text-center">
           Digital Marketing Programs &amp; <br />
           Social Media Management Solutions
         </div>
       </BackgroundImage>
       <div className="w-11/12 mx-auto">
-        <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center">
+        <h1 className="text-themeOrange-400 text-5xl font-Raleway font-bold tracking-wide text-center">
           DIGITAL MARKETING SERVICE PLANS
         </h1>
 
         <div className="py-5 text-center">
-          <p className="text-themeGray-200 text-lg font-Lato pb-3">
+          <p className="text-themeGray-200 text-lg font-Raleway pb-3">
             Every business has its own individual approach to marketing - the
             goals, budget and expectations. And for online marketing, your SEO
             opportunities may differ from your competition for your website
             updates, keyword phrase selection and Social Media management.
           </p>
-          <p className="text-themeGray-200 text-lg font-Lato">
+          <p className="text-themeGray-200 text-lg font-Raleway">
             Many companies are looking to fully optimize their website with top
             search marketing practices while other businesses require an ongoing
             SEO program to better align their website with Google, Yahoo and
@@ -73,7 +73,7 @@ const SEOPlansPage = ({ data: { page, bgImage, googleImage, seoImages } }) => {
             posts, Business Directory placement and weekly monitoring of their
             Digital Marketing campaign results.
           </p>
-          <p className="text-lg text-themeBlue-600 font-Lato font-bold italic py-10">
+          <p className="text-lg text-themeBlue-600 font-Raleway font-bold italic py-10">
             &lt;&lt; Select A SEO Program That Best Meets Your Online Marketing
             Objectives &amp; Strategies &gt;&gt;
           </p>
@@ -82,7 +82,7 @@ const SEOPlansPage = ({ data: { page, bgImage, googleImage, seoImages } }) => {
             useShareableState={useShareableState}
           />
           <ComparisionTable />
-          <p className="text-themeGray-200 text-lg font-Lato py-10">
+          <p className="text-themeGray-200 text-lg font-Raleway py-10">
             The above programs are very effective in generating top position
             keyword rankings and driving organic search traffic to your website.
             For the past 15 years, Search Marketing Resource has been providing

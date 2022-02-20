@@ -51,11 +51,11 @@ export const TeamSection = () => {
               alt="About slider 1"
             />
           </figure>
-          <div className="title absolute top-5 left-40 lg:top-1/4 lg:left-1/3 text-themeBlue-600 text-2xl lg:text-7xl font-LatoBold text-center">
+          <div className="title absolute top-5 left-40 lg:top-1/4 lg:left-1/3 text-themeBlue-600 text-2xl lg:text-7xl font-Raleway font-bold text-center">
             Industry Recognized <br />
             Team Leadership
           </div>
-          <div className="subtitle absolute top-2/3 right-5 lg:right-20 text-themeOrange-400 text-sm lg:text-4xl font-LatoLight text-center">
+          <div className="subtitle absolute top-2/3 right-5 lg:right-20 text-themeOrange-400 text-sm lg:text-4xl font-RalewayLight text-center">
             Experienced & Professional Project Leaders, <br />
             Website Developers & SEO Managers
           </div>
@@ -66,15 +66,15 @@ export const TeamSection = () => {
         <div className="top_padding_page top_padding page_content_website faq-page top-space">
           <div className="wrapper">
             <div className="top_content">
-              <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center">
+              <h1 className="text-themeOrange-400 text-5xl font-Raleway font-bold tracking-wide text-center">
                 ABOUT SEARCH MARKETING RESOURCE
               </h1>
             </div>
             <div className="py-5">
-              <h2 className="text-themeBlue-600 text-2xl font-MontserratSemiBold uppercase pb-5">
+              <h2 className="text-themeBlue-600 text-2xl font-LusitanaSemiBold uppercase pb-5">
                 SEARCH MARKETING RESOURCE'S MISSION
               </h2>
-              <p className="text-themeGray-200 text-lg font-Lato">
+              <p className="text-themeGray-200 text-lg font-Raleway">
                 Our team’s mission is to significantly promote our client’s web
                 presence above the competition and gain a measurable increased
                 level of online visibility in their vertical market. Every day,
@@ -83,7 +83,7 @@ export const TeamSection = () => {
                 better communication with their target audience and obtaining
                 top keyword rankings with the Search Engines.
               </p>
-              <p className="text-themeGray-200 text-lg font-Lato pt-3">
+              <p className="text-themeGray-200 text-lg font-Raleway pt-3">
                 Our goal and objective is to generate ongoing revenue growth for
                 every business we represent and deliver a return on investment
                 for all services provided.
@@ -94,13 +94,13 @@ export const TeamSection = () => {
         <div className="team_design light_grey_bg extra-work">
           <div className="wrapper">
             <div className="top_content team_lead">
-              <h2 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold text-left py-5">
+              <h2 className="text-themeOrange-400 text-5xl font-Raleway font-bold text-left py-5">
                 TEAM LEADERSHIP
               </h2>
-              <h3 className="text-themeBlue-600 text-2xl font-MontserratSemiBold uppercase text-left pb-5">
+              <h3 className="text-themeBlue-600 text-2xl font-LusitanaSemiBold uppercase text-left pb-5">
                 MEET OUR PROJECT MANAGERS
               </h3>
-              <p className="text-themeGray-200 text-lg font-Lato pb-10">
+              <p className="text-themeGray-200 text-lg font-Raleway pb-10">
                 Our team leaders have significant tenure in their chosen career
                 disciplines. This experience is augmented by the 100’s of
                 projects each has completed while here at Search Marketing
@@ -121,13 +121,13 @@ export const TeamSection = () => {
               >
                 <div className="conts_wrapper">
                   <div className="content_pnl">
-                    <h2 className="text-themeBlue-600 text-2xl font-MontserratSemiBold uppercase text-left">
+                    <h2 className="text-themeBlue-600 text-2xl font-LusitanaSemiBold uppercase text-left">
                       {teamMember.title}
                     </h2>
-                    <span className="text-themeGray-200 text-lg font-Lato">
+                    <span className="text-themeGray-200 text-lg font-Raleway">
                       <i>{teamMember.memberRole}</i>
                     </span>
-                    <div className="text-themeGray-200 text-lg font-Lato pt-5">
+                    <div className="text-themeGray-200 text-lg font-Raleway pt-5">
                       {parse(teamMember.content)}
                     </div>
                   </div>

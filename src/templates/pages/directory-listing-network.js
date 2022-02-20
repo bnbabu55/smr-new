@@ -14,7 +14,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
       <Seo seoData={page?.seo} />
       <div className="w-full mx-auto text-center py-10">
         <div className="w-11/12 mx-auto">
-          <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center pt-10">
+          <h1 className="text-themeOrange-400 text-5xl font-Raleway font-bold tracking-wide text-center pt-10">
             BUSINESS LISTING NETWORK
           </h1>
           <div className="py-10 text-themeGray-200 text-left text-lg">
@@ -34,7 +34,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
             </p>
           </div>
 
-          <h2 className="font-MontserratSemiBold underline text-4xl text-themeBlue-600">
+          <h2 className="font-LusitanaSemiBold underline text-4xl text-themeBlue-600">
             Business Listing Basics
           </h2>
 

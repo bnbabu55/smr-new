@@ -255,15 +255,6 @@ const MobileNav = ({ navMenu }) => {
           </ul>
         </nav>
       </div>
-      <Link
-        to="/search-marketing-website-design-proposal-form"
-        className="absolute z-10 hidden overflow-hidden top-18 right-12 lg:block"
-      >
-        <StaticImage
-          src="../../static/images/smr-proposal-icon.png"
-          alt="Freequote button"
-        />
-      </Link>
     </>
   )
 }

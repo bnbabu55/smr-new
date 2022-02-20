@@ -30,11 +30,11 @@ const WebDesignProposalPage = ({ data: { page, seoImages } }) => {
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto pt-20 pb-10">
         <div className="wrapper">
-          <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center">
+          <h1 className="text-themeOrange-400 text-5xl font-Raleway font-bold tracking-wide text-center">
             Search Marketing Programs <br /> & <br /> Web Design Services
           </h1>
           <hr className="w-1/2 mx-auto my-5 border-2 border-gray-300" />
-          <p className="px-4 py-5 text-themeGray-200 text-lg font-Lato text-center mx-auto">
+          <p className="px-4 py-5 text-themeGray-200 text-lg font-Raleway text-center mx-auto">
             For the past 15 years, Search Marketing Resource has been providing
             online marketing services ranging from 100/% turn-key solutions to
             ala carte programs tailored to a client's specific needs and budget.
@@ -51,7 +51,7 @@ const WebDesignProposalPage = ({ data: { page, seoImages } }) => {
           useShareableState={useShareableState}
         />
         <ComparisionTable />
-        <div className="py-10 font-Lato text-center mx-auto">
+        <div className="py-10 font-Raleway text-center mx-auto">
           <div className="">
             <h3 className="text-3xl text-themeBlue-600 uppercase py-5">
               website design service

@@ -1,11 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 const DesktopNav = ({ navMenu }) => {
   function renderNavDropdown(dropdownMenu) {
     return (
-      <ul className="absolute z-10 flex-col hidden w-64 pt-5 pb-2 -mx-3 bg-themeBlue-500 group-hover:flex">
+      <ul className="absolute flex-col hidden w-64 pt-5 pb-2 -mx-3 z-[999] bg-themeBlue-500 group-hover:flex">
         {dropdownMenu.map(renderNavDropdownItem)}
       </ul>
     )
@@ -151,15 +150,6 @@ const DesktopNav = ({ navMenu }) => {
           </ul>
         </nav>
       </div>
-      <Link
-        to="/search-marketing-website-design-proposal-form"
-        className="absolute z-10 hidden overflow-hidden top-18 right-12 lg:block"
-      >
-        <StaticImage
-          src="../../static/images/smr-proposal-icon.png"
-          alt="Freequote button"
-        />
-      </Link>
     </>
   )
 }

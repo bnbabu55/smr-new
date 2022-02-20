@@ -65,10 +65,6 @@
     scroll-behavior: smooth;
   }
 
-  body a {
-    @apply text-[#c01b31] underline;
-  }
-
   body h1 {
     @apply font-Raleway pb-5 text-2xl font-bold;
   }

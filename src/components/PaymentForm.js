@@ -210,12 +210,12 @@ const PaymentForm = () => {
   return (
     <div className="w-full contact-wrapper mx-auto border border-gray-700 rounded">
       <form
-        className="text-gray-700 contact-form flex flex-col justify-center align-center m-10 font-Lato text-base"
+        className="text-gray-700 contact-form flex flex-col justify-center align-center m-10 font-Raleway text-base"
         onSubmit={e => submitHandler(formData.stepTwo, e)}
       >
         {step === 1 && (
           <>
-            <div className="font-Montserrat text-lg font-bold pb-5">
+            <div className="font-Lusitana text-lg font-bold pb-5">
               Step 1 of 2
             </div>
             <div className="grid gap-6 grid-cols-1 lg:grid-cols-4">
@@ -375,7 +375,7 @@ const PaymentForm = () => {
         )}
         {step === 2 && (
           <>
-            <div className="font-Montserrat text-lg font-bold pb-5">
+            <div className="font-Lusitana text-lg font-bold pb-5">
               Step 2 of 2
             </div>
             <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-x-5">
@@ -742,13 +742,15 @@ const PaymentForm = () => {
 
       <div id="response-message" style={{ padding: "20px" }}>
         {formResp.status === "loading" && (
-          <p className="font-Lato text-black">Processing....</p>
+          <p className="font-Raleway text-black">Processing....</p>
         )}
         {formResp.status === "error" && (
-          <p className="font-Lato text-red-600">{formResp.body_response}</p>
+          <p className="font-Raleway text-red-600">{formResp.body_response}</p>
         )}
         {formResp.status === "success" && (
-          <p className="font-Lato text-green-600">{formResp.body_response}</p>
+          <p className="font-Raleway text-green-600">
+            {formResp.body_response}
+          </p>
         )}
         <p className="text-white">
           {formResp === "success" &&

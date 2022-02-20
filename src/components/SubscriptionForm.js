@@ -112,15 +112,15 @@ const SubscriptionForm = () => {
       </form>
       <div id="response-message">
         {formResp.status === "loading" && (
-          <p className="text-sm text-black font-Lato">Sending....</p>
+          <p className="text-sm text-black font-Raleway">Sending....</p>
         )}
         {formResp.status === "error" && (
-          <p className="text-sm text-red-600 font-Lato">
+          <p className="text-sm text-red-600 font-Raleway">
             {formResp.body_response}
           </p>
         )}
         {formResp.status === "success" && (
-          <p className="text-sm text-green-600 font-Lato">
+          <p className="text-sm text-green-600 font-Raleway">
             Your form has been submitted successfully, thank you.
           </p>
         )}
