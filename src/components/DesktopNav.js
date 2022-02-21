@@ -11,12 +11,21 @@ const DesktopNav = ({ navMenu }) => {
   }
 
   function renderNavDropdownItem(subMenuItem) {
+    const pathVar = subMenuItem?.path
+    const anchorPosition = pathVar.indexOf("#")
+    let pageAnchor = ""
+    if (anchorPosition > 0 && "/" === subMenuItem?.path) {
+      pageAnchor = subMenuItem?.path + pathVar.substring(anchorPosition)
+    } else {
+      pageAnchor = subMenuItem?.path
+    }
+    pageAnchor = pageAnchor.replace("/blog", "")
     return (
       <li
         key={subMenuItem?.id}
         className="px-2 py-1 mx-2 text-xs font-black text-white uppercase rounded font-Raleway"
       >
-        <Link to={subMenuItem?.path} activeClassName="active">
+        <Link to={pageAnchor} activeClassName="active">
           {subMenuItem?.label}
         </Link>
         {subMenuItem?.childItems?.nodes?.length > 0 &&
@@ -120,6 +129,7 @@ const DesktopNav = ({ navMenu }) => {
               } else {
                 pageAnchor = menuItem?.path
               }
+              pageAnchor = pageAnchor.replace("/blog", "")
               return (
                 <li
                   key={menuItem?.id}

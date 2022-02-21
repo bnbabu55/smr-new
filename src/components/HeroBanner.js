@@ -17,7 +17,7 @@ const HeroBanner = () => {
             placeholder: BLURRED
             quality: 100
             width: 603
-            formats: [AVIF, WEBP, PNG, JPG]
+            formats: [AUTO]
           )
         }
       }

@@ -51,6 +51,7 @@ const MobileNav = ({ navMenu }) => {
     } else {
       pageAnchor = data?.path
     }
+    pageAnchor = pageAnchor.replace("/blog", "")
 
     return (
       <li key={data.id}>
