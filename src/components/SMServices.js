@@ -18,7 +18,7 @@ const SMServices = () => {
             title
             featuredImage {
               childImageSharp {
-                gatsbyImageData(width: 50, layout: CONSTRAINED, quality: 100)
+                gatsbyImageData(width: 1349, layout: FIXED, quality: 100)
               }
             }
           }
@@ -37,60 +37,60 @@ const SMServices = () => {
           return (
             <div
               key={smSlide.id}
-              className="w-full py-10 mx-auto my-2 bg-themeYellow-400"
+              className="w-full py-10 mx-auto flex items-center relative min-h-[289px]"
             >
-              <div className="flex flex-col w-10/12 mx-auto gap-y-5 ">
+              <GatsbyImage
+                image={
+                  smSlide.frontmatter.featuredImage.childImageSharp
+                    .gatsbyImageData
+                }
+                alt={smSlide.frontmatter.altTxt}
+                className="absolute w-full h-full z-0 bg-cover mx-auto"
+              />
+
+              <div className="z-10 flex flex-col w-10/12 mx-auto gap-y-5 ">
                 <h3 className="text-2xl font-bold uppercase font-Raleway">
                   {smSlide.frontmatter.title}
                 </h3>
-                <MDXRenderer className="py-5 text-lg">
-                  {smSlide.body}
-                </MDXRenderer>
-                <a
+                <div className="py-5 text-lg w-2/3">
+                  <MDXRenderer>{smSlide.body}</MDXRenderer>
+                </div>
+                <Link
                   href={smSlide.frontmatter.websiteUrl}
                   className="cursor-pointer"
                 >
                   Read More
-                </a>
+                </Link>
               </div>
-              {/* <GatsbyImage 
-        image={
-          smSlides.frontmatter.featuredImage.childImageSharp
-            .gatsbyImageData
-        }
-        alt={smSlides.frontmatter.altTxt}
-        className="w-2/5"
-      /> */}
             </div>
           )
         } else {
           return (
             <div
               key={smSlide.id}
-              className="w-full py-10 mx-auto my-2 bg-themeBlue-400"
+              className="w-full py-10 mx-auto flex items-center relative lg:min-h-[289px]"
             >
-              {/* <GatsbyImage 
-        image={
-          smSlides.frontmatter.featuredImage.childImageSharp
-            .gatsbyImageData
-        }
-        alt={smSlides.frontmatter.altTxt}
-        className="w-2/5"
-      /> */}
-
-              <div className="flex flex-col items-end justify-end w-10/12 mx-auto gap-y-5">
+              <GatsbyImage
+                image={
+                  smSlide.frontmatter.featuredImage.childImageSharp
+                    .gatsbyImageData
+                }
+                alt={smSlide.frontmatter.altTxt}
+                className="absolute w-full h-full z-0 bg-cover mx-auto"
+              />
+              <div className="z-10 flex flex-col items-end justify-end w-10/12 mx-auto gap-y-5">
                 <h3 className="text-2xl font-bold uppercase font-Raleway">
                   {smSlide.frontmatter.title}
                 </h3>
-                <MDXRenderer className="py-5 text-lg">
-                  {smSlide.body}
-                </MDXRenderer>
-                <a
+                <div className="py-5 text-lg w-2/3">
+                  <MDXRenderer>{smSlide.body}</MDXRenderer>
+                </div>
+                <Link
                   href={smSlide.frontmatter.websiteUrl}
                   className="cursor-pointer"
                 >
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
           )

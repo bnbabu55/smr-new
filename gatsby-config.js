@@ -58,7 +58,9 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url: process.env.GATSBY_GRAPHQL_URL || `http://newsmr.test/graphql`,
+        url:
+          process.env.GATSBY_GRAPHQL_URL ||
+          `https://newsmr.devsmr-development.com/blog/graphql`,
         type: {
           Post: {
             limit: 5,

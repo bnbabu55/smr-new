@@ -36,7 +36,7 @@ module.exports = {
         linkedInBlue: "#0072b1",
       },
       listStyleType: {
-        tick: "✓",
+        tickmark: "✓",
       },
     },
   },

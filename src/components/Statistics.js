@@ -1,12 +1,21 @@
 import React from "react"
 import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Statistics = () => {
   return (
-    <div id="statistics" className="py-32 mx-auto overflow-hidden bg-white">
-      <div className="container flex flex-col items-center justify-between w-full gap-5 mx-auto text-center lg:flex-row lg:w-10/12 lg:px-10">
-        <p className="text-5xl font-black">
+    <div
+      id="statistics"
+      className="w-full relative py-32 mx-auto overflow-hidden bg-white flex items-center"
+    >
+      <StaticImage
+        src="../../content/assets/statistic_text_bg.png"
+        alt=""
+        className="absolute w-full h-full z-0 bg-cover mx-auto"
+      />
+      <div className="z-10 flex flex-col items-center justify-evenly w-full gap-5 mx-auto text-center lg:flex-row lg:w-10/12">
+        <div className="text-5xl font-black">
           {/* <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
             {({ isVisible }) => (
               <div style={{ height: 50 }}>
@@ -18,25 +27,25 @@ const Statistics = () => {
           </VisibilitySensor> */}
           <br />
           <span className="text-base font-normal">professionals team</span>
-        </p>
-        <p className="text-5xl font-black">
+        </div>
+        <div className="text-5xl font-black">
           <CountUp start={0} end={248} delay={5} />{" "}
           <span className="text-[#e55327]">+</span>
           <br />
           <span className="text-base font-normal">satisfied customers</span>
-        </p>
-        <p className="text-5xl font-black">
+        </div>
+        <div className="text-5xl font-black">
           <CountUp start={0} end={917} delay={5} />{" "}
           <span className="text-[#e55327]">+</span>
           <br />
           <span className="text-base font-normal">successful projects</span>
-        </p>
-        <p className="text-5xl font-black">
+        </div>
+        <div className="text-5xl font-black">
           <CountUp start={0} end={10} delay={5} />{" "}
           <span className="text-[#e55327]">+</span>
           <br />
           <span className="text-base font-normal">years of experience</span>
-        </p>
+        </div>
       </div>
     </div>
   )

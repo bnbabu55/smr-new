@@ -47,7 +47,7 @@ const HomeNews = () => {
         return (
           <p
             itemProp="description"
-            className="mt-2 text-base text-justify font-Raleway line-clamp-3"
+            className="mt-2 text-base text-justify font-Lusitana line-clamp-3"
           >
             {domToReact(domNode.children, options)}
           </p>
@@ -120,13 +120,13 @@ const HomeNews = () => {
                     <Link
                       to={`/news${post?.uri}`}
                       itemProp="url"
-                      className="w-full text-lg font-bold text-left uppercase font-Lusitana"
+                      className="w-full text-lg font-bold text-left uppercase font-Raleway"
                     >
                       {parse(title)}
                     </Link>
                   </li>
                   <li
-                    className="flex items-start justify-start mx-5 mb-3"
+                    className="flex items-start justify-start mx-5 mb-3 font-Lusitana"
                     itemScope
                     itemType="http://schema.org/Article"
                   >

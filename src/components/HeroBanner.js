@@ -111,19 +111,43 @@ const HeroBanner = () => {
             functionality. Our site presentations focus on your target audience
             and corporate brand while promoting your products and services.
           </p>
-          <ul className="grid grid-cols-2 gap-5 pt-5 text-sm list-inside list-tick font-Raleway">
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
-            <li>Mockup Design Review</li>
+          <ul className="grid grid-cols-2 gap-5 pt-5 text-sm list-inside list-none font-Raleway">
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
+            <li>
+              <span className="pr-2">✓</span>Mockup Design Review
+            </li>
           </ul>
         </div>
         <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">

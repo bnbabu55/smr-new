@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 const MobileNav = ({ navMenu }) => {
   const [menuOpen, setMenuStatus] = useState()
