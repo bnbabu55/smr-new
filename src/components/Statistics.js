@@ -16,35 +16,60 @@ const Statistics = () => {
       />
       <div className="z-10 flex flex-col items-center justify-evenly w-full gap-5 mx-auto text-center lg:flex-row lg:w-10/12">
         <div className="text-5xl font-black">
-          {/* <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
+          <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
             {({ isVisible }) => (
-              <div style={{ height: 50 }}>
-                {isVisible ? <CountUp start={0} end={32} /> : "32"} */}
-          <CountUp start={0} end={32} delay={5} />{" "}
-          <span className="text-[#e55327]">+</span>
-          {/* </div>
+              <div>
+                {isVisible ? <CountUp start={0} end={32} /> : "32"}
+                <span className="text-[#e55327]">+</span>
+              </div>
             )}
-          </VisibilitySensor> */}
+          </VisibilitySensor>
           <br />
-          <span className="text-base font-normal">professionals team</span>
+          <span className="text-base font-normal font-Raleway">
+            professionals team
+          </span>
         </div>
         <div className="text-5xl font-black">
-          <CountUp start={0} end={248} delay={5} />{" "}
-          <span className="text-[#e55327]">+</span>
+          <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
+            {({ isVisible }) => (
+              <div>
+                {isVisible ? <CountUp start={0} end={248} /> : "32"}
+                <span className="text-[#e55327]">+</span>
+              </div>
+            )}
+          </VisibilitySensor>
           <br />
-          <span className="text-base font-normal">satisfied customers</span>
+          <span className="text-base font-normal font-Raleway">
+            satisfied customers
+          </span>
         </div>
         <div className="text-5xl font-black">
-          <CountUp start={0} end={917} delay={5} />{" "}
-          <span className="text-[#e55327]">+</span>
+          <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
+            {({ isVisible }) => (
+              <div>
+                {isVisible ? <CountUp start={0} end={917} /> : "32"}
+                <span className="text-[#e55327]">+</span>
+              </div>
+            )}
+          </VisibilitySensor>
           <br />
-          <span className="text-base font-normal">successful projects</span>
+          <span className="text-base font-normal font-Raleway">
+            successful projects
+          </span>
         </div>
         <div className="text-5xl font-black">
-          <CountUp start={0} end={10} delay={5} />{" "}
-          <span className="text-[#e55327]">+</span>
+          <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
+            {({ isVisible }) => (
+              <div>
+                {isVisible ? <CountUp start={0} end={10} /> : "32"}
+                <span className="text-[#e55327]">+</span>
+              </div>
+            )}
+          </VisibilitySensor>
           <br />
-          <span className="text-base font-normal">years of experience</span>
+          <span className="text-base font-normal font-Raleway">
+            years of experience
+          </span>
         </div>
       </div>
     </div>
