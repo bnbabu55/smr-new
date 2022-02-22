@@ -85,7 +85,7 @@ const Testimonials = () => {
             </button>
             <button onClick={e => handleClick(e, 1)} className="w-full">
               {/* <span className="before:border-solid before:border-b-8 before:border-r-8 before:border-black before:content-[''] before:inline-block before:h-[1em] before:left-[0.15em] before:relative before:top-[0.15em] before:rotate-45 before:align-top before:w-[1em]"></span> */}
-              <span className="down-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[9vh] before:top-[9vh] before:right-[50%] before:skew-x-0 before:skew-y-[25deg] after:left-[50%] after:skew-x-0 after:skew-y-[-25deg]"></span>
+              <span className="down-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[11vh] before:top-[11vh] before:right-[50%] before:skew-x-0 before:skew-y-[25deg] after:left-[50%] after:skew-x-0 after:skew-y-[-25deg]"></span>
             </button>
           </div>
           <div className="flex flex-col w-3/4 mx-auto">
@@ -93,7 +93,7 @@ const Testimonials = () => {
               return (
                 <div key={testimonialSlide.id} className="mb-3">
                   <div
-                    className={`text-lg font-bold uppercase ${
+                    className={`text-lg font-bold font-Raleway uppercase ${
                       index === 0 ? "text-[#e55327]" : ""
                     }`}
                     id="title"

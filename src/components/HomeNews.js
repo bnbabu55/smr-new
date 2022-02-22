@@ -67,7 +67,7 @@ const HomeNews = () => {
           <h2 className="pb-8">
             <Link
               to="/news"
-              className="text-5xl uppercase font-Raleway hover:underline"
+              className="text-5xl font-Raleway font-bold hover:underline"
             >
               Latest from the Blog
             </Link>
@@ -106,7 +106,7 @@ const HomeNews = () => {
                     </Link>
                   </li>
                   <li className="z-30 flex items-start justify-end pr-3 mx-5 mb-3 -mt-16">
-                    <p className="bg-[#01487e] text-white p-2">
+                    <p className="bg-[#01487e] text-white font-Raleway font-semibold p-2">
                       {post.day.split("/")[0]}
                       <br />
                       {post.day.split("/")[1]}

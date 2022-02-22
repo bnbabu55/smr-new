@@ -95,7 +95,7 @@ const SubscriptionForm = () => {
           />
           <button
             type="submit"
-            className="w-2/6 py-2.5 text-sm tracking-wider text-white uppercase rounded-full shadow-md font-RalewayBold bg-[#0b4f80] hover:bg-[#052740] ease-in-out duration-300 lg:-ml-10"
+            className="w-2/6 py-2.5 text-sm font-Raleway font-bold tracking-wider text-white uppercase rounded-full shadow-md font-RalewayBold bg-[#0b4f80] hover:bg-[#052740] ease-in-out duration-300 lg:-ml-10"
             aria-label="submit"
             disabled={formResp === "success" ? true : false}
           >

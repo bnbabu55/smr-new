@@ -1,7 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
-import parse from "html-react-parser"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const HeroBanner = () => {
@@ -31,6 +30,7 @@ const HeroBanner = () => {
           frontmatter {
             altTxt
             title
+            websiteUrl
             featuredImage {
               childImageSharp {
                 gatsbyImageData(width: 70, layout: FIXED, formats: [AUTO])
@@ -89,13 +89,15 @@ const HeroBanner = () => {
                   {card.frontmatter.title}
                 </h3>
               </div>
-              <MDXRenderer className="py-5 text-lg">{card.body}</MDXRenderer>
-              <a
-                href={card.frontmatter.websiteUrl}
+              <div className="py-5 text-lg">
+                <MDXRenderer>{card.body}</MDXRenderer>
+              </div>
+              <Link
+                to={card.frontmatter.websiteUrl}
                 className="mt-auto cursor-pointer"
               >
                 Learn more
-              </a>
+              </Link>
             </div>
           )
         })}

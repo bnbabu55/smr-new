@@ -60,7 +60,7 @@ const SMServices = () => {
                   to={smSlide.frontmatter.websiteUrl}
                   className="cursor-pointer"
                 >
-                  Read More
+                  Read more
                 </Link>
               </div>
             </div>

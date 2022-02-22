@@ -34,12 +34,12 @@ const HomePortfolio = () => {
           <div className="flex items-center justify-center pb-8 text-center">
             <Link
               to={`/portfolio`}
-              className="text-5xl font-Raleway hover:underline"
+              className="text-5xl font-Raleway font-bold hover:underline"
             >
               Portfolio
             </Link>
           </div>
-          <p className="text-lg text-center font-Raleway">
+          <p className="text-lg text-center font-Lusitana">
             The Search Marketing Resource team has provided website graphic
             design services and online marketing solutions for thousands of
             businesses nationwide, and in every major vertical market including
