@@ -80,10 +80,12 @@ const Testimonials = () => {
         <div className="w-1/4 flex">
           <div className="flex flex-col w-1/4 mx-auto">
             <button onClick={e => handleClick(e, -1)} className="w-full">
-              <span className="before:border-solid before:border-t-8 before:border-r-8 before:border-black before:content-[''] before:inline-block before:h-[1em] before:left-[0.15em] before:relative before:top-[0.15em] before:-rotate-45 before:align-top before:w-[1em]"></span>
+              {/* <span className="before:border-solid before:border-t-8 before:border-r-8 before:border-black before:content-[''] before:inline-block before:h-[1em] before:left-[0.15em] before:relative before:top-[0.15em] before:-rotate-45 before:align-top before:w-[1em]"></span> */}
+              <span className="up-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[3vh] before:top-[3vh] before:right-[50%] before:skew-x-0 before:skew-y-[-25deg] after:left-[50%] after:skew-x-0 after:skew-y-[25deg]"></span>
             </button>
             <button onClick={e => handleClick(e, 1)} className="w-full">
-              <span className="before:border-solid before:border-b-8 before:border-r-8 before:border-black before:content-[''] before:inline-block before:h-[1em] before:left-[0.15em] before:relative before:top-[0.15em] before:rotate-45 before:align-top before:w-[1em]"></span>
+              {/* <span className="before:border-solid before:border-b-8 before:border-r-8 before:border-black before:content-[''] before:inline-block before:h-[1em] before:left-[0.15em] before:relative before:top-[0.15em] before:rotate-45 before:align-top before:w-[1em]"></span> */}
+              <span className="down-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[9vh] before:top-[9vh] before:right-[50%] before:skew-x-0 before:skew-y-[25deg] after:left-[50%] after:skew-x-0 after:skew-y-[-25deg]"></span>
             </button>
           </div>
           <div className="flex flex-col w-3/4 mx-auto">
