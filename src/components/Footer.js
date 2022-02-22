@@ -239,8 +239,22 @@ const Footer = () => {
                 <br />
                 Lombard, IL 60148
               </p>
-              <p className="pb-3">888-842-9033</p>
-              <p className="pb-3">info@searchmarketingresource.com</p>
+              <p className="pb-3">
+                <a
+                  href="tel:888-842-9033"
+                  className="hover:text-themeYellow-400"
+                >
+                  888-842-9033
+                </a>
+              </p>
+              <p className="pb-3">
+                <a
+                  href="mailto:info@searchmarketingresource.com"
+                  className="hover:text-themeYellow-400"
+                >
+                  info@searchmarketingresource.com
+                </a>
+              </p>
             </div>
           </div>
           <nav className="w-full">
@@ -257,6 +271,7 @@ const Footer = () => {
                   } else {
                     pageAnchor = menu?.path
                   }
+                  pageAnchor = pageAnchor.replace("/blog", "")
 
                   return (
                     <Link
@@ -273,19 +288,49 @@ const Footer = () => {
           </nav>
           <div className="text-base">
             <p className="pb-3">
-              sales@searchmarketingresource.com
+              <a
+                href="mailto:sales@searchmarketingresource.com"
+                className="hover:text-themeYellow-400"
+              >
+                sales@searchmarketingresource.com
+              </a>
               <br />
-              888-842-9033 x 11
+              <a
+                href="tel:888-842-9033x11"
+                className="hover:text-themeYellow-400"
+              >
+                888-842-9033 x 11
+              </a>
             </p>
             <p className="pb-3">
-              support@searchmarketingresource.com
+              <a
+                href="mailto:support@searchmarketingresource.com"
+                className="hover:text-themeYellow-400"
+              >
+                support@searchmarketingresource.com
+              </a>
               <br />
-              888-842-9033 x 12
+              <a
+                href="tel:888-842-9033x12"
+                className="hover:text-themeYellow-400"
+              >
+                888-842-9033 x 12
+              </a>
             </p>
             <p className="pb-3">
-              accounting@searchmarketingresource.com
+              <a
+                href="mailto:accounting@searchmarketingresource.com"
+                className="hover:text-themeYellow-400"
+              >
+                accounting@searchmarketingresource.com
+              </a>
               <br />
-              888-842-9033 x 14
+              <a
+                href="tel:888-842-9033x14"
+                className="hover:text-themeYellow-400"
+              >
+                888-842-9033 x 14
+              </a>
             </p>
           </div>
         </div>

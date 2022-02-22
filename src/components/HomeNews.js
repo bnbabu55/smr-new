@@ -94,7 +94,7 @@ const HomeNews = () => {
                 <ul className="flex flex-col gap-3 overflow-hidden bg-white shadow-xl rounded-xl">
                   <li className="flex items-start justify-start mb-3">
                     <Link
-                      to={`/news${post?.uri}`}
+                      to={`${post?.uri}`}
                       itemProp="url"
                       className="w-full"
                       aria-label={featuredImage?.alt}
@@ -118,7 +118,7 @@ const HomeNews = () => {
                     itemType="http://schema.org/Article"
                   >
                     <Link
-                      to={`/news${post?.uri}`}
+                      to={`${post?.uri}`}
                       itemProp="url"
                       className="w-full text-lg font-bold text-left uppercase font-Raleway"
                     >
@@ -134,7 +134,7 @@ const HomeNews = () => {
                   </li>
                   <hr className="flex mx-5 mt-auto border-b border-gray-500" />
                   <Link
-                    to={`/news${post?.uri}`}
+                    to={`${post?.uri}`}
                     itemProp="url"
                     className="flex justify-between w-full px-5 pb-5 text-lg font-bold text-left font-Lusitana"
                   >
