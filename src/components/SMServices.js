@@ -16,6 +16,7 @@ const SMServices = () => {
           frontmatter {
             altTxt
             title
+            websiteUrl
             featuredImage {
               childImageSharp {
                 gatsbyImageData(width: 1349, layout: FIXED, quality: 100)
@@ -56,7 +57,7 @@ const SMServices = () => {
                   <MDXRenderer>{smSlide.body}</MDXRenderer>
                 </div>
                 <Link
-                  href={smSlide.frontmatter.websiteUrl}
+                  to={smSlide.frontmatter.websiteUrl}
                   className="cursor-pointer"
                 >
                   Read More
@@ -86,7 +87,7 @@ const SMServices = () => {
                   <MDXRenderer>{smSlide.body}</MDXRenderer>
                 </div>
                 <Link
-                  href={smSlide.frontmatter.websiteUrl}
+                  to={smSlide.frontmatter.websiteUrl}
                   className="cursor-pointer"
                 >
                   Read More

@@ -33,7 +33,7 @@ const HeroBanner = () => {
             title
             featuredImage {
               childImageSharp {
-                gatsbyImageData(width: 70, layout: FIXED)
+                gatsbyImageData(width: 70, layout: FIXED, formats: [AUTO])
               }
             }
           }
@@ -49,7 +49,7 @@ const HeroBanner = () => {
     >
       <StaticImage
         alt=""
-        src="../../content/assets/home-banner/banner_bg.png"
+        src="../../content/assets/home-banner/home_banner_bg.png"
         className="absolute top-0 w-full h-full -z-1"
       />
       <div className="z-10 flex items-center justify-between px-5 pt-20 mx-auto">
