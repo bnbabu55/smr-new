@@ -67,7 +67,9 @@ const HeroBanner = () => {
         />
       </div>
       <button className="font-Raleway fixed z-[99] right-0 origin-bottom-right px-5 py-2 font-bold -rotate-90 rounded-tl rounded-tr top-40 bg-themeYellow-400">
-        Quick Quote
+        <a href="/search-marketing-website-design-proposal-form/">
+          Quick Quote
+        </a>
       </button>
       <div className="z-50 flex flex-col items-stretch justify-center w-full gap-10 px-5 mx-auto my-32 lg:w-10/12 lg:flex-row">
         {bannerCards.nodes.map(card => {
@@ -92,12 +94,14 @@ const HeroBanner = () => {
               <div className="py-5 text-lg">
                 <MDXRenderer>{card.body}</MDXRenderer>
               </div>
-              <Link
-                to={card.frontmatter.websiteUrl}
-                className="mt-auto cursor-pointer"
-              >
-                Learn more
-              </Link>
+              <button type="button">
+                <Link
+                  to={card.frontmatter.websiteUrl}
+                  className="mt-auto cursor-pointer"
+                >
+                  Learn more
+                </Link>
+              </button>
             </div>
           )
         })}

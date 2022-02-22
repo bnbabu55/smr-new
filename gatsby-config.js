@@ -125,15 +125,7 @@ module.exports = {
 
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [
-          require(`tailwindcss`)(tailwindConfig),
-          require("autoprefixer"),
-        ],
-      },
-    },
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-perf-budgets`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
     `gatsby-plugin-advanced-sitemap`,
