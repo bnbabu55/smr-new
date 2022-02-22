@@ -73,7 +73,7 @@ const HomeNews = () => {
             </Link>
           </h2>
 
-          <p className="pb-8 text-lg text-center font-Raleway">
+          <p className="pb-8 text-lg text-center font-Lusitana">
             Stay Current on Search Marketing Resource events, industry news,
             recent projects, the latest design practices and online marketing
             advice - Opt In on our News Page and receive posts alerts to your
