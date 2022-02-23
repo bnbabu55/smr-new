@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
+import { BgImage } from "gbimage-bridge"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const SMServices = () => {
@@ -19,7 +20,12 @@ const SMServices = () => {
             websiteUrl
             featuredImage {
               childImageSharp {
-                gatsbyImageData(width: 1349, layout: FIXED, quality: 100)
+                gatsbyImageData(
+                  width: 2000
+                  placeholder: BLURRED
+                  quality: 100
+                  formats: [AUTO]
+                )
               }
             }
           }
@@ -31,25 +37,19 @@ const SMServices = () => {
   return (
     <div
       id="sm-services"
-      className="flex flex-col items-center justify-center w-full py-10 mx-auto"
+      className="flex flex-col items-center justify-center w-full py-10 mx-auto gap-y-4"
     >
       {smSlides.nodes.map((smSlide, index) => {
+        const pluginImage = getImage(smSlide.frontmatter.featuredImage)
+
         if (index === 0 || index % 2 === 0) {
           return (
-            <div
+            <BgImage
+              image={pluginImage}
               key={smSlide.id}
-              className="w-full py-10 mx-auto flex items-center relative min-h-[289px]"
+              className="flex items-center w-full py-10 mx-auto"
             >
-              <GatsbyImage
-                image={
-                  smSlide.frontmatter.featuredImage.childImageSharp
-                    .gatsbyImageData
-                }
-                alt={smSlide.frontmatter.altTxt}
-                className="absolute w-full h-full z-0 bg-cover mx-auto"
-              />
-
-              <div className="py-5 lg:py-0 z-10 flex flex-col items-center justify-center lg:items-start lg:justify-start w-full px-3 lg:px-0 lg:w-10/12 mx-auto gap-y-5">
+              <div className="flex flex-col items-center justify-center w-full px-3 py-5 mx-auto lg:py-0 lg:items-start lg:justify-start lg:px-0 lg:w-10/12 gap-y-5">
                 <h3 className="text-2xl font-bold uppercase font-Raleway">
                   {smSlide.frontmatter.title}
                 </h3>
@@ -63,23 +63,16 @@ const SMServices = () => {
                   Read more
                 </Link>
               </div>
-            </div>
+            </BgImage>
           )
         } else {
           return (
-            <div
+            <BgImage
+              image={pluginImage}
               key={smSlide.id}
-              className="w-full py-10 mx-auto flex items-center relative lg:min-h-[289px]"
+              className="flex items-center w-full py-10 mx-auto"
             >
-              <GatsbyImage
-                image={
-                  smSlide.frontmatter.featuredImage.childImageSharp
-                    .gatsbyImageData
-                }
-                alt={smSlide.frontmatter.altTxt}
-                className="absolute w-full h-full z-0 bg-cover mx-auto"
-              />
-              <div className="py-5 lg:py-0 z-10 flex flex-col items-center justify-center lg:items-end lg:justify-end w-full px-3 lg:px-0 lg:w-10/12 mx-auto gap-y-5">
+              <div className="flex flex-col items-center justify-center w-full px-3 py-5 mx-auto lg:py-0 lg:items-end lg:justify-end lg:px-0 lg:w-10/12 gap-y-5">
                 <h3 className="text-2xl font-bold uppercase font-Raleway">
                   {smSlide.frontmatter.title}
                 </h3>
@@ -93,7 +86,7 @@ const SMServices = () => {
                   Read More
                 </Link>
               </div>
-            </div>
+            </BgImage>
           )
         }
       })}

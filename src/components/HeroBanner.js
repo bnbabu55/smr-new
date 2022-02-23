@@ -1,11 +1,25 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { BgImage } from "gbimage-bridge"
 
 const HeroBanner = () => {
-  const { bannerImg1, bannerCards } = useStaticQuery(graphql`
+  const { bannerBg, bannerImg1, bannerCards } = useStaticQuery(graphql`
     query {
+      bannerBg: file(
+        relativePath: { regex: "/home_banner_bg.png/" }
+        relativeDirectory: { regex: "/home-banner/" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 2000
+            placeholder: BLURRED
+            quality: 100
+            formats: [AUTO]
+          )
+        }
+      }
       bannerImg1: file(
         relativePath: { regex: "/banner_image_1.png/" }
         relativeDirectory: { regex: "/home-banner/" }
@@ -42,17 +56,15 @@ const HeroBanner = () => {
     }
   `)
 
+  const pluginImage = getImage(bannerBg)
+
   return (
-    <div
+    <BgImage
+      image={pluginImage}
       id="hero-banner"
-      className="bg-no-repeat bg-cover bg-center min-h-[1297px] flex flex-col justify-center items-start relative"
+      className="flex flex-col items-start justify-center"
     >
-      <StaticImage
-        alt=""
-        src="../../content/assets/home-banner/home_banner_bg.png"
-        className="absolute top-0 w-full h-full -z-1"
-      />
-      <div className="z-10 flex items-center justify-between px-5 pt-20 mx-auto">
+      <div className="flex items-center justify-between px-5 pt-20 mx-auto">
         <div className="w-[55%] text-right uppercase font-Raleway font-black text-white lg:text-6xl text-3xl">
           <div className=" relative flex flex-col justify-center items-center z-[1]">
             <span className="hidden lg:block absolute z-[1] w-[150px] h-[150px] -top-[100px] -left-[5px] bg-themeYellow-400 before:content-[''] before:absolute before:w-[90px] before:h-[90px] before:top-[30px] before:left-[30px] before:bg-[#01487e] before:z-[2] after:content-[''] after:absolute after:w-[85px] after:h-[60px] after:top-[90px] after:left-[65px] after:bg-[#01487e] after:z-[3]" />
@@ -66,12 +78,7 @@ const HeroBanner = () => {
           alt="hero banner illustration"
         />
       </div>
-      <button className="font-Raleway fixed z-[99] right-0 origin-bottom-right px-5 py-2 font-bold -rotate-90 rounded-tl rounded-tr top-40 bg-themeYellow-400">
-        <a href="/search-marketing-website-design-proposal-form/">
-          Quick Quote
-        </a>
-      </button>
-      <div className="z-50 flex flex-col items-stretch justify-center w-full gap-10 px-5 mx-auto my-32 lg:w-10/12 lg:flex-row">
+      <div className="flex flex-col items-stretch justify-center w-full gap-10 px-5 mx-auto my-32 lg:w-10/12 lg:flex-row">
         {bannerCards.nodes.map(card => {
           return (
             <div
@@ -94,19 +101,17 @@ const HeroBanner = () => {
               <div className="py-5 text-lg">
                 <MDXRenderer>{card.body}</MDXRenderer>
               </div>
-              <button type="button">
-                <Link
-                  to={card.frontmatter.websiteUrl}
-                  className="mt-auto cursor-pointer"
-                >
-                  Learn more
-                </Link>
-              </button>
+              <Link
+                to={card.frontmatter.websiteUrl}
+                className="mt-auto cursor-pointer"
+              >
+                Learn more
+              </Link>
             </div>
           )
         })}
       </div>
-      <div className="z-50 grid w-full grid-cols-2 grid-rows-4 gap-5 px-5 mx-auto lg:grid-cols-4 lg:grid-rows-2 lg:w-10/12">
+      <div className="grid w-full grid-cols-2 grid-rows-4 gap-5 px-5 mx-auto lg:grid-cols-4 lg:grid-rows-2 lg:w-10/12">
         <div className="col-span-2 row-span-2">
           <h3 className="text-2xl font-bold uppercase font-Raleway">
             Digital Marketing Services
@@ -117,7 +122,7 @@ const HeroBanner = () => {
             functionality. Our site presentations focus on your target audience
             and corporate brand while promoting your products and services.
           </p>
-          <ul className="grid grid-cols-2 gap-5 pt-5 text-sm list-inside list-none font-Raleway">
+          <ul className="grid grid-cols-2 gap-5 pt-5 text-sm list-none list-inside font-Raleway">
             <li>
               <span className="pr-2">✓</span>Mockup Design Review
             </li>
@@ -189,7 +194,7 @@ const HeroBanner = () => {
           </p>
         </div>
       </div>
-    </div>
+    </BgImage>
   )
 }
 

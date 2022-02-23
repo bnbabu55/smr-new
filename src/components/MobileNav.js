@@ -78,6 +78,7 @@ const MobileNav = ({ navMenu }) => {
               onClick={() => handleArrowClick(menuName)}
               toggle={activeMenus.includes(menuName).toString()}
               type="button"
+              aria-label="sub menu arrow button"
               aria-haspopup="menu"
               aria-expanded={activeMenus.includes(menuName) ? "true" : "false"}
             />

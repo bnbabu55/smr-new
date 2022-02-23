@@ -18,6 +18,9 @@ const HomePage = ({ data: { page } }) => (
     <Testimonials />
     <HomeNews />
     <HomePortfolio />
+    <button className="font-Raleway fixed z-[99] top-20 right-0 origin-bottom-right px-5 py-2 font-bold -rotate-90 rounded-tl rounded-tr bg-themeYellow-400">
+      <a href="/search-marketing-website-design-proposal-form/">Quick Quote</a>
+    </button>
   </Layout>
 )
 

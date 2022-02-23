@@ -1,20 +1,35 @@
 import React from "react"
 import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
-import { StaticImage } from "gatsby-plugin-image"
+import { useStaticQuery, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { BgImage } from "gbimage-bridge"
 
 const Statistics = () => {
+  const { bannerBg } = useStaticQuery(graphql`
+    query {
+      bannerBg: file(relativePath: { regex: "/statistic_text_bg.png/" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 2000
+            placeholder: BLURRED
+            quality: 100
+            formats: [AUTO]
+          )
+        }
+      }
+    }
+  `)
+
+  const pluginImage = getImage(bannerBg)
+
   return (
-    <div
+    <BgImage
+      image={pluginImage}
       id="statistics"
-      className="w-full relative py-32 mx-auto overflow-hidden bg-white flex items-center"
+      className="flex items-center py-32 mx-auto"
     >
-      <StaticImage
-        src="../../content/assets/statistic_text_bg.png"
-        alt=""
-        className="absolute w-full h-full z-0 bg-cover mx-auto"
-      />
-      <div className="z-10 flex flex-col items-center justify-evenly w-full gap-5 mx-auto text-center lg:flex-row lg:w-10/12">
+      <div className="flex flex-col items-center w-full gap-5 mx-auto text-center justify-evenly lg:flex-row lg:w-10/12">
         <div className="text-5xl font-black">
           <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
             {({ isVisible }) => (
@@ -72,7 +87,7 @@ const Statistics = () => {
           </span>
         </div>
       </div>
-    </div>
+    </BgImage>
   )
 }
 
