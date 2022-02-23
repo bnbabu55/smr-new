@@ -83,7 +83,7 @@ const HeroBanner = () => {
           return (
             <div
               key={card.id}
-              className="flex flex-col items-center justify-between gap-10 p-10 bg-[#ededed] hover:bg-themeYellow-400 relative hover:after:content-[''] hover:after:w-full hover:after:h-full hover:after:absolute hover:after:bg-transparent hover:after:border-2 hover:after:border-themeYellow-400 hover:after:top-3 hover:after:left-3"
+              className="flex flex-col items-center justify-between gap-10 p-10 bg-[#ededed] hover:bg-themeYellow-400 relative z-20 hover:after:content-[''] hover:after:w-full hover:after:h-full hover:after:absolute hover:after:-z-20 hover:after:bg-transparent hover:after:border-2 hover:after:border-themeYellow-400 hover:after:top-3 hover:after:left-3"
             >
               <div className="flex items-center justify-between gap-x-4">
                 <GatsbyImage
