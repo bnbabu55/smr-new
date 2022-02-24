@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 const DesktopNav = ({ navMenu }) => {
   function renderNavDropdown(dropdownMenu) {
     return (
-      <ul className="absolute flex-col hidden w-64 pt-5 pb-2 -mx-3 z-[999] bg-themeBlue-500 group-hover:flex">
+      <ul className="absolute flex-col hidden w-[17rem] pt-5 pb-2 pl-2 -mx-3 z-[999] bg-themeBlue-300 group-hover:flex">
         {dropdownMenu.map(renderNavDropdownItem)}
       </ul>
     )
