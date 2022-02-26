@@ -48,7 +48,7 @@ const Statistics = () => {
           <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
             {({ isVisible }) => (
               <div>
-                {isVisible ? <CountUp start={0} end={248} /> : "32"}
+                {isVisible ? <CountUp start={0} end={248} /> : "248"}
                 <span className="text-[#e55327]">+</span>
               </div>
             )}
@@ -62,7 +62,7 @@ const Statistics = () => {
           <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
             {({ isVisible }) => (
               <div>
-                {isVisible ? <CountUp start={0} end={917} /> : "32"}
+                {isVisible ? <CountUp start={0} end={917} /> : "917"}
                 <span className="text-[#e55327]">+</span>
               </div>
             )}
@@ -76,7 +76,7 @@ const Statistics = () => {
           <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
             {({ isVisible }) => (
               <div>
-                {isVisible ? <CountUp start={0} end={10} /> : "32"}
+                {isVisible ? <CountUp start={0} end={10} /> : "10"}
                 <span className="text-[#e55327]">+</span>
               </div>
             )}
