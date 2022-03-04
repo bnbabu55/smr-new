@@ -107,7 +107,7 @@ const HomeNews = () => {
                   </li>
                   <li className="z-30 flex items-start justify-end pr-3 mx-5 mb-3 -mt-16">
                     <p className="bg-[#01487e] text-white font-Raleway font-semibold p-2">
-                      {post.day.split("/")[0]}
+                      <span className="text-2xl">{post.day.split("/")[0]}</span>
                       <br />
                       {post.day.split("/")[1]}
                     </p>
