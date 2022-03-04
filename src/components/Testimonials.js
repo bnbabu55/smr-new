@@ -34,7 +34,6 @@ const Testimonials = () => {
 
   const handleClick = (e, next) => {
     e.preventDefault()
-    console.log("next: " + next)
     let targetSlide = 0
     let targetCard
     // let targetCard = document.querySelector('div[name="card"]')
@@ -46,15 +45,13 @@ const Testimonials = () => {
       document.querySelector("#currentSlide").dataset.index
     )
 
-    console.log("currentSlide: " + currentSlide)
-
-    if (next === -1) {
+    if (next === "prev") {
       if (currentSlide <= 0) {
         targetSlide = testimonialSlides.nodes.length - 1
       } else {
         targetSlide = currentSlide - 1
       }
-    } else if (next === 1) {
+    } else if (next === "next") {
       if (currentSlide === testimonialSlides.nodes.length - 1) {
         targetSlide = 0
       } else {
@@ -69,12 +66,15 @@ const Testimonials = () => {
       memberRole: testimonialSlides.nodes[targetSlide].frontmatter.memberRole,
       body: testimonialSlides.nodes[targetSlide].body,
     }))
+
+    console.log(
+      `currentSlide: ${currentSlide} clicked ${next} target is ${targetSlide}`
+    )
+
     currentTitle[targetSlide].classList.add("text-[#e55327]")
     targetCard = document.querySelector(
       `div[name="card"][data-index="${targetSlide}"]`
     )
-    console.log("target: " + targetSlide)
-    console.dir("taget name: " + Object.keys(targetCard))
     targetCard.scrollIntoView({
       behavior: "smooth",
       block: "nearest",
@@ -87,11 +87,11 @@ const Testimonials = () => {
       <div className="container flex w-full mx-auto lg:w-10/12 gap-x-5">
         <div className="flex w-1/4">
           <div className="flex flex-col w-1/4 mx-auto">
-            <button onClick={e => handleClick(e, -1)} className="w-full">
+            <button onClick={e => handleClick(e, "prev")} className="w-full">
               <span className="up-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[3vh] before:top-[3vh] before:right-[50%] before:skew-x-0 before:skew-y-[-25deg] after:left-[50%] after:skew-x-0 after:skew-y-[25deg]"></span>
             </button>
-            <button onClick={e => handleClick(e, 1)} className="w-full">
-              <span className="down-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[11vh] before:top-[11vh] before:right-[50%] before:skew-x-0 before:skew-y-[25deg] after:left-[50%] after:skew-x-0 after:skew-y-[-25deg]"></span>
+            <button onClick={e => handleClick(e, "next")} className="w-full">
+              <span className="down-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[9vh] before:top-[9vh] before:right-[50%] before:skew-x-0 before:skew-y-[25deg] after:left-[50%] after:skew-x-0 after:skew-y-[-25deg]"></span>
             </button>
           </div>
           <div className="flex flex-col w-3/4 mx-auto overflow-y-scroll max-h-60">
@@ -111,7 +111,7 @@ const Testimonials = () => {
                     data-index={index}
                     onClick={e => handleClick(e, index)}
                   >
-                    {testimonialSlide?.frontmatter?.title},
+                    {testimonialSlide?.frontmatter?.title}
                   </button>
                   <div className="text-base">
                     {testimonialSlide?.frontmatter?.memberRole}
