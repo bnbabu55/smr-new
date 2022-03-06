@@ -1,0 +1,44 @@
+RewriteEngine On
+
+# set the base URL prefix
+RewriteBase /
+
+# for requests for index.html, just respond with the file
+RewriteRule ^index.html$ - [END]
+
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301,E=HTTPS:1]
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# if requested path is not a valid filename, continue rewrite
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# if requested path is not a valid directory, continue rewrite
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# if you have continue to here, respond with index.html
+RewriteRule . /index.html [END]
+
+# BROWSER CACHING USING CACHE-CONTROL HEADERS
+<ifModule mod_headers.c>
+	<FilesMatch "\.(html|htm|json|xml|php)>
+		FileETag None
+		Header unset ETag
+		Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+		Header set Pragma "no-cache"
+		Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+	</FilesMatch>
+
+    # One year for font, image and video files
+    <filesMatch ".(gif|ico|jpg|jpeg|png|bmp|svg|swf|webp|avif|mp3|mp4|mpeg|ogg|webm|flv|woff|woff2|ttf|eot|otf)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </filesMatch>
+
+    # One month for CSS, JavaScript and PDF files
+    <filesMatch ".(js|pdf|css)$">
+        Header set Cache-Control "max-age=2592000, public, immutable"
+    </filesMatch>
+</ifModule>

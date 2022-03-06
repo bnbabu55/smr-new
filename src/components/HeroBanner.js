@@ -29,7 +29,7 @@ const HeroBanner = () => {
           gatsbyImageData(
             placeholder: BLURRED
             quality: 100
-            width: 603
+            width: 530
             formats: [AUTO]
           )
         }
