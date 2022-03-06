@@ -86,7 +86,7 @@ const HomeNews = () => {
               fluid:
                 post.featuredImage?.node?.localFile?.childImageSharp
                   ?.gatsbyImageData,
-              alt: post.featuredImage?.node?.alt || ``,
+              alt: post.featuredImage?.node?.altText || ``,
             }
             const title = post?.title
             return (
@@ -132,17 +132,21 @@ const HomeNews = () => {
                   >
                     {parse(post?.excerpt, options)}
                   </li>
-                  <hr className="flex mx-5 mt-auto border-b-[1/2] border-gray-500" />
-                  <Link
-                    to={`${post?.uri}`}
-                    itemProp="url"
-                    className="flex justify-between items-center w-full px-5 pb-5 text-sm font-semibold text-left font-Montserrat group"
-                  >
-                    Learn more
-                    <span className="text-2xl group-hover:rotate-180 group-hover:duration-500 group-hover:ease-in-out">
-                      &#10230;
-                    </span>
-                  </Link>
+                  <li>
+                    <hr className="flex mx-5 mt-auto border-b-[1/2] border-gray-500" />
+                  </li>
+                  <li>
+                    <Link
+                      to={`${post?.uri}`}
+                      itemProp="url"
+                      className="flex justify-between items-center w-full px-5 pb-5 text-sm font-semibold text-left font-Montserrat group"
+                    >
+                      Learn more
+                      <span className="text-2xl group-hover:rotate-180 group-hover:duration-500 group-hover:ease-in-out">
+                        &#10230;
+                      </span>
+                    </Link>
+                  </li>
                 </ul>
               </li>
             )

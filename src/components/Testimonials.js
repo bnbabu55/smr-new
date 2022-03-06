@@ -37,9 +37,9 @@ const Testimonials = () => {
     let targetSlide = 0
     let targetCard
     // let targetCard = document.querySelector('div[name="card"]')
-    const currentTitle = document.querySelectorAll("#title")
+    const currentTitle = document.querySelectorAll(".title")
     currentTitle.forEach(function (item) {
-      item.classList.remove("text-[#e55327]")
+      item.classList.remove("text-themeOrange-300")
     })
     const currentSlide = parseInt(
       document.querySelector("#currentSlide").dataset.index
@@ -71,7 +71,7 @@ const Testimonials = () => {
       `currentSlide: ${currentSlide} clicked ${next} target is ${targetSlide}`
     )
 
-    currentTitle[targetSlide].classList.add("text-[#e55327]")
+    currentTitle[targetSlide].classList.add("text-themeOrange-300")
     targetCard = document.querySelector(
       `div[name="card"][data-index="${targetSlide}"]`
     )
@@ -87,10 +87,18 @@ const Testimonials = () => {
       <div className="container flex w-full mx-auto lg:w-10/12 gap-x-5">
         <div className="flex w-1/4">
           <div className="flex flex-col w-1/4 mx-auto">
-            <button onClick={e => handleClick(e, "prev")} className="w-full">
+            <button
+              onClick={e => handleClick(e, "prev")}
+              className="w-full"
+              aria-label="up arrow"
+            >
               <span className="up-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[3vh] before:top-[3vh] before:right-[50%] before:skew-x-0 before:skew-y-[-25deg] after:left-[50%] after:skew-x-0 after:skew-y-[25deg]"></span>
             </button>
-            <button onClick={e => handleClick(e, "next")} className="w-full">
+            <button
+              onClick={e => handleClick(e, "next")}
+              className="w-full"
+              aria-label="down arrow"
+            >
               <span className="down-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[9vh] before:top-[9vh] before:right-[50%] before:skew-x-0 before:skew-y-[25deg] after:left-[50%] after:skew-x-0 after:skew-y-[-25deg]"></span>
             </button>
           </div>
@@ -104,10 +112,9 @@ const Testimonials = () => {
                   data-index={index}
                 >
                   <button
-                    className={`text-lg font-semibold font-Montserrat uppercase ${
-                      index === 0 ? "text-[#e55327]" : ""
+                    className={`title text-lg font-semibold font-Montserrat uppercase ${
+                      index === 0 ? "text-themeOrange-700" : ""
                     }`}
-                    id="title"
                     data-index={index}
                     onClick={e => handleClick(e, index)}
                   >

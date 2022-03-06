@@ -72,7 +72,7 @@ const SubscriptionForm = () => {
               console.log(error)
             })
         }}
-        className="w-full px-3 py-10 mx-auto bg-[#fc9902] border border-[#fc9902] lg:absolute lg:left-0 lg:right-0 lg:z-20 lg:-mt-16 rounded-2xl lg:w-10/12 lg:px-0"
+        className="w-full px-3 py-10 mx-auto bg-themeOrange-300 border border-themeOrange-300 lg:absolute lg:left-0 lg:right-0 lg:z-20 lg:-mt-16 rounded-2xl lg:w-10/12 lg:px-0"
       >
         <div className="flex flex-col items-center justify-between px-8 gap-y-3 lg:gap-y-0 lg:flex-row">
           <label

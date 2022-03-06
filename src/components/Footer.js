@@ -40,6 +40,7 @@ const Footer = () => {
               width="270"
               height="70"
               xmlns="http://www.w3.org/2000/svg"
+              role="img"
             >
               <filter
                 id="a"

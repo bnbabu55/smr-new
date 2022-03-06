@@ -35,7 +35,7 @@ const Statistics = () => {
             {({ isVisible }) => (
               <div>
                 {isVisible ? <CountUp start={0} end={32} /> : "32"}
-                <span className="text-[#e55327]">+</span>
+                <span className="text-themeOrange-300">+</span>
               </div>
             )}
           </VisibilitySensor>
@@ -49,7 +49,7 @@ const Statistics = () => {
             {({ isVisible }) => (
               <div>
                 {isVisible ? <CountUp start={0} end={248} /> : "248"}
-                <span className="text-[#e55327]">+</span>
+                <span className="text-themeOrange-300">+</span>
               </div>
             )}
           </VisibilitySensor>
@@ -63,7 +63,7 @@ const Statistics = () => {
             {({ isVisible }) => (
               <div>
                 {isVisible ? <CountUp start={0} end={917} /> : "917"}
-                <span className="text-[#e55327]">+</span>
+                <span className="text-themeOrange-300">+</span>
               </div>
             )}
           </VisibilitySensor>
@@ -77,7 +77,7 @@ const Statistics = () => {
             {({ isVisible }) => (
               <div>
                 {isVisible ? <CountUp start={0} end={10} /> : "10"}
-                <span className="text-[#e55327]">+</span>
+                <span className="text-themeOrange-300">+</span>
               </div>
             )}
           </VisibilitySensor>
