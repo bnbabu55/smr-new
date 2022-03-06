@@ -23,13 +23,13 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
 
       <div className="mt-12 mb-5 text-gray-600">
         <div>
-          <h2 className="text-5xl font-bold tracking-wide text-center font-Raleway text-themeBlue-600">
+          <h2 className="text-5xl font-bold tracking-wide text-center font-Montserrat text-themeBlue-600">
             SEARCH MARKETING NEWS
           </h2>
-          <p className="my-6 text-2xl font-semibold text-center uppercase font-Lusitana text-themeOrange-400">
+          <p className="my-6 text-2xl font-semibold text-center uppercase font-Montserrat text-themeOrange-400">
             Seo and SEM Marketing & Website Design News
           </p>
-          <p className="my-6 text-lg text-center font-Raleway text-themeGray-200">
+          <p className="my-6 text-lg text-center font-Montserrat text-themeGray-200">
             Stay current on leading online marketing trends and the latest
             website development <br />
             practices by opting-in to receive our monthly News posts.
@@ -90,7 +90,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                   <h2 className="py-3 -mt-2">
                     <span
                       itemProp="headline"
-                      className="text-3xl leading-none tracking-wide text-left font-Raleway font-bold text-themeBlue-600"
+                      className="text-3xl leading-none tracking-wide text-left font-Montserrat font-bold text-themeBlue-600"
                     >
                       {parse(title)}
                     </span>
@@ -101,7 +101,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                         <li key={cat?.id + index} className="pb-3">
                           <Link
                             to={`${cat?.uri}`}
-                            className="text-lg font-Raleway text-themeOrange-400"
+                            className="text-lg font-Montserrat text-themeOrange-400"
                           >
                             {`${
                               arr.length !== index + 1
@@ -122,7 +122,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                 />
               </li>
               <li className="items-center justify-center w-full">
-                <p className="py-3 text-xl font-Lusitana text-themeBlue-600">
+                <p className="py-3 text-xl font-Montserrat text-themeBlue-600">
                   {post.date}
                 </p>
                 <article
@@ -132,7 +132,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                 >
                   <div
                     itemProp="description"
-                    className="prose text-justify font-Raleway md:prose-lg max-w-none"
+                    className="prose text-justify font-Montserrat md:prose-lg max-w-none"
                   >
                     {parse(post?.content)}
                   </div>

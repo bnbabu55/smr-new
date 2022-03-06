@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <footer className="relative w-full mx-auto mt-5 lg:mt-20">
       <SubscriptionForm />
-      <div className="bg-[#2e2f31] text-white font-Raleway text-2xl pt-28 pb-16 pl-5 lg:pl-0">
+      <div className="bg-[#2e2f31] text-white font-Montserrat text-2xl pt-28 pb-16 pl-5 lg:pl-0">
         <div className="w-full pb-3 pl-2 mx-auto lg:pl-0 lg:w-10/12">
           <Link to="/">
             <svg
@@ -106,19 +106,19 @@ const Footer = () => {
         </div>
         <div className="flex flex-col w-full gap-3 pl-2 mx-auto lg:pl-0 lg:w-10/12 lg:flex-row">
           <div className="flex flex-col w-full gap-y-2">
-            <div className="font-bold uppercase text-bases">
+            <div className="uppercase text-22 font-semibold tracking-wide">
               Website SEO, design and development company
             </div>
-            <div className="flex gap-x-3">
+            <div className="flex gap-x-3 py-3 items-center">
               <a
                 href="https://www.facebook.com/Search-Marketing-Resource-108196670966/?ref=py_c"
                 target="_blank"
                 rel="noreferrer"
               >
                 <svg
-                  height="3rem"
+                  height="2.5rem"
                   viewBox="0 0 67.6 67.6"
-                  width="3rem"
+                  width="2.5rem"
                   xmlns="http://www.w3.org/2000/svg"
                   role="img"
                   aria-label="Facebook Icon"
@@ -140,9 +140,9 @@ const Footer = () => {
                 rel="noreferrer"
               >
                 <svg
-                  height="3rem"
+                  height="2.5rem"
                   viewBox="0 0 67.6 67.6"
-                  width="3rem"
+                  width="2.5rem"
                   xmlns="http://www.w3.org/2000/svg"
                   className="text-5xl text-linkedInBlue"
                   role="img"
@@ -161,11 +161,11 @@ const Footer = () => {
                 href="https://goo.gl/maps/wcmHRrgMzpD2"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center bg-white rounded-full w-[45px] h-[45px]"
+                className="flex items-center justify-center bg-white rounded-full w-[35px] h-[35px]"
               >
                 <svg
-                  height="24"
-                  width="27"
+                  height="20"
+                  width="23"
                   viewBox="0 0.43 1108.186 933.21"
                   xmlns="http://www.w3.org/2000/svg"
                   className="text-5xl"
@@ -258,9 +258,9 @@ const Footer = () => {
             </div>
           </div>
           <nav className="w-full">
-            <h2 className="pb-5 font-bold">Quicklinks</h2>
+            <h2 className="pb-5 text-22 font-semibold">Quicklinks</h2>
             {wpMenu?.menuItems?.nodes?.length > 0 ? (
-              <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
+              <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
                 {wpMenu?.menuItems?.nodes.map(menu => {
                   const pathVar = menu?.path
                   const anchorPosition = pathVar.indexOf("#")
@@ -277,7 +277,7 @@ const Footer = () => {
                     <Link
                       key={menu?.id}
                       to={pageAnchor}
-                      className="text-base font-semibold text-white rounded font-Raleway"
+                      className="text-sm text-white rounded font-Montserrat font-semibold"
                     >
                       {menu?.label}
                     </Link>
@@ -286,7 +286,7 @@ const Footer = () => {
               </div>
             ) : null}
           </nav>
-          <div className="text-base">
+          <div className="text-sm">
             <p className="pb-3">
               <a
                 href="mailto:sales@searchmarketingresource.com"
@@ -335,12 +335,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center py-3 m-auto text-xs font-semibold text-black bg-white footer-copyright font-Lusitana">
+      <div className="flex items-center justify-center py-3 m-auto text-sm text-black bg-white footer-copyright font-Montserrat">
         <div className="copyright-smr pl-11">
           Copyright © {new Date().getFullYear()}{" "}
           <Link
             to="/"
-            className="text-xs font-semibold text-black font-Lusitana hover:text-themeOrange-200"
+            className="text-sm text-black font-Montserrat hover:text-themeOrange-200"
           >
             Search Marketing Resource LLC -{" "}
           </Link>

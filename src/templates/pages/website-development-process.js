@@ -16,7 +16,7 @@ const WebDevPage = ({ data: { page, checkMark, graphics, devSlides } }) => {
       <Seo seoData={page?.seo} />
       <div className="w-full py-10 text-lg">
         <div className="w-11/12 mx-auto">
-          <h1 className="text-themeOrange-400 text-5xl font-Raleway font-bold tracking-wide text-center py-12">
+          <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center py-12">
             Website Development Process
           </h1>
           <p className="pb-3">

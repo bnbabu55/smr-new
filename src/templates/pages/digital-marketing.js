@@ -23,14 +23,14 @@ const DigMarkPage = ({ data: { page, seoImages } }) => {
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto pt-20 pb-10">
         <div className="wrapper">
-          <h1 className="text-themeOrange-400 text-5xl font-Raleway font-bold tracking-wide text-center">
+          <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center">
             SEO PROGRAMS
           </h1>
           <p className="py-5 text-center text-themeBlue-600 text-xl">
             Select the program you're interested in, to get a{" "}
             <span className="text-themeOrange-400 italic">free quote</span>
           </p>
-          <p className="px-4 py-5 text-themeGray-200 text-lg font-Raleway text-center mx-auto">
+          <p className="px-4 py-5 text-themeGray-200 text-lg font-Montserrat text-center mx-auto">
             For the past 15 years, Search Marketing Resource has been providing
             online marketing services ranging from 100/% turn-key solutions to
             ala carte programs tailored to a client's specific needs and budget.

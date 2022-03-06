@@ -45,13 +45,13 @@ const BlogIndex = ({
 
       <div className="my-16 text-gray-600">
         <div>
-          <h2 className="text-5xl font-bold tracking-wide text-center font-Raleway text-themeBlue-600">
+          <h2 className="text-5xl font-bold tracking-wide text-center font-Montserrat text-themeBlue-600">
             SEARCH MARKETING NEWS
           </h2>
-          <p className="my-6 text-2xl font-semibold text-center uppercase font-Lusitana text-themeOrange-400">
+          <p className="my-6 text-2xl font-semibold text-center uppercase font-Montserrat text-themeOrange-400">
             Seo and SEM Marketing & Website Design News
           </p>
-          <p className="my-6 text-lg text-center font-Raleway text-themeGray-200">
+          <p className="my-6 text-lg text-center font-Montserrat text-themeGray-200">
             Stay current on leading online marketing trends and the latest
             website development <br />
             practices by opting-in to receive our monthly News posts.
@@ -89,20 +89,20 @@ const BlogIndex = ({
                               <Link to={`${post.uri}`} itemProp="url">
                                 <span
                                   itemProp="headline"
-                                  className="text-base leading-none tracking-wider uppercase font-LusitanaBold text-themeOrange-400"
+                                  className="text-base leading-none tracking-wider uppercase font-MontserratBold text-themeOrange-400"
                                 >
                                   {parse(title)}
                                 </span>
                               </Link>
                             </h2>
-                            <p className="pb-2 text-sm font-Raleway text-themeGray-200">
+                            <p className="pb-2 text-sm font-Montserrat text-themeGray-200">
                               Posted by{" "}
                               <span>{`${post?.author?.node?.firstName} ${post?.author?.node?.lastName}`}</span>
                             </p>
                           </header>
                           <div
                             itemProp="description"
-                            className="text-sm font-Raleway text-themeGray-200"
+                            className="text-sm font-Montserrat text-themeGray-200"
                           >
                             {parse(post?.excerpt, {
                               replace: ({ attribs }) =>

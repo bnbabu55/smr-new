@@ -6,14 +6,14 @@ const ContactSection = () => {
     <div id="contact" className="text-white py-10 mx-auto">
       <div className="w-11/12 mx-auto">
         <div className="mx-auto flex flex-col justify-evenly">
-          <h2 className="mx-auto text-center font-Raleway text-themeOrange-400 text-5xl">
+          <h2 className="mx-auto text-center font-Montserrat text-themeOrange-400 text-5xl">
             CONTACT US
           </h2>
-          <h3 className="mx-auto text-center font-Lusitana text-themeBlue-600 text-2xl py-5">
+          <h3 className="mx-auto text-center font-Montserrat text-themeBlue-600 text-2xl py-5">
             WEBSITE SEO, DESIGN AND DEVELOPMENT COMPANY
           </h3>
 
-          <p className="mx-auto text-center w-3/5 leading-7 font-Raleway text-lg text-themeGray-200 pb-5">
+          <p className="mx-auto text-center w-3/5 leading-7 font-Montserrat text-lg text-themeGray-200 pb-5">
             Contact the Search Marketing Resource team to discuss your online
             marketing needs or website development requirements. We will provide
             a detailed proposal or schedule a brief call to help define the
@@ -22,7 +22,7 @@ const ContactSection = () => {
         </div>
         <div className="contact-content w-full flex flex-col lg:flex-row lg:gap-x-16 mx-auto bg-white my-5">
           <ContactForm />
-          <div className="w-full mt-5 lg:mt-0 mx-auto font-Lusitana text-themeGray-300">
+          <div className="w-full mt-5 lg:mt-0 mx-auto font-Montserrat text-themeGray-300">
             <div className="flex items-center pb-3">
               <span
                 className="text-themeBlue-600 text-2xl lg:text-5xl"

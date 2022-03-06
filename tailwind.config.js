@@ -6,8 +6,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Lusitana: ["Lusitana", "serif"],
-        Raleway: ["Raleway", "sans-serif"],
+        Montserrat: ["Montserrat", "sans-serif"],
+      },
+      fontSize: {
+        22: ["22px", "30px"],
       },
       letterSpacing: {
         wider2xl: ".25em",

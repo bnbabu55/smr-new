@@ -13,7 +13,7 @@ const HeroBanner = () => {
       ) {
         childImageSharp {
           gatsbyImageData(
-            width: 2000
+            width: 1366
             placeholder: BLURRED
             quality: 100
             formats: [AUTO]
@@ -62,18 +62,18 @@ const HeroBanner = () => {
     <BgImage
       image={pluginImage}
       id="hero-banner"
-      className="flex flex-col items-start justify-center"
+      className="flex flex-col items-start justify-center bg-cover"
     >
       <div className="flex items-center justify-between px-5 pt-20 mx-auto">
-        <div className="w-[55%] text-right uppercase font-Raleway font-black text-white lg:text-6xl text-3xl">
+        <div className="w-[60%] text-right uppercase font-Montserrat font-bold text-white lg:text-[69px] text-3xl">
           <div className=" relative flex flex-col justify-center items-center z-[1]">
-            <span className="hidden lg:block absolute z-[1] w-[150px] h-[150px] -top-[100px] -left-[5px] bg-themeYellow-400 before:content-[''] before:absolute before:w-[90px] before:h-[90px] before:top-[30px] before:left-[30px] before:bg-[#01487e] before:z-[2] after:content-[''] after:absolute after:w-[85px] after:h-[60px] after:top-[90px] after:left-[65px] after:bg-[#01487e] after:z-[3]" />
-            <div className="z-10">Award Winning</div>
+            <span className="hidden lg:block absolute z-[1] w-[150px] h-[150px] -top-[108px] -left-[5px] bg-themeYellow-400 before:content-[''] before:absolute before:w-[90px] before:h-[90px] before:top-[30px] before:left-[30px] before:bg-[#01487e] before:z-[2] after:content-[''] after:absolute after:w-[85px] after:h-[60px] after:top-[90px] after:left-[65px] after:bg-[#01487e] after:z-[3]" />
+            <div className="z-10 mb-12 pl-2">Award Winning</div>
             <div className="z-10">Digital Marketing</div>
           </div>
         </div>
         <GatsbyImage
-          className="w-[45%]"
+          className="w-[40%]"
           image={bannerImg1.childImageSharp.gatsbyImageData}
           alt="hero banner illustration"
         />
@@ -83,7 +83,7 @@ const HeroBanner = () => {
           return (
             <div
               key={card.id}
-              className="flex flex-col items-center justify-between gap-10 p-10 bg-[#ededed] hover:bg-themeYellow-400 relative z-20 hover:after:content-[''] hover:after:w-full hover:after:h-full hover:after:absolute hover:after:-z-20 hover:after:bg-transparent hover:after:border-2 hover:after:border-themeYellow-400 hover:after:top-3 hover:after:left-3"
+              className="w-full flex flex-col items-center justify-between gap-10 p-10 bg-[#ededed] hover:bg-themeYellow-400 relative z-20 hover:after:content-[''] hover:after:w-full hover:after:h-full hover:after:absolute hover:after:-z-20 hover:after:bg-transparent hover:after:border-2 hover:after:border-themeYellow-400 hover:after:top-3 hover:after:left-3 group"
             >
               <div className="flex items-center justify-between gap-x-4">
                 <GatsbyImage
@@ -94,18 +94,21 @@ const HeroBanner = () => {
                   alt={card.frontmatter.altTxt}
                   className="w-2/5"
                 />
-                <h3 className="w-3/5 text-xl font-semibold font-Raleway">
+                <h3 className="w-3/5 text-22 px-2 font-semibold font-Montserrat">
                   {card.frontmatter.title}
                 </h3>
               </div>
-              <div className="py-5 text-lg">
+              <div className="py-5 text-sm leading-7">
                 <MDXRenderer>{card.body}</MDXRenderer>
               </div>
               <Link
                 to={card.frontmatter.websiteUrl}
-                className="mt-auto cursor-pointer"
+                className="mt-auto cursor-pointer text-left w-full text-sm font-semibold flex justify-between items-center"
               >
                 Learn more
+                <span className="text-2xl group-hover:rotate-180 group-hover:duration-500 group-hover:ease-in-out">
+                  &#10230;
+                </span>
               </Link>
             </div>
           )
@@ -113,16 +116,16 @@ const HeroBanner = () => {
       </div>
       <div className="grid w-full grid-cols-2 grid-rows-4 gap-5 px-5 mx-auto lg:grid-cols-4 lg:grid-rows-2 lg:w-10/12">
         <div className="col-span-2 row-span-2">
-          <h3 className="text-2xl font-bold uppercase font-Raleway">
+          <h3 className="text-22 font-semibold uppercase font-Montserrat">
             Digital Marketing Services
           </h3>
-          <p className="py-5 text-base font-Lusitana">
+          <p className="py-5 text-sm font-Montserrat leading-7">
             Award winning search optimized website development services,
             professionaly designed with industry leading graphics, and
             functionality. Our site presentations focus on your target audience
             and corporate brand while promoting your products and services.
           </p>
-          <ul className="grid grid-cols-2 gap-5 pt-5 text-sm list-none list-inside font-Raleway">
+          <ul className="grid grid-cols-2 gap-5 pt-5 text-sm list-none list-inside font-Montserrat">
             <li>
               <span className="pr-2">✓</span>Mockup Design Review
             </li>
@@ -162,34 +165,34 @@ const HeroBanner = () => {
           </ul>
         </div>
         <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
-          <h3 className="text-2xl font-bold uppercase font-Raleway">
+          <h3 className="text-22 font-semibold uppercase font-Montserrat">
             Digital Marketing
           </h3>
-          <p className="py-5 text-base font-Lusitana">
+          <p className="py-5 text-sm leading-7 font-Montserrat">
             Award winning search optimized website development services.
           </p>
         </div>
         <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
-          <h3 className="text-2xl font-bold uppercase font-Raleway">
+          <h3 className="text-22 font-semibold uppercase font-Montserrat">
             Digital Marketing
           </h3>
-          <p className="py-5 text-base font-Lusitana">
+          <p className="py-5 text-sm leading-7 font-Montserrat">
             Award winning search optimized website development services.
           </p>
         </div>
         <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
-          <h3 className="text-2xl font-bold uppercase font-Raleway">
+          <h3 className="text-22 font-semibold uppercase font-Montserrat">
             Digital Marketing
           </h3>
-          <p className="py-5 text-base font-Lusitana">
+          <p className="py-5 text-sm leading-7 font-Montserrat">
             Award winning search optimized website development services.
           </p>
         </div>
         <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
-          <h3 className="text-2xl font-bold uppercase font-Raleway">
+          <h3 className="text-22 font-semibold uppercase font-Montserrat">
             Digital Marketing
           </h3>
-          <p className="py-5 text-base font-Lusitana">
+          <p className="py-5 text-sm leading-7 font-Montserrat">
             Award winning search optimized website development services.
           </p>
         </div>

@@ -19,7 +19,7 @@ const ContactForm = () => {
   return (
     <div className="w-full contact-wrapper mx-auto border border-gray-700 rounded">
       <form
-        className="text-gray-700 contact-form flex flex-col justify-center align-center m-10 font-Raleway text-base"
+        className="text-gray-700 contact-form flex flex-col justify-center align-center m-10 font-Montserrat text-base"
         onSubmit={async event => {
           event.preventDefault()
 
@@ -78,7 +78,7 @@ const ContactForm = () => {
             })
         }}
       >
-        <div className="font-Lusitana font-semibold text-xs text-red-600 pb-4">
+        <div className="font-Montserrat font-semibold text-xs text-red-600 pb-4">
           Required *
         </div>
         <div className="grid gap-y-6 lg:gap-y-6 lg:gap-x-6 grid-cols-1 lg:grid-cols-2">
@@ -190,7 +190,7 @@ const ContactForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full text-white uppercase bg-themeOrange-400 rounded font-LusitanaSemiBold px-8 py-2 tracking-wider text-base shadow-2xl mt-5 col-span-2"
+            className="w-full text-white uppercase bg-themeOrange-400 rounded font-MontserratSemiBold px-8 py-2 tracking-wider text-base shadow-2xl mt-5 col-span-2"
           >
             Submit
           </button>
@@ -198,13 +198,15 @@ const ContactForm = () => {
       </form>
       <div id="response-message" style={{ padding: "20px" }}>
         {formResp.status === "loading" && (
-          <p className="font-Raleway text-black">Sending....</p>
+          <p className="font-Montserrat text-black">Sending....</p>
         )}
         {formResp.status === "error" && (
-          <p className="font-Raleway text-red-600">{formResp.body_response}</p>
+          <p className="font-Montserrat text-red-600">
+            {formResp.body_response}
+          </p>
         )}
         {formResp.status === "success" && (
-          <p className="font-Raleway text-green-600">
+          <p className="font-Montserrat text-green-600">
             Your form has been submitted successfully, thank you.
           </p>
         )}

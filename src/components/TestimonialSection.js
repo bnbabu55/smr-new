@@ -62,11 +62,11 @@ export const TestimonialSection = () => {
               alt="Testimonial slider 1"
             />
           </figure>
-          <div className="title absolute top-5 left-10 lg:top-1/4 lg:left-32 text-themeBlue-600 text-2xl lg:text-7xl font-Raleway font-bold text-center">
+          <div className="title absolute top-5 left-10 lg:top-1/4 lg:left-32 text-themeBlue-600 text-2xl lg:text-7xl font-Montserrat font-bold text-center">
             Hear What Our <br />
             Clients Say!
           </div>
-          <div className="subtitle absolute top-2/3 left-5 lg:left-32 text-themeOrange-400 text-sm lg:text-4xl font-RalewayLight text-center">
+          <div className="subtitle absolute top-2/3 left-5 lg:left-32 text-themeOrange-400 text-sm lg:text-4xl font-MontserratLight text-center">
             Best Customer Service & Highest <br />
             Client Testimonials
           </div>
@@ -77,22 +77,22 @@ export const TestimonialSection = () => {
         <div className="top_padding_page top_padding page_content_website faq-page top-space">
           <div className="wrapper">
             <div className="top_content">
-              <h1 className="text-themeOrange-400 text-5xl font-Raleway font-bold tracking-wide text-center">
+              <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center">
                 CUSTOMER TESTIMONIALS
               </h1>
             </div>
             <div className="py-5">
-              <h2 className="text-themeBlue-600 text-2xl font-LusitanaSemiBold uppercase pb-5">
+              <h2 className="text-themeBlue-600 text-2xl font-MontserratSemiBold uppercase pb-5">
                 DIGITAL MARKETING & WEBSITE DESIGN CLIENT TESTIMONIALS
               </h2>
-              <p className="text-themeGray-200 text-lg font-Raleway">
+              <p className="text-themeGray-200 text-lg font-Montserrat">
                 We have provided a compilation of remarks our customers have
                 submitted with regards to the various services the Search
                 Marketing Resource team has provided over the years. The
                 different requirements performed included Content Writing,{" "}
                 <Link
                   to="/search-marketing-programs"
-                  className="text-themeGray-200 text-lg font-Raleway underline"
+                  className="text-themeGray-200 text-lg font-Montserrat underline"
                 >
                   SEO Programs
                 </Link>
@@ -100,35 +100,35 @@ export const TestimonialSection = () => {
                 optimized{" "}
                 <Link
                   to="/optimized-press-release"
-                  className="text-themeGray-200 text-lg font-Raleway underline"
+                  className="text-themeGray-200 text-lg font-Montserrat underline"
                 >
                   Press Releases
                 </Link>
                 {", "}
                 <Link
                   to="/email-marketing"
-                  className="text-themeGray-200 text-lg font-Raleway underline"
+                  className="text-themeGray-200 text-lg font-Montserrat underline"
                 >
                   Email Marketing campaigns
                 </Link>
                 {", "}
                 <Link
                   to="/google-ads-management"
-                  className="text-themeGray-200 text-lg font-Raleway underline"
+                  className="text-themeGray-200 text-lg font-Montserrat underline"
                 >
                   Google Adwords management
                 </Link>
                 {", "}
                 <Link
                   to="/social-media"
-                  className="text-themeGray-200 text-lg font-Raleway underline"
+                  className="text-themeGray-200 text-lg font-Montserrat underline"
                 >
                   Social Media posts
                 </Link>
                 {", "}
                 <Link
                   to="/web-design-services"
-                  className="text-themeGray-200 text-lg font-Raleway underline"
+                  className="text-themeGray-200 text-lg font-Montserrat underline"
                 >
                   Website Development
                 </Link>
@@ -145,18 +145,18 @@ export const TestimonialSection = () => {
                 key={testimonial.id}
                 id={testimonial.id}
               >
-                <h3 className="text-themeOrange-400 text-2xl font-LusitanaSemiBold uppercase text-left">
+                <h3 className="text-themeOrange-400 text-2xl font-MontserratSemiBold uppercase text-left">
                   {testimonial.frontmatter.companyName} {" - "}
                   <a
                     href={testimonial.frontmatter.websiteUrl}
-                    className="text-themeBlue-600 text-xl font-Lusitana lowercase"
+                    className="text-themeBlue-600 text-xl font-Montserrat lowercase"
                   >
                     {testimonial.frontmatter.websiteUrl
                       .replace(/^\/\/|^.*?:(\/\/)?/g, "")
                       .replace(/\/$/, "")}
                   </a>
                 </h3>
-                <div className="text-themeGray-200 text-lg font-Raleway py-5">
+                <div className="text-themeGray-200 text-lg font-Montserrat py-5">
                   <MDXRenderer className="text-lg text-justify prose">
                     {testimonial.body}
                   </MDXRenderer>
@@ -164,7 +164,7 @@ export const TestimonialSection = () => {
                 <h3 className="text-themeBlue-600 text-2xl font-NothingYouCouldDo font-bold uppercase text-left">
                   {testimonial.frontmatter.title}
                 </h3>
-                <span className="text-themeGray-200 text-lg font-Raleway">
+                <span className="text-themeGray-200 text-lg font-Montserrat">
                   {testimonial.frontmatter.memberRole}
                 </span>
               </div>

@@ -23,7 +23,7 @@ const DesktopNav = ({ navMenu }) => {
     return (
       <li
         key={subMenuItem?.id}
-        className="px-2 py-1 mx-2 text-xs font-black text-white uppercase rounded font-Raleway"
+        className="px-2 py-1 mx-2 text-xs font-semibold text-white uppercase rounded font-Montserrat"
       >
         <Link to={pageAnchor} activeClassName="active">
           {subMenuItem?.label}
@@ -142,7 +142,7 @@ const DesktopNav = ({ navMenu }) => {
                   <Link
                     data-id={menuItem?.label}
                     to={pageAnchor}
-                    className="py-1 text-xs font-black tracking-wide uppercase rounded x-2 font-Raleway"
+                    className="py-1 text-xs font-semibold tracking-wide uppercase rounded x-2 font-Montserrat"
                     activeClassName="active"
                     partiallyActive={menuItem?.label === "News" ? true : false}
                   >

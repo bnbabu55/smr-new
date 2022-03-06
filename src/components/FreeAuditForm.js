@@ -24,7 +24,7 @@ const FreeAuditForm = ({ home }) => {
       } border-gray-300`}
     >
       <div className="top_content flex flex-col justify-center items-center">
-        <div className="pt-8 text-white text-2xl text-center font-LusitanaBold pb-5">
+        <div className="pt-8 text-white text-2xl text-center font-MontserratBold pb-5">
           Is Your Website Search Engine Optimized? Get a Free Website SEO Audit!
         </div>
         <div
@@ -33,7 +33,7 @@ const FreeAuditForm = ({ home }) => {
           } mx-auto`}
         >
           <form
-            className="audit-form m-10 font-Raleway text-base"
+            className="audit-form m-10 font-Montserrat text-base"
             onSubmit={async event => {
               event.preventDefault()
 
@@ -93,7 +93,7 @@ const FreeAuditForm = ({ home }) => {
             }}
           >
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
-              <div className="order-1 font-LusitanaBold text-2xl uppercase text-white md:col-span-2 lg:col-span-1">
+              <div className="order-1 font-MontserratBold text-2xl uppercase text-white md:col-span-2 lg:col-span-1">
                 Free Site Audit!
               </div>
               <input
@@ -159,7 +159,7 @@ const FreeAuditForm = ({ home }) => {
                 ${
                   home ? "bg-themeBlue-200" : "bg-themeOrange-400"
                 }                 
-                font-LusitanaSemiBold px-16 py-3 tracking-wider text-base shadow-2xl rounded`}
+                font-MontserratSemiBold px-16 py-3 tracking-wider text-base shadow-2xl rounded`}
                 disabled={formResp === "success" ? true : false}
               >
                 {formResp === "success" ? "Submitted" : "Submit"}
@@ -168,15 +168,15 @@ const FreeAuditForm = ({ home }) => {
           </form>
           <div id="response-message" style={{ padding: "20px" }}>
             {formResp.status === "loading" && (
-              <p className="font-Raleway text-black">Sending....</p>
+              <p className="font-Montserrat text-black">Sending....</p>
             )}
             {formResp.status === "error" && (
-              <p className="font-Raleway text-red-600">
+              <p className="font-Montserrat text-red-600">
                 {formResp.body_response}
               </p>
             )}
             {formResp.status === "success" && (
-              <p className="font-Raleway text-green-600">
+              <p className="font-Montserrat text-green-600">
                 Your form has been submitted successfully, thank you.
               </p>
             )}
@@ -193,7 +193,7 @@ const FreeAuditForm = ({ home }) => {
             </p>
           </div>
         </div>
-        <p className="text-white text-lg font-Raleway text-center py-5 mx-5">
+        <p className="text-white text-lg font-Montserrat text-center py-5 mx-5">
           The Search Marketing Resource team will review your website and
           deliver a report that provides both a graded review on how well your
           site has been Search Engine optimized for the keywords or phrases you

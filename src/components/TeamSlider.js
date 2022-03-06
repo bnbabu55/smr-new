@@ -29,17 +29,17 @@ const TeamSlider = () => {
         <h2>
           <Link
             to={`/about`}
-            className="text-themeOrange-400 font-Raleway text-5xl hover:underline"
+            className="text-themeOrange-400 font-Montserrat text-5xl hover:underline"
           >
             The Team
           </Link>
         </h2>
 
-        <h3 className="text-themeBlue-600 font-Lusitana text-2xl uppercase my-5">
+        <h3 className="text-themeBlue-600 font-Montserrat text-2xl uppercase my-5">
           Knowledgeable, Experienced, Professional &amp; Dedicated
         </h3>
 
-        <p className="font-Raleway text-lg text-center">
+        <p className="font-Montserrat text-lg text-center">
           The Search Marketing Resource team members are the most seasoned and
           highly trained group of graphic designers, programmers and inbound
           marketers’ in the industry
@@ -80,11 +80,11 @@ const TeamSlider = () => {
               >
                 <Link
                   to={`/about`}
-                  className="font-Raleway text-2xl uppercase text-themeOrange-400 pb-1"
+                  className="font-Montserrat text-2xl uppercase text-themeOrange-400 pb-1"
                 >
                   {teamMember.title}
                 </Link>
-                <div className="font-Raleway text-base pb-5">
+                <div className="font-Montserrat text-base pb-5">
                   {teamMember.memberRole}
                 </div>
                 <div

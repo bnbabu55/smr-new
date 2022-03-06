@@ -65,12 +65,12 @@ const Testimonials = () => {
           <Link
             key="testi-link"
             to="#"
-            className="font-Raleway text-themeBlue-600 text-5xl lg:text-7xl"
+            className="font-Montserrat text-themeBlue-600 text-5xl lg:text-7xl"
           >
             Testimonials
             <span
               key="testi-span"
-              className="font-Raleway text-themeOrange-100 text-base lg:text-2xl pl-5 py-0"
+              className="font-Montserrat text-themeOrange-100 text-base lg:text-2xl pl-5 py-0"
             >
               read more...
             </span>
@@ -134,13 +134,13 @@ const Testimonials = () => {
                     />
                   </a>
                 </div>
-                <div className="font-Raleway text-base text-themeGray-400 text-center line-clamp-4">
+                <div className="font-Montserrat text-base text-themeGray-400 text-center line-clamp-4">
                   {portfolio?.Portfolio_Details?.testimonial?.testimonial}
                 </div>
                 <div className="font-NothingYouCouldDo font-bold text-2xl text-themeDarkBrown pt-8">
                   {portfolio?.Portfolio_Details?.testimonial?.name}
                 </div>
-                <div className="font-Lusitana text-xl text-themeOrange-100">
+                <div className="font-Montserrat text-xl text-themeOrange-100">
                   {portfolio?.Portfolio_Details?.testimonial?.position}
                 </div>
               </div>

@@ -14,14 +14,14 @@ const SEOPage = ({ data: { page, webImage } }) => {
         <div className="top_padding_page top_padding page_content_website faq-page top-space">
           <div className="wrapper">
             <div className="top_content">
-              <h1 className="text-themeOrange-400 text-5xl font-Raleway font-bold tracking-wide text-center">
+              <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center">
                 SEO PROGRAM, SOCIAL MEDIA &amp; EMAIL MARKETING
               </h1>
-              <h2 className="text-themeBlue-600 text-2xl font-LusitanaSemiBold tracking-wide text-center pt-5">
+              <h2 className="text-themeBlue-600 text-2xl font-MontserratSemiBold tracking-wide text-center pt-5">
                 Digital Marketing Program #3
               </h2>
             </div>
-            <div className="py-5 text-themeGray-200 text-lg font-Raleway text-center">
+            <div className="py-5 text-themeGray-200 text-lg font-Montserrat text-center">
               <p>
                 This group of Digital Marketing services is very effective to
                 increasing your keyword search rankings quickly, managing your
@@ -49,11 +49,11 @@ const SEOPage = ({ data: { page, webImage } }) => {
           </div>
         </div>
         <div>
-          <h2 className="text-themeBlue-600 text-3xl font-LusitanaBold tracking-wide text-center py-10">
+          <h2 className="text-themeBlue-600 text-3xl font-MontserratBold tracking-wide text-center py-10">
             SEO PROGRAM &amp; SOCIAL MEDIA CAMPAIGN (H2)
           </h2>
           <div className="pb-8">
-            <h3 className="font-Raleway text-2xl text-themeOrange-400 underline">
+            <h3 className="font-Montserrat text-2xl text-themeOrange-400 underline">
               Website Technical Review
             </h3>
             <p className="pt-3 text-lg">
@@ -67,7 +67,7 @@ const SEOPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Raleway text-2xl text-themeBlue-600 underline">
+            <h3 className="font-Montserrat text-2xl text-themeBlue-600 underline">
               Keyword Selection Process
             </h3>
             <p className="pt-3 text-lg">
@@ -82,7 +82,7 @@ const SEOPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Raleway text-2xl text-themeOrange-400 underline">
+            <h3 className="font-Montserrat text-2xl text-themeOrange-400 underline">
               SEO Performance Dashboard
             </h3>
             <p className="pt-3 text-lg">
@@ -98,7 +98,7 @@ const SEOPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Raleway text-2xl text-themeBlue-600 underline">
+            <h3 className="font-Montserrat text-2xl text-themeBlue-600 underline">
               Website Page Optimization - SEO Attributes
             </h3>
             <p className="pt-3 text-lg">
@@ -150,7 +150,7 @@ const SEOPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Raleway text-2xl text-themeOrange-400 underline">
+            <h3 className="font-Montserrat text-2xl text-themeOrange-400 underline">
               Social Media Management
             </h3>
             <p className="pt-3 text-lg">
@@ -178,7 +178,7 @@ const SEOPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Raleway text-2xl text-themeBlue-600 underline">
+            <h3 className="font-Montserrat text-2xl text-themeBlue-600 underline">
               News (Blog) Writing Services
             </h3>
             <p className="pt-3 text-lg">
@@ -201,7 +201,7 @@ const SEOPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Raleway text-2xl text-themeOrange-400 underline">
+            <h3 className="font-Montserrat text-2xl text-themeOrange-400 underline">
               Optimized Press Releases
             </h3>
             <p className="pt-3 text-lg">
@@ -216,7 +216,7 @@ const SEOPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Raleway text-2xl text-themeBlue-600 underline">
+            <h3 className="font-Montserrat text-2xl text-themeBlue-600 underline">
               Business Directory Submissions
             </h3>
             <p className="pt-3 text-lg">
@@ -244,7 +244,7 @@ const SEOPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Raleway text-2xl text-themeOrange-400 underline">
+            <h3 className="font-Montserrat text-2xl text-themeOrange-400 underline">
               Backlink Programs
             </h3>
             <p className="pt-3 text-lg">
@@ -267,7 +267,7 @@ const SEOPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Raleway text-2xl text-themeBlue-600 underline">
+            <h3 className="font-Montserrat text-2xl text-themeBlue-600 underline">
               Effective Email Marketing Management
             </h3>
             <p className="pt-3 text-lg">

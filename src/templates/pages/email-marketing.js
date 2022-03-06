@@ -11,10 +11,10 @@ const EmailMktPage = ({ data: { page, emIcons } }) => {
     <Layout>
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto py-10">
-        <h1 className="text-themeOrange-400 text-5xl font-Raleway font-bold tracking-wide text-center pt-10">
+        <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center pt-10">
           Email Marketing Services
         </h1>
-        <div className="py-10 text-themeGray-200 text-lg font-Raleway">
+        <div className="py-10 text-themeGray-200 text-lg font-Montserrat">
           <h3 className="font-semibold text-2xl text-themeBlue-600 text-left pb-3">
             EFFECTIVE EMAIL MARKETING MANAGEMENT
           </h3>

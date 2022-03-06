@@ -238,7 +238,7 @@ const MobileNav = ({ navMenu }) => {
           aria-label="Primary Navigation"
           className={`w-full mx-auto ${menuOpen ? "block" : "hidden"}`}
         >
-          <ul className="p-0 m-0 text-base font-semibold list-none font-Raleway">
+          <ul className="p-0 m-0 text-xs font-semibold list-none font-Montserrat">
             {navMenu.map((menuItem, index) => {
               const depth = 1
               const menuName = `sidebar-menu-${depth}-${index}`

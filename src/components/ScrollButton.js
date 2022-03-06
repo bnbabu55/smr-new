@@ -30,7 +30,7 @@ const ScrollButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={` ${isVisible ? "fixed bottom-20 right-10 z-100" : ""}`}
+      className={` ${isVisible ? "fixed bottom-20 right-5 z-100" : ""}`}
       aria-label="Scroll to top button"
     >
       <svg

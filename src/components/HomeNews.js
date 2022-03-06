@@ -21,7 +21,7 @@ const HomeNews = () => {
                 childImageSharp {
                   gatsbyImageData(
                     layout: FIXED
-                    width: 340
+                    width: 359
                     height: 240
                     placeholder: BLURRED
                     formats: [AUTO, WEBP]
@@ -47,14 +47,14 @@ const HomeNews = () => {
         return (
           <p
             itemProp="description"
-            className="mt-2 text-base text-justify font-Lusitana line-clamp-3"
+            className="mt-2 text-sm text-justify font-Montserrat line-clamp-3 leading-7"
           >
             {domToReact(domNode.children, options)}
           </p>
         )
       }
 
-      if (domNode.attribs.class === "read-more") {
+      if (domNode.attribs.class === "more-link") {
         return <></>
       }
     },
@@ -67,17 +67,17 @@ const HomeNews = () => {
           <h2 className="pb-8">
             <Link
               to="/news"
-              className="text-5xl font-Raleway font-bold hover:underline"
+              className="text-4xl font-semibold font-Montserrat uppercase hover:underline"
             >
               Latest from the Blog
             </Link>
           </h2>
 
-          <p className="pb-8 text-lg text-center font-Lusitana">
+          <p className="pb-8 text-sm text-center font-Montserrat leading-7">
             Stay Current on Search Marketing Resource events, industry news,
             recent projects, the latest design practices and online marketing
-            advice - Opt In on our News Page and receive posts alerts to your
-            email
+            advice <br /> - Opt In on our News Page and receive posts alerts to
+            your email
           </p>
         </div>
         <ul className="flex flex-col lg:flex-row lg:gap-x-8 gap-y-5">
@@ -90,8 +90,8 @@ const HomeNews = () => {
             }
             const title = post?.title
             return (
-              <li key={post.id} className="flex">
-                <ul className="flex flex-col gap-3 overflow-hidden bg-white shadow-xl rounded-xl">
+              <li key={post.id} className="flex w-full">
+                <ul className="flex flex-col gap-3 overflow-hidden bg-white shadow-xl rounded-3xl">
                   <li className="flex items-start justify-start mb-3">
                     <Link
                       to={`${post?.uri}`}
@@ -106,7 +106,7 @@ const HomeNews = () => {
                     </Link>
                   </li>
                   <li className="z-30 flex items-start justify-end pr-3 mx-5 mb-3 -mt-16">
-                    <p className="bg-[#01487e] text-white font-Raleway font-semibold p-2">
+                    <p className="bg-[#01487e] text-white text-xs font-Montserrat font-semibold p-2">
                       <span className="text-2xl">{post.day.split("/")[0]}</span>
                       <br />
                       {post.day.split("/")[1]}
@@ -120,25 +120,28 @@ const HomeNews = () => {
                     <Link
                       to={`${post?.uri}`}
                       itemProp="url"
-                      className="w-full text-lg font-bold text-left uppercase font-Raleway"
+                      className="w-full text-22 font-semibold text-left font-Montserrat hover:underline"
                     >
                       {parse(title)}
                     </Link>
                   </li>
                   <li
-                    className="flex items-start justify-start mx-5 mb-3 font-Lusitana"
+                    className="flex items-start justify-start mx-5 mb-3 font-Montserrat"
                     itemScope
                     itemType="http://schema.org/Article"
                   >
                     {parse(post?.excerpt, options)}
                   </li>
-                  <hr className="flex mx-5 mt-auto border-b border-gray-500" />
+                  <hr className="flex mx-5 mt-auto border-b-[1/2] border-gray-500" />
                   <Link
                     to={`${post?.uri}`}
                     itemProp="url"
-                    className="flex justify-between w-full px-5 pb-5 text-lg font-bold text-left font-Lusitana"
+                    className="flex justify-between items-center w-full px-5 pb-5 text-sm font-semibold text-left font-Montserrat group"
                   >
-                    Blog {i + 1} <span>&rarr;</span>
+                    Learn more
+                    <span className="text-2xl group-hover:rotate-180 group-hover:duration-500 group-hover:ease-in-out">
+                      &#10230;
+                    </span>
                   </Link>
                 </ul>
               </li>

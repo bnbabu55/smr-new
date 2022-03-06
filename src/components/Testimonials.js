@@ -94,7 +94,7 @@ const Testimonials = () => {
               <span className="down-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[9vh] before:top-[9vh] before:right-[50%] before:skew-x-0 before:skew-y-[25deg] after:left-[50%] after:skew-x-0 after:skew-y-[-25deg]"></span>
             </button>
           </div>
-          <div className="flex flex-col w-3/4 mx-auto overflow-y-scroll max-h-60">
+          <div className="flex flex-col w-3/4 mx-auto overflow-y-scroll max-h-72 gap-y-3">
             {testimonialSlides?.nodes?.map((testimonialSlide, index) => {
               return (
                 <div
@@ -104,7 +104,7 @@ const Testimonials = () => {
                   data-index={index}
                 >
                   <button
-                    className={`text-lg font-bold font-Raleway uppercase ${
+                    className={`text-lg font-semibold font-Montserrat uppercase ${
                       index === 0 ? "text-[#e55327]" : ""
                     }`}
                     id="title"
@@ -113,7 +113,7 @@ const Testimonials = () => {
                   >
                     {testimonialSlide?.frontmatter?.title}
                   </button>
-                  <div className="text-base">
+                  <div className="text-sm">
                     {testimonialSlide?.frontmatter?.memberRole}
                   </div>
                 </div>
@@ -122,7 +122,7 @@ const Testimonials = () => {
           </div>
         </div>
         <div
-          className="w-3/4 pr-2 prose-lg text-justify lg:pl-10 lg:pr-0 max-w-none"
+          className="w-3/4 pr-2 prose text-justify lg:px-20 max-w-none"
           id="currentSlide"
           data-index={testimonialSlide.id}
         >
