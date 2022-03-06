@@ -105,7 +105,7 @@ const HomeNews = () => {
                       />
                     </Link>
                   </li>
-                  <li className="z-30 flex items-start justify-end pr-3 mx-5 mb-3 -mt-16">
+                  <li className="z-30 flex items-start justify-end pr-3 mx-5 mb-3 -mt-14">
                     <p className="bg-[#01487e] text-white text-xs font-Montserrat font-semibold p-2">
                       <span className="text-2xl">{post.day.split("/")[0]}</span>
                       <br />
@@ -132,7 +132,7 @@ const HomeNews = () => {
                   >
                     {parse(post?.excerpt, options)}
                   </li>
-                  <li>
+                  <li className="mt-auto">
                     <hr className="flex mx-5 mt-auto border-b-[1/2] border-gray-500" />
                   </li>
                   <li>

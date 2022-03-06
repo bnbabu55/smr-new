@@ -45,7 +45,12 @@ module.exports = {
         update: false,
       },
     },
-
+    {
+      resolve: "gatsby-plugin-brotli",
+      options: {
+        extensions: ["css", "html", "js", "svg"],
+      },
+    },
     {
       /**
        * First up is the WordPress source plugin that connects Gatsby
