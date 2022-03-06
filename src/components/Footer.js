@@ -278,53 +278,50 @@ const Footer = () => {
               </div>
             ) : null}
           </nav>
-          <div className="text-sm">
-            <p className="pb-3">
+          <ul className="text-sm flex flex-col gap-y-5">
+            <li>
               <a
                 href="mailto:sales@searchmarketingresource.com"
-                className="hover:text-themeYellow-400"
+                className="hover:text-themeYellow-400 block pb-2"
               >
                 sales@searchmarketingresource.com
               </a>
-              <br />
               <a
                 href="tel:888-842-9033x11"
                 className="hover:text-themeYellow-400"
               >
                 888-842-9033 x 11
               </a>
-            </p>
-            <p className="pb-3">
+            </li>
+            <li>
               <a
                 href="mailto:support@searchmarketingresource.com"
-                className="hover:text-themeYellow-400"
+                className="hover:text-themeYellow-400 block pb-2"
               >
                 support@searchmarketingresource.com
               </a>
-              <br />
               <a
                 href="tel:888-842-9033x12"
                 className="hover:text-themeYellow-400"
               >
                 888-842-9033 x 12
               </a>
-            </p>
-            <p className="pb-3">
+            </li>
+            <li>
               <a
                 href="mailto:accounting@searchmarketingresource.com"
-                className="hover:text-themeYellow-400"
+                className="hover:text-themeYellow-400 block pb-2"
               >
                 accounting@searchmarketingresource.com
               </a>
-              <br />
               <a
                 href="tel:888-842-9033x14"
                 className="hover:text-themeYellow-400"
               >
                 888-842-9033 x 14
               </a>
-            </p>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="flex items-center justify-center py-3 m-auto text-sm text-black bg-white footer-copyright font-Montserrat">
