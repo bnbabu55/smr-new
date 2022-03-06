@@ -16,7 +16,7 @@ const HeroBanner = () => {
             width: 1366
             placeholder: BLURRED
             quality: 100
-            formats: [AUTO]
+            formats: [AVIF, WEBP, AUTO]
           )
         }
       }
@@ -30,7 +30,7 @@ const HeroBanner = () => {
             placeholder: BLURRED
             quality: 100
             width: 530
-            formats: [AUTO]
+            formats: [AVIF, WEBP, AUTO]
           )
         }
       }
@@ -47,7 +47,11 @@ const HeroBanner = () => {
             websiteUrl
             featuredImage {
               childImageSharp {
-                gatsbyImageData(width: 70, layout: FIXED, formats: [AUTO])
+                gatsbyImageData(
+                  width: 70
+                  layout: FIXED
+                  formats: [AVIF, WEBP, AUTO]
+                )
               }
             }
           }
@@ -105,7 +109,7 @@ const HeroBanner = () => {
                 to={card.frontmatter.websiteUrl}
                 className="mt-auto cursor-pointer text-left w-full text-sm font-semibold flex justify-between items-center"
               >
-                Learn more
+                Get More Info
                 <span className="text-2xl group-hover:rotate-180 group-hover:duration-500 group-hover:ease-in-out">
                   &#10230;
                 </span>

@@ -60,7 +60,7 @@ const SMServices = () => {
                   to={smSlide.frontmatter.websiteUrl}
                   className="cursor-pointer underline text-sm font-semibold"
                 >
-                  Read more
+                  Read more about our {smSlide.frontmatter.title} offerings
                 </Link>
               </div>
             </BgImage>
@@ -83,7 +83,7 @@ const SMServices = () => {
                   to={smSlide.frontmatter.websiteUrl}
                   className="cursor-pointer underline text-sm font-semibold"
                 >
-                  Read More
+                  Read more about our {smSlide.frontmatter.title} offerings
                 </Link>
               </div>
             </BgImage>

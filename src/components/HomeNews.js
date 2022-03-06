@@ -141,7 +141,7 @@ const HomeNews = () => {
                       itemProp="url"
                       className="flex justify-between items-center w-full px-5 pb-5 text-sm font-semibold text-left font-Montserrat group"
                     >
-                      Learn more
+                      See Full Article
                       <span className="text-2xl group-hover:rotate-180 group-hover:duration-500 group-hover:ease-in-out">
                         &#10230;
                       </span>
