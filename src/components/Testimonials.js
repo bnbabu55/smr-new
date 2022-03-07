@@ -39,7 +39,7 @@ const Testimonials = () => {
     // let targetCard = document.querySelector('div[name="card"]')
     const currentTitle = document.querySelectorAll(".title")
     currentTitle.forEach(function (item) {
-      item.classList.remove("text-themeOrange-300")
+      item.classList.remove("text-themeOrange-600")
     })
     const currentSlide = parseInt(
       document.querySelector("#currentSlide").dataset.index
@@ -113,7 +113,7 @@ const Testimonials = () => {
                 >
                   <button
                     className={`title text-lg font-semibold font-Montserrat uppercase ${
-                      index === 0 ? "text-themeOrange-700" : ""
+                      index === 0 ? "text-themeOrange-600" : ""
                     }`}
                     data-index={index}
                     onClick={e => handleClick(e, index)}
