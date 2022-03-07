@@ -36,7 +36,6 @@ const Testimonials = () => {
     e.preventDefault()
     let targetSlide = 0
     let targetCard
-    // let targetCard = document.querySelector('div[name="card"]')
     const currentTitle = document.querySelectorAll(".title")
     currentTitle.forEach(function (item) {
       item.classList.remove("text-themeOrange-600")
@@ -71,7 +70,7 @@ const Testimonials = () => {
       `currentSlide: ${currentSlide} clicked ${next} target is ${targetSlide}`
     )
 
-    currentTitle[targetSlide].classList.add("text-themeOrange-300")
+    currentTitle[targetSlide].classList.add("text-themeOrange-600")
     targetCard = document.querySelector(
       `div[name="card"][data-index="${targetSlide}"]`
     )
