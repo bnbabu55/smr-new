@@ -1,16 +1,11 @@
 const path = require(`path`)
 const fs = require("fs")
-// const chunk = require(`lodash/chunk`)
 const chunk = (arr, chunkSize = 1, cache = []) => {
   const tmp = [...arr]
   if (chunkSize <= 0) return cache
   while (tmp.length) cache.push(tmp.splice(0, chunkSize))
   return cache
 }
-
-// This is a simple debugging tool
-// dd() will prettily dump to the terminal and kill the process
-// const { dd } = require(`dumper.js`)
 
 /**
  * exports.createPages is a built-in Gatsby Node API.
@@ -48,7 +43,7 @@ exports.createPages = async gatsbyUtilities => {
     console.log("no blogs to show")
 
     await gatsbyUtilities.actions.createPage({
-      path: `/blog`,
+      path: `/news`,
 
       // use the blog post archive template as the page component
       component: path.resolve(`./src/templates/blog-post-archive.js`),
@@ -65,10 +60,10 @@ exports.createPages = async gatsbyUtilities => {
         postsPerPage: 1,
         totalPages: 1,
         currentPage: 1,
-        currentPageBase: `/blog/`,
+        currentPageBase: `/news/`,
 
-        nextPagePath: `/blog`,
-        previousPagePath: `/blog`,
+        nextPagePath: `/news`,
+        previousPagePath: `/news`,
         paginationArray: pagination(1, 1),
       },
     })
@@ -209,7 +204,6 @@ async function createBlogPostArchive({ posts, gatsbyUtilities }) {
           totalPages,
           currentPage: pageNumber,
           currentPageBase: `/news/`,
-
           nextPagePath: getPagePath(pageNumber + 1),
           previousPagePath: getPagePath(pageNumber - 1),
           paginationArray: paginationArray,

@@ -77,7 +77,7 @@ const RecentPosts = () => {
                 >
                   <header>
                     <h2 className="-mt-2">
-                      <Link to={`/news${post?.uri}`} itemProp="url">
+                      <Link to={`${post?.uri}`} itemProp="url">
                         <span
                           itemProp="headline"
                           className="text-xs tracking-wider uppercase font-MontserratBold text-themeOrange-400"

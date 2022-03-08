@@ -6,8 +6,6 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import Categories from "../components/Categories"
 import RecentPosts from "../components/RecentPosts"
-import ContactSection from "../components/ContactSection"
-import SubscriptionForm from "../components/SubscriptionForm"
 
 const BlogIndex = ({
   data,
@@ -41,7 +39,7 @@ const BlogIndex = ({
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={seoData} />
 
       <div className="my-16 text-gray-600">
@@ -71,7 +69,7 @@ const BlogIndex = ({
                 const title = post?.title
 
                 return (
-                  <li key={post.uri} className="pb-8">
+                  <li key={post.uri.replace("/blog", "")} className="pb-8">
                     <ul className="flex flex-col md:flex-row">
                       <li className="w-full md:w-2/6">
                         <GatsbyImage
@@ -87,7 +85,10 @@ const BlogIndex = ({
                         >
                           <header>
                             <h2 className="-mt-2">
-                              <Link to={`${post.uri}`} itemProp="url">
+                              <Link
+                                to={`${post.uri.replace("/blog", "")}`}
+                                itemProp="url"
+                              >
                                 <span
                                   itemProp="headline"
                                   className="text-base leading-none tracking-wider uppercase font-MontserratBold text-themeOrange-400"
@@ -120,7 +121,6 @@ const BlogIndex = ({
             </ol>
           </div>
           <div className="sidebar">
-            <SubscriptionForm />
             <RecentPosts />
             <Categories />
           </div>
@@ -185,32 +185,6 @@ const BlogIndex = ({
               </li>
             )
           })}
-          {/* {Array.from({ length: totalPages }, (_, i) => (
-            <li
-              key={`pagination-number${i + 1}`}
-              style={{
-                margin: 0,
-              }}
-            >
-              <Link
-                to={`${i === 0 ? currentPageBase : currentPageBase + (i + 1)}`}
-                className={`${
-                  i + 1 === currentPage
-                    ? "text-white bg-themeBlue-200 hover:bg-themeBlue-600"
-                    : "text-themeBlue-200 hover:text-themeBlue-600"
-                }
-                `}
-                style={{
-                  marginTop: "0.1rem",
-                  marginBottom: "0.1rem",
-                  padding: "0.5rem",
-                  textDecoration: "none",
-                }}
-              >
-                {i + 1}
-              </Link>
-            </li>
-          ))} */}
           {!isLast && (
             <li>
               <Link
@@ -229,7 +203,6 @@ const BlogIndex = ({
           )}
         </ul>
       </div>
-      <ContactSection />
     </Layout>
   )
 }

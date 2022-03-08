@@ -68,10 +68,10 @@ module.exports = {
           `https://newsmr.devsmr-development.com/blog/graphql`,
         type: {
           Post: {
-            limit: 5,
+            limit: 10,
           },
           Portfolio: {
-            limit: 5,
+            limit: 10,
           },
         },
         schema: {

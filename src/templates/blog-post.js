@@ -6,8 +6,6 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import Categories from "../components/Categories"
 import RecentPosts from "../components/RecentPosts"
-import ContactSection from "../components/ContactSection"
-import SubscriptionForm from "../components/SubscriptionForm"
 
 const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
   const featuredImage = {
@@ -16,6 +14,12 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
     alt: post.featuredImage?.node?.alt || ``,
   }
   const title = post?.title
+
+  let regEx = /\/services\//
+  let regEx1 = /\/industry\//
+  let filteredCat = post?.categories?.nodes
+    .filter(y => !y.uri.match(regEx))
+    .filter(y => !y.uri.match(regEx1))
 
   return (
     <Layout location={location}>
@@ -96,11 +100,11 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                     </span>
                   </h2>
                   <ul className="flex pb-3">
-                    {post?.categories?.nodes.map((cat, index, arr) => {
+                    {filteredCat?.map((cat, index, arr) => {
                       return (
                         <li key={cat?.id + index} className="pb-3">
                           <Link
-                            to={`${cat?.uri}`}
+                            to={`${cat?.uri.replace("/blog", "")}`}
                             className="text-lg font-Montserrat text-themeOrange-400"
                           >
                             {`${
@@ -132,7 +136,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                 >
                   <div
                     itemProp="description"
-                    className="prose text-justify font-Montserrat md:prose-lg max-w-none"
+                    className="entry-content prose text-justify font-Montserrat md:prose-lg max-w-none"
                   >
                     {parse(post?.content)}
                   </div>
@@ -189,13 +193,11 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
             </ul>
           </div>
           <div className="sidebar">
-            <SubscriptionForm />
             <RecentPosts />
             <Categories />
           </div>
         </div>
       </div>
-      <ContactSection />
     </Layout>
   )
 }

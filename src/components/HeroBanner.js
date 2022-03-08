@@ -66,7 +66,7 @@ const HeroBanner = () => {
     <BgImage
       image={pluginImage}
       id="hero-banner"
-      className="flex flex-col items-start justify-center bg-cover"
+      className="flex flex-col items-start justify-center bg-auto bg-top"
     >
       <div className="flex items-center justify-between px-5 pt-20 mx-auto">
         <div className="w-[60%] text-right uppercase font-Montserrat font-bold text-white lg:text-[69px] text-3xl">
