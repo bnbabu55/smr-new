@@ -168,7 +168,7 @@
     text-decoration: none;
   }
 
-  .footer-nav a {
+  footer nav a {
     position: relative;
     display: inline-block;
     font-size: 1em;
@@ -186,12 +186,13 @@
   }
 
   nav ul li:hover > a,
-  .footer-nav a:hover {
+  footer nav a:hover {
     background-position: 0 100%;
     text-decoration: underline;
   }
 
-  nav ul li a.active {
+  nav ul li a.active,
+  footer nav a.active {
     background: #ffa800;
     background-clip: text;
     -webkit-background-clip: text;

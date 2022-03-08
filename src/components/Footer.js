@@ -270,6 +270,7 @@ const Footer = () => {
                       key={menu?.id}
                       to={pageAnchor}
                       className="text-sm text-white rounded font-Montserrat font-semibold"
+                      activeClassName="active"
                     >
                       {menu?.label}
                     </Link>
