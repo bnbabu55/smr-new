@@ -16,13 +16,14 @@ SwiperCore.use([Autoplay, Pagination])
 
 const WebDesignPage = ({
   data: { page, bgImage, checkMark, sbClient, slides, clientSlides },
+  location,
 }) => {
   const pluginImage = getImage(bgImage.childImageSharp.gatsbyImageData)
 
   const image = convertToBgImage(pluginImage)
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <BackgroundImage
         Tag="section"

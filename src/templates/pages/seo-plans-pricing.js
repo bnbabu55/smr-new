@@ -11,7 +11,10 @@ import SEOProgramSelection from "../../components/SEOProgramSelection"
 import ComparisionTable from "../../components/ComparisionTable"
 import FreeQuoteForm from "../../components/FreeQuoteForm"
 
-const SEOPlansPage = ({ data: { page, bgImage, googleImage, seoImages } }) => {
+const SEOPlansPage = ({
+  data: { page, bgImage, googleImage, seoImages },
+  location,
+}) => {
   const useShareableState = () => {
     const [selectedProgram, setSelectedProgram] = useState("silver")
     const [formProgram, setFormProgram] = useState("silver")
@@ -28,7 +31,7 @@ const SEOPlansPage = ({ data: { page, bgImage, googleImage, seoImages } }) => {
   const image = convertToBgImage(pluginImage)
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <BackgroundImage
         Tag="section"

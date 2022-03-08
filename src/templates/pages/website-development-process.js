@@ -8,11 +8,14 @@ import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-const WebDevPage = ({ data: { page, checkMark, graphics, devSlides } }) => {
+const WebDevPage = ({
+  data: { page, checkMark, graphics, devSlides },
+  location,
+}) => {
   const analyticsImage = graphics.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-full py-10 text-lg">
         <div className="w-11/12 mx-auto">

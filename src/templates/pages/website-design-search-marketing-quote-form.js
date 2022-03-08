@@ -7,7 +7,7 @@ import SEOProgramSelection from "../../components/SEOProgramSelection"
 import FreeQuoteForm from "../../components/FreeQuoteForm"
 import WebDesignForm from "../../components/WebDesignForm"
 
-const WebDesignQuotePage = ({ data: { page, seoImages } }) => {
+const WebDesignQuotePage = ({ data: { page, seoImages }, location }) => {
   const useShareableState = () => {
     const [selectedProgram, setSelectedProgram] = useState("silver")
     const [formProgram, setFormProgram] = useState("silver")
@@ -26,7 +26,7 @@ const WebDesignQuotePage = ({ data: { page, seoImages } }) => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto pt-20 pb-10">
         <div className="wrapper">

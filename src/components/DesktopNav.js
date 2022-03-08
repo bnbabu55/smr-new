@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const DesktopNav = ({ navMenu }) => {
+const DesktopNav = ({ navMenu, location }) => {
   function renderNavDropdown(dropdownMenu) {
     return (
       <ul className="absolute flex-col hidden w-[17rem] pt-5 pb-2 pl-2 -mx-3 z-[999] bg-themeBlue-300 group-hover:flex">
@@ -20,12 +20,19 @@ const DesktopNav = ({ navMenu }) => {
       pageAnchor = subMenuItem?.path
     }
     pageAnchor = pageAnchor.replace("/blog", "")
+    let parentId = subMenuItem.parentId
     return (
       <li
         key={subMenuItem?.id}
         className="px-2 py-1 mx-2 text-xs font-semibold text-white uppercase rounded font-Montserrat"
       >
-        <Link to={pageAnchor} activeClassName="active">
+        <Link
+          data-parentid={subMenuItem.parentId}
+          id={subMenuItem.id}
+          to={pageAnchor}
+          activeClassName="active"
+          state={{ parentId: parentId }}
+        >
           {subMenuItem?.label}
         </Link>
         {subMenuItem?.childItems?.nodes?.length > 0 &&
@@ -134,19 +141,30 @@ const DesktopNav = ({ navMenu }) => {
                   } `}
                 >
                   <Link
-                    data-id={menuItem?.label}
+                    id={menuItem.id}
                     to={pageAnchor}
-                    className="py-1 text-xs font-semibold tracking-wide uppercase rounded x-2 font-Montserrat"
+                    className={`py-1 text-xs font-semibold tracking-wide uppercase rounded x-2 font-Montserrat ${
+                      location?.state?.parentId === menuItem.id ? "active" : ""
+                    }`}
                     activeClassName="active"
-                    partiallyActive={menuItem?.label === "News" ? true : false}
+                    partiallyActive={true}
                   >
                     {menuItem?.label}
                     {menuItem?.childItems?.nodes?.length > 0 && (
-                      <i className="mx-1 h-[0.5em] w-[0.5em] inline-block align-middle border-l-[0.18em] border-l-solid border-l-white border-b-[0.18em] border-b-solid border-b-white -rotate-45 -mt-[0.25em] transition duration-150 ease-in-out group-hover:rotate-[225deg] group-hover:border-l-themeOrange-200 group-hover:border-b-themeOrange-200"></i>
+                      <i
+                        className={`mx-1 h-[0.5em] w-[0.5em] inline-block align-middle border-l-[0.18em] border-l-solid border-l-white border-b-[0.18em] border-b-solid border-b-white -rotate-45 -mt-[0.25em] transition duration-150 ease-in-out group-hover:rotate-[225deg] group-hover:border-l-themeOrange-200 group-hover:border-b-themeOrange-200 ${
+                          location?.state?.parentId === menuItem.id
+                            ? "border-l-themeOrange-200 border-b-themeOrange-200"
+                            : ""
+                        }`}
+                      ></i>
                     )}
                   </Link>
                   {menuItem?.childItems?.nodes?.length > 0
-                    ? renderNavDropdown(menuItem?.childItems?.nodes)
+                    ? renderNavDropdown(
+                        menuItem?.childItems?.nodes,
+                        menuItem.id
+                      )
                     : ""}
                 </li>
               )

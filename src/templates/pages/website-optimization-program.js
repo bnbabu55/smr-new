@@ -6,9 +6,9 @@ import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const WebOptPage = ({ data: { page, webImage } }) => {
+const WebOptPage = ({ data: { page, webImage }, location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto py-10">
         <div className="top_padding_page top_padding page_content_website faq-page top-space">

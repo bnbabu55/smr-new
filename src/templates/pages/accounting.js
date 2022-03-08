@@ -6,9 +6,9 @@ import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 import PaymentForm from "../../components/PaymentForm"
 
-const AccountingPage = ({ data: { page } }) => {
+const AccountingPage = ({ data: { page }, location }) => {
   return (
-    <Layout className="overflow-x-hidden break-all">
+    <Layout location={location} className="overflow-x-hidden break-all">
       <Seo seoData={page?.seo} />
       <div>
         <h1 className="w-11/12 mx-auto font-Montserrat font-bold text-5xl text-themeOrange-400 text-center py-5">

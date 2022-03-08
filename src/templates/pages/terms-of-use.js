@@ -9,13 +9,13 @@ import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
 
-const TermsPage = ({ data: { page, plxImage } }) => {
+const TermsPage = ({ data: { page, plxImage }, location }) => {
   const sectionImage = getImage(plxImage.childImageSharp.gatsbyImageData)
 
   const image2 = convertToBgImage(sectionImage)
 
   return (
-    <Layout className="overflow-x-hidden break-all">
+    <Layout location={location} className="overflow-x-hidden break-all">
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto">
         <h1 className="font-Montserrat font-bold text-5xl text-themeOrange-400 text-center py-8">

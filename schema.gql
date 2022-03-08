@@ -1,4 +1,4 @@
-### Type definitions saved at 2022-02-21T05:58:09.913Z ###
+### Type definitions saved at 2022-03-07T16:41:41.391Z ###
 
 type File implements Node @dontInfer {
   sourceInstanceName: String!
@@ -665,6 +665,11 @@ type WpUser implements Node & WpNode & WpUniformResourceIdentifiable & WpComment
 }
 
 interface WpCommenter @isPlaceholder {
+  """
+  Avatar object for user. The avatar object can be retrieved in different sizes by specifying the size argument.
+  """
+  avatar: WpAvatar
+
   """Identifies the primary key from the database."""
   databaseId: Int!
 
@@ -679,11 +684,6 @@ interface WpCommenter @isPlaceholder {
 
   """The url of the author of a comment."""
   url: String
-}
-
-interface WpDatabaseIdentifier @isPlaceholder {
-  """The unique identifier stored in the database"""
-  databaseId: Int!
 }
 
 """
@@ -731,6 +731,11 @@ type WpAvatar {
 
   """Width of the avatar image."""
   width: Int
+}
+
+interface WpDatabaseIdentifier @isPlaceholder {
+  """The unique identifier stored in the database"""
+  databaseId: Int!
 }
 
 """Connection between the User type and the Comment type"""
@@ -2911,6 +2916,11 @@ type WpWritingSettings {
 
 """A Comment Author object"""
 type WpCommentAuthor implements Node & WpNode & WpCommenter @dontInfer {
+  """
+  Avatar object for user. The avatar object can be retrieved in different sizes by specifying the size argument.
+  """
+  avatar: WpAvatar
+
   """Identifies the primary key from the database."""
   databaseId: Int!
 
@@ -3098,10 +3108,10 @@ input AVIFOptions {
 }
 
 input TransformOptions {
-  grayscale: Boolean = false
+  grayscale: Boolean
   duotone: DuotoneGradient
-  rotate: Int = 0
-  trim: Float = 0
+  rotate: Int
+  trim: Float
   cropFocus: ImageCropFocus = ATTENTION
   fit: ImageFit = COVER
 }
@@ -3122,12 +3132,12 @@ type ImageSharpResize {
 }
 
 type ImageSharp implements Node @childOf(types: ["File"]) @dontInfer {
-  fixed(width: Int, height: Int, base64Width: Int, jpegProgressive: Boolean = true, pngCompressionSpeed: Int = 4, grayscale: Boolean = false, duotone: DuotoneGradient, traceSVG: Potrace, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, toFormat: ImageFormat = AUTO, toFormatBase64: ImageFormat = AUTO, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int = 0, trim: Float = 0): ImageSharpFixed
+  fixed(width: Int, height: Int, base64Width: Int, jpegProgressive: Boolean = true, pngCompressionSpeed: Int = 4, grayscale: Boolean, duotone: DuotoneGradient, traceSVG: Potrace, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, toFormat: ImageFormat, toFormatBase64: ImageFormat, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int, trim: Float): ImageSharpFixed
   fluid(
     maxWidth: Int
     maxHeight: Int
     base64Width: Int
-    grayscale: Boolean = false
+    grayscale: Boolean
     jpegProgressive: Boolean = true
     pngCompressionSpeed: Int = 4
     duotone: DuotoneGradient
@@ -3136,14 +3146,14 @@ type ImageSharp implements Node @childOf(types: ["File"]) @dontInfer {
     jpegQuality: Int
     pngQuality: Int
     webpQuality: Int
-    toFormat: ImageFormat = AUTO
-    toFormatBase64: ImageFormat = AUTO
+    toFormat: ImageFormat
+    toFormatBase64: ImageFormat
     cropFocus: ImageCropFocus = ATTENTION
     fit: ImageFit = COVER
     background: String = "rgba(0,0,0,1)"
-    rotate: Int = 0
-    trim: Float = 0
-    sizes: String = ""
+    rotate: Int
+    trim: Float
+    sizes: String
 
     """
     A list of image widths to be generated. Example: [ 200, 340, 520, 890 ]
@@ -3267,7 +3277,7 @@ type ImageSharp implements Node @childOf(types: ["File"]) @dontInfer {
     backgroundColor: String
   ): JSON!
   original: ImageSharpOriginal
-  resize(width: Int, height: Int, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, jpegProgressive: Boolean = true, pngCompressionLevel: Int = 9, pngCompressionSpeed: Int = 4, grayscale: Boolean = false, duotone: DuotoneGradient, base64: Boolean = false, traceSVG: Potrace, toFormat: ImageFormat = AUTO, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int = 0, trim: Float = 0): ImageSharpResize
+  resize(width: Int, height: Int, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, jpegProgressive: Boolean = true, pngCompressionLevel: Int = 9, pngCompressionSpeed: Int = 4, grayscale: Boolean, duotone: DuotoneGradient, base64: Boolean, traceSVG: Potrace, toFormat: ImageFormat, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int, trim: Float): ImageSharpResize
 }
 
 type MdxFrontmatter {
@@ -3307,7 +3317,7 @@ type Mdx implements Node @childOf(mimeTypes: ["text/markdown", "text/x-markdown"
   frontmatter: MdxFrontmatter
   slug: String
   body: String!
-  excerpt(pruneLength: Int = 140, truncate: Boolean = false): String!
+  excerpt(pruneLength: Int = 140, truncate: Boolean): String!
   headings(depth: HeadingsMdx): [MdxHeadingMdx]
   html: String
   mdxAST: JSON

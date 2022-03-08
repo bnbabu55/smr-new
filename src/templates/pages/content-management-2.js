@@ -7,14 +7,14 @@ import FreeQuoteSection from "../../components/FreeQuoteSection"
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 
-const ContentPage = ({ data: { page, checkMarks, content } }) => {
+const ContentPage = ({ data: { page, checkMarks, content }, location }) => {
   const checkMarkBlue = checkMarks.nodes[0].childImageSharp.gatsbyImageData
   const checkMarkOrange = checkMarks.nodes[1].childImageSharp.gatsbyImageData
 
   const contentImage = content.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-full mx-auto text-center py-10">
         <h1 className="w-11/12 mx-auto text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center pt-10">

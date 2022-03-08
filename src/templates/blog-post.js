@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
   const title = post?.title
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={post?.seo} />
 
       <div className="mt-12 mb-5 text-gray-600">

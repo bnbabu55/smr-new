@@ -6,11 +6,14 @@ import FreeQuoteSection from "../../components/FreeQuoteSection"
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 
-const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
+const DirectoryListingPage = ({
+  data: { page, dSubmission, listings },
+  location,
+}) => {
   const submissionImage = dSubmission.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-full mx-auto text-center py-10">
         <div className="w-11/12 mx-auto">

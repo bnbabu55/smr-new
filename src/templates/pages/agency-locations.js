@@ -9,13 +9,16 @@ import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
 import Testimonials from "../../components/Testimonials"
 
-const LocationsPage = ({ data: { page, bgImage, seoImages, checkMark } }) => {
+const LocationsPage = ({
+  data: { page, bgImage, seoImages, checkMark },
+  location,
+}) => {
   const pluginImage = getImage(bgImage.childImageSharp.gatsbyImageData)
 
   const image = convertToBgImage(pluginImage)
 
   return (
-    <Layout className="overflow-x-hidden break-all">
+    <Layout location={location} className="overflow-x-hidden break-all">
       <Seo seoData={page?.seo} />
       <BackgroundImage
         Tag="section"

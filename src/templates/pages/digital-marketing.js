@@ -6,7 +6,7 @@ import ComparisionTable from "../../components/ComparisionTable"
 import SEOProgramSelection from "../../components/SEOProgramSelection"
 import FreeQuoteForm from "../../components/FreeQuoteForm"
 
-const DigMarkPage = ({ data: { page, seoImages } }) => {
+const DigMarkPage = ({ data: { page, seoImages }, location }) => {
   const useShareableState = () => {
     const [selectedProgram, setSelectedProgram] = useState("silver")
     const [formProgram, setFormProgram] = useState("silver")
@@ -19,7 +19,7 @@ const DigMarkPage = ({ data: { page, seoImages } }) => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto pt-20 pb-10">
         <div className="wrapper">

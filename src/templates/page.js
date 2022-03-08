@@ -4,9 +4,9 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import ContactSection from "../components/ContactSection"
 
-const PageTemplate = ({ data: { page } }) => {
+const PageTemplate = ({ data: { page }, location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       {page.title}
       <ContactSection />

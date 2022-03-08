@@ -13,7 +13,10 @@ import "../../styles/swiper-pagination.css"
 
 SwiperCore.use([Pagination, Navigation, Grid])
 
-const PortfolioPage = ({ data: { page, bgImage, defaultImage, clients } }) => {
+const PortfolioPage = ({
+  data: { page, bgImage, defaultImage, clients },
+  location,
+}) => {
   const pluginImage = getImage(bgImage.childImageSharp.gatsbyImageData)
   const image = convertToBgImage(pluginImage)
 
@@ -36,7 +39,7 @@ const PortfolioPage = ({ data: { page, bgImage, defaultImage, clients } }) => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <BackgroundImage
         Tag="section"

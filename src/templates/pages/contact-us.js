@@ -9,7 +9,7 @@ import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
 import ContactForm from "../../components/ContactForm"
 
-const ContactPage = ({ data: { page, bgImage, plxImage } }) => {
+const ContactPage = ({ data: { page, bgImage, plxImage }, location }) => {
   const pluginImage = getImage(bgImage.childImageSharp.gatsbyImageData)
   const sectionImage = getImage(plxImage.childImageSharp.gatsbyImageData)
 
@@ -17,7 +17,7 @@ const ContactPage = ({ data: { page, bgImage, plxImage } }) => {
   const image2 = convertToBgImage(sectionImage)
 
   return (
-    <Layout className="overflow-x-hidden break-all">
+    <Layout location={location} className="overflow-x-hidden break-all">
       <Seo seoData={page?.seo} />
       <BackgroundImage
         Tag="section"

@@ -8,6 +8,7 @@ import Seo from "../../components/Seo"
 
 const BusinessDirectoryPage = ({
   data: { page, checkMarks, dSubmission, listings, yext },
+  location,
 }) => {
   const checkMarkBlue = checkMarks.nodes[0].childImageSharp.gatsbyImageData
   const checkMarkOrange = checkMarks.nodes[1].childImageSharp.gatsbyImageData
@@ -15,7 +16,7 @@ const BusinessDirectoryPage = ({
   const yextImage = yext.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-full mx-auto text-center py-10">
         <div className="w-11/12 mx-auto">

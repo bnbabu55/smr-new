@@ -19,6 +19,7 @@ const BlogIndex = ({
     currentPage,
     paginationArray,
   },
+  location,
 }) => {
   const posts = data.allWpPost.nodes
   const isFirst = currentPage === 1
@@ -27,7 +28,7 @@ const BlogIndex = ({
 
   if (!posts.length) {
     return (
-      <Layout>
+      <Layout location={location}>
         <Seo seoData={seoData} />
         <div className="w-10/12 mx-auto my-16 text-2xl font-semibold text-gray-600">
           <p>

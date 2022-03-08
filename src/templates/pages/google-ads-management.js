@@ -8,13 +8,14 @@ import Seo from "../../components/Seo"
 
 const GoogleAdsPage = ({
   data: { page, smpIcons, checkMark, bid, perfRpt },
+  location,
 }) => {
   const checkMarkImage = checkMark.childImageSharp.gatsbyImageData
 
   const bidImage = bid.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto py-10">
         <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center pt-10">

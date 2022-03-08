@@ -9,8 +9,8 @@ import Testimonials from "../../components/Testimonials"
 import Statistics from "../../components/Statistics"
 import SMServices from "../../components/SMServices"
 
-const HomePage = ({ data: { page } }) => (
-  <Layout>
+const HomePage = ({ data: { page }, location }) => (
+  <Layout location={location}>
     <Seo seoData={page?.seo} />
     <HeroBanner />
     <Statistics />

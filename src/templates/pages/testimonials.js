@@ -7,9 +7,9 @@ import Seo from "../../components/Seo"
 import TestimonialSection from "../../components/TestimonialSection"
 import ContactSection from "../../components/ContactSection"
 
-const TestimonialsPage = ({ data: { page } }) => {
+const TestimonialsPage = ({ data: { page }, location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <TestimonialSection />
       <div className="flex">
