@@ -57,7 +57,7 @@ const MobileNav = ({ navMenu }) => {
       <li key={data.id}>
         <div
           depth={depth}
-          className={`flex items-center px-[18px] py-3 ${leftPadding[depth]}`}
+          className={`flex items-center px-[18px] py-1 ${leftPadding[depth]}`}
         >
           <Link
             to={pageAnchor}
@@ -70,7 +70,7 @@ const MobileNav = ({ navMenu }) => {
           </Link>
           {hasSubMenu && (
             <button
-              className={`flex h-[25px] w-[35px] justify-center items-center cursor-pointer after:content-[''] after:w-0 after:h-0 after:border-x-4 after:border-solid after:border-x-transparent after:border-t-4 after:border-t-white ${
+              className={`flex h-[16px] w-[35px] justify-center items-center cursor-pointer after:content-[''] after:w-0 after:h-0 after:border-x-4 after:border-solid after:border-x-transparent after:border-t-4 after:border-t-white ${
                 activeMenus.includes(menuName)
                   ? "after:rotate-180"
                   : "after:rotate-0"

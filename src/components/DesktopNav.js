@@ -24,7 +24,7 @@ const DesktopNav = ({ navMenu, location }) => {
     return (
       <li
         key={subMenuItem?.id}
-        className="px-2 py-1 mx-2 text-xs font-semibold text-white uppercase rounded font-Montserrat"
+        className="px-2 py-1 mx-2 text-xs font-bold text-white uppercase rounded font-Montserrat"
       >
         <Link
           data-parentid={subMenuItem.parentId}
@@ -143,7 +143,7 @@ const DesktopNav = ({ navMenu, location }) => {
                   <Link
                     id={menuItem.id}
                     to={pageAnchor}
-                    className={`py-1 text-xs font-semibold tracking-wide uppercase rounded x-2 font-Montserrat ${
+                    className={`py-1 text-xs font-bold tracking-wide uppercase rounded x-2 font-Montserrat ${
                       location?.state?.parentId === menuItem.id ? "active" : ""
                     }`}
                     activeClassName="active"
