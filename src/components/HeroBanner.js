@@ -68,8 +68,8 @@ const HeroBanner = () => {
       id="hero-banner"
       className="flex flex-col items-start justify-center bg-contain bg-top"
     >
-      <div className="flex items-center justify-between px-5 pt-20 mx-auto">
-        <div className="w-[60%] text-right uppercase font-Montserrat font-bold text-white lg:text-[69px] text-3xl">
+      <div className="flex items-center justify-between px-5 pt-5 lg:pt-20 mx-auto">
+        <div className="w-full mx-auto px-5 lg:px-0 lg:w-[60%] text-right uppercase font-Montserrat font-bold text-white lg:text-[69px] text-2xl">
           <div className=" relative flex flex-col justify-center items-center z-[1]">
             <span className="hidden lg:block absolute z-[1] w-[150px] h-[150px] -top-[108px] -left-[5px] bg-themeYellow-400 before:content-[''] before:absolute before:w-[90px] before:h-[90px] before:top-[30px] before:left-[30px] before:bg-[#01487e] before:z-[2] after:content-[''] after:absolute after:w-[85px] after:h-[60px] after:top-[90px] after:left-[65px] after:bg-[#01487e] after:z-[3]" />
             <div className="z-10 mb-12 ml-8">Award Winning</div>
@@ -77,7 +77,7 @@ const HeroBanner = () => {
           </div>
         </div>
         <GatsbyImage
-          className="w-[40%]"
+          className="w-[40%] hidden lg:block"
           image={bannerImg1.childImageSharp.gatsbyImageData}
           alt="hero banner illustration"
         />

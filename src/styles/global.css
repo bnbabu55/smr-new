@@ -323,7 +323,8 @@
   }
 
   #currentSlide::after {
-    content: "\275E";
+    /* content: "\275E"; */
+    content: "\201D";
     font-size: 26em;
     color: rgba(255, 0, 0, 0.1);
     position: absolute;
