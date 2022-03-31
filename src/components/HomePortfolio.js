@@ -34,19 +34,19 @@ const HomePortfolio = () => {
           <div className="flex items-center justify-center pb-8 text-center">
             <Link
               to={`/portfolio`}
-              className="text-5xl font-BebasNeue hover:underline"
+              className="text-4xl font-semibold font-Montserrat uppercase hover:underline"
             >
               Portfolio
             </Link>
           </div>
-          <p className="text-lg text-center font-Lato">
+          <p className="w-4/5 mx-auto text-sm text-center font-Montserrat">
             The Search Marketing Resource team has provided website graphic
             design services and online marketing solutions for thousands of
             businesses nationwide, and in every major vertical market including
             business-to-business, industrial, consumer based and retail based
             companies.
           </p>
-          <div className="grid grid-cols-2 grid-rows-4 pt-10 lg:mt-5 lg:grid-cols-4 lg:grid-rows-2">
+          <div className="grid items-center grid-cols-2 grid-rows-4 pt-10 lg:mt-5 lg:grid-cols-4 lg:grid-rows-2">
             <Link
               to={`/portfolio`}
               className="col-start-1 col-end-2 row-start-1 row-end-2 p-5 border-b border-r border-gray-500"
@@ -55,6 +55,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[0].name}
                 image={portfolioImages.nodes[0].childImageSharp.gatsbyImageData}
+                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
               />
             </Link>
             <Link
@@ -65,6 +66,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[1].name}
                 image={portfolioImages.nodes[1].childImageSharp.gatsbyImageData}
+                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
               />
             </Link>
             <Link
@@ -75,6 +77,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[2].name}
                 image={portfolioImages.nodes[2].childImageSharp.gatsbyImageData}
+                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
               />
             </Link>
             <Link
@@ -85,6 +88,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[3].name}
                 image={portfolioImages.nodes[3].childImageSharp.gatsbyImageData}
+                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
               />
             </Link>
             <Link
@@ -95,6 +99,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[4].name}
                 image={portfolioImages.nodes[4].childImageSharp.gatsbyImageData}
+                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
               />
             </Link>
             <Link
@@ -105,6 +110,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[5].name}
                 image={portfolioImages.nodes[5].childImageSharp.gatsbyImageData}
+                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
               />
             </Link>
             <Link
@@ -115,6 +121,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[6].name}
                 image={portfolioImages.nodes[6].childImageSharp.gatsbyImageData}
+                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
               />
             </Link>
             <Link
@@ -125,6 +132,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[7].name}
                 image={portfolioImages.nodes[7].childImageSharp.gatsbyImageData}
+                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
               />
             </Link>
           </div>

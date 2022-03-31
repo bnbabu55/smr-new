@@ -6,22 +6,22 @@ import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const WebOptPage = ({ data: { page, webImage } }) => {
+const WebOptPage = ({ data: { page, webImage }, location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto py-10">
         <div className="top_padding_page top_padding page_content_website faq-page top-space">
           <div className="wrapper">
             <div className="top_content">
-              <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center">
+              <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center">
                 WEBSITE SEARCH OPTIMIZATION
               </h1>
               <h2 className="text-themeBlue-600 text-2xl font-MontserratSemiBold tracking-wide text-center pt-5">
                 Digital Marketing Program #1
               </h2>
             </div>
-            <div className="py-5 text-themeGray-200 text-lg font-Lato">
+            <div className="py-5 text-themeGray-200 text-lg font-Montserrat">
               <p>
                 With this program, the focus is to search optimize every page of
                 your website to bring current with the algorithms, or
@@ -63,7 +63,7 @@ const WebOptPage = ({ data: { page, webImage } }) => {
             SEARCH MARKETING PROGRAM OVERVIEW
           </h2>
           <div className="pb-8">
-            <h3 className="font-Lato text-2xl text-themeBlue-600 underline">
+            <h3 className="font-Montserrat text-2xl text-themeBlue-600 underline">
               SEO Manager &amp; Team
             </h3>
             <p className="pt-3 text-lg">
@@ -75,7 +75,7 @@ const WebOptPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Lato text-2xl text-themeOrange-400 underline">
+            <h3 className="font-Montserrat text-2xl text-themeOrange-400 underline">
               Website Technical Review
             </h3>
             <p className="pt-3 text-lg">
@@ -88,7 +88,7 @@ const WebOptPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Lato text-2xl text-themeBlue-600 underline">
+            <h3 className="font-Montserrat text-2xl text-themeBlue-600 underline">
               Keyword Selection Process
             </h3>
             <p className="pt-3 text-lg">
@@ -100,7 +100,7 @@ const WebOptPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Lato text-2xl text-themeOrange-400 underline">
+            <h3 className="font-Montserrat text-2xl text-themeOrange-400 underline">
               SEO Performance Dashboard
             </h3>
             <p className="pt-3 text-lg">
@@ -114,7 +114,7 @@ const WebOptPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Lato text-2xl text-themeBlue-600 underline">
+            <h3 className="font-Montserrat text-2xl text-themeBlue-600 underline">
               SEO Monthly Planner
             </h3>
             <p className="pt-3 text-lg">
@@ -127,7 +127,7 @@ const WebOptPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Lato text-2xl text-themeOrange-400 underline">
+            <h3 className="font-Montserrat text-2xl text-themeOrange-400 underline">
               Page Content Rewrites
             </h3>
             <p className="pt-3 text-lg">
@@ -140,7 +140,7 @@ const WebOptPage = ({ data: { page, webImage } }) => {
             </p>
           </div>
           <div className="pb-8">
-            <h3 className="font-Lato text-2xl text-themeBlue-600 underline">
+            <h3 className="font-Montserrat text-2xl text-themeBlue-600 underline">
               Website Page Optimization - SEO Attributes
             </h3>
             <p className="pt-3 text-lg">
@@ -202,7 +202,7 @@ const WebOptPage = ({ data: { page, webImage } }) => {
             </ul>
           </div>
           <div className="pb-8">
-            <h3 className="font-Lato text-2xl text-themeOrange-400 underline">
+            <h3 className="font-Montserrat text-2xl text-themeOrange-400 underline">
               Digital Marketing Program
             </h3>
             <p className="pt-3 text-lg">

@@ -8,19 +8,20 @@ import Seo from "../../components/Seo"
 
 const GoogleAdsPage = ({
   data: { page, smpIcons, checkMark, bid, perfRpt },
+  location,
 }) => {
   const checkMarkImage = checkMark.childImageSharp.gatsbyImageData
 
   const bidImage = bid.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto py-10">
-        <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center pt-10">
+        <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center pt-10">
           Sponsored Search Ad Management Services
         </h1>
-        <div className="py-10 text-themeGray-200 text-lg font-Lato grid grid-cols-1 lg:grid-cols-2 gap-x-3">
+        <div className="py-10 text-themeGray-200 text-lg font-Montserrat grid grid-cols-1 lg:grid-cols-2 gap-x-3">
           <div className="col-start-1 col-end-2 row-start-1 row-end-2">
             <h3 className="font-semibold text-2xl text-themeBlue-600 text-left pb-3">
               PPC CAMPAIGN MANAGEMENT
@@ -275,7 +276,7 @@ const GoogleAdsPage = ({
           </div>
           <div className="clear-both"></div>
         </div>
-        <div className="py-10 text-themeGray-200 text-lg font-Lato">
+        <div className="py-10 text-themeGray-200 text-lg font-Montserrat">
           <h3 className="font-semibold text-2xl text-themeBlue-600 text-left pb-3">
             CAMPAIGN TRACKING & REPORTING
           </h3>

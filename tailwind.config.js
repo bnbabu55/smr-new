@@ -1,13 +1,15 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx, html, css}",
     "./content/**/*.{js,jsx,ts,tsx,html,md,mdx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        Lusitana: ["Lusitana", "serif"],
-        Raleway: ["Raleway", "sans-serif"],
+        Montserrat: ["Montserrat", "sans-serif"],
+      },
+      fontSize: {
+        22: ["22px", "30px"],
       },
       letterSpacing: {
         wider2xl: ".25em",
@@ -26,9 +28,18 @@ module.exports = {
           100: "#FFEC19",
           200: "#ffa800",
           300: "#fc9902",
-          400: "#b95e02",
-          700: "#7c3f02",
+          400: "#ca7a02",
+          600: "#975c01",
+          700: "#4c2e01",
         },
+        themeYellow: {
+          400: "#ed950d",
+        },
+        facebookBlue: "#4267B2",
+        linkedInBlue: "#0072b1",
+      },
+      listStyleType: {
+        tickmark: "✓",
       },
     },
   },

@@ -3,7 +3,7 @@ import React from "react"
 const ComparisionTable = () => {
   return (
     <div className="comparision-table text-themeOrange-400 shadow-themeShadow">
-      <table className="w-full table-fixed border-collapse font-Lato font-semibold text-sm text-center">
+      <table className="w-full table-fixed border-collapse font-Montserrat font-semibold text-sm text-center">
         <thead>
           <tr className="font-bold text-xs md:text-lg bg-gray-200">
             <th>Services</th>

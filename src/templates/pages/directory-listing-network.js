@@ -6,15 +6,18 @@ import FreeQuoteSection from "../../components/FreeQuoteSection"
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 
-const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
+const DirectoryListingPage = ({
+  data: { page, dSubmission, listings },
+  location,
+}) => {
   const submissionImage = dSubmission.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-full mx-auto text-center py-10">
         <div className="w-11/12 mx-auto">
-          <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center pt-10">
+          <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center pt-10">
             BUSINESS LISTING NETWORK
           </h1>
           <div className="py-10 text-themeGray-200 text-left text-lg">
@@ -116,7 +119,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[0].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>2FindLocal</span>
                   <span>Active Monthly Users: 100,000</span>
                 </h3>
@@ -134,7 +137,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[1].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>8Coupons</span>
                   <span>Active Monthly Users: 500,000</span>
                 </h3>
@@ -153,7 +156,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[2].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>ABLocal</span>
                   <span>Active Monthly Users: 50,000</span>
                 </h3>
@@ -174,7 +177,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[3].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Allonesearch</span>
                   <span>Active Monthly Users: 20,000</span>
                 </h3>
@@ -192,7 +195,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[4].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Credibility.com</span>
                   <span>Active Monthly Users: 300,000</span>
                 </h3>
@@ -210,7 +213,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[5].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>GetFave</span>
                   <span>Active Monthly Users: 2M</span>
                 </h3>
@@ -227,7 +230,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[6].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Hotfrog</span>
                   <span>Active Monthly Users: 1.6M</span>
                 </h3>
@@ -246,7 +249,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[7].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>iGlobal</span>
                   <span>Active Monthly Users: 4M</span>
                 </h3>
@@ -265,7 +268,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[8].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>iBegin</span>
                   <span>Active Monthly Users: 20,000</span>
                 </h3>
@@ -282,7 +285,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[9].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>MapQuest</span>
                   <span>Active Monthly Users: 27M+</span>
                 </h3>
@@ -302,7 +305,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[10].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>FindOpen</span>
                   <span>Active Monthly Users: 20,000</span>
                 </h3>
@@ -326,7 +329,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[11].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Foursquare</span>
                   <span>Active Monthly Users: 10M</span>
                 </h3>
@@ -349,7 +352,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[12].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Superpages</span>
                   <span>Active Monthly Users: 7M</span>
                 </h3>
@@ -368,7 +371,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[13].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Waze</span>
                   <span>Active Monthly Users: 50M</span>
                 </h3>
@@ -387,7 +390,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[14].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>AirYell</span>
                   <span>Active Monthly Users: 1M</span>
                 </h3>
@@ -404,7 +407,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[15].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>AmericanTowns.com</span>
                   <span>Active Monthly Users: 2.3M</span>
                 </h3>
@@ -425,7 +428,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[16].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>AroundMe</span>
                   <span>Active Monthly Users: 3M</span>
                 </h3>
@@ -444,7 +447,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[17].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Bizwiki.com</span>
                   <span>Active Monthly Users: 100,000</span>
                 </h3>
@@ -462,7 +465,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[18].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Brownbook.net</span>
                   <span>Active Monthly Users: 1M</span>
                 </h3>
@@ -479,7 +482,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[19].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>ChamberofCommerce.com</span>
                   <span>Active Monthly Users: 450,000</span>
                 </h3>
@@ -498,7 +501,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[20].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Citysearch</span>
                   <span>Active Monthly Users: 12M</span>
                 </h3>
@@ -516,7 +519,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[21].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>CitySquares</span>
                   <span>Active Monthly Users: 250,000</span>
                 </h3>
@@ -534,7 +537,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[22].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Credibility Review</span>
                   <span>Active Monthly Users: 500,000</span>
                 </h3>
@@ -553,7 +556,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[23].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>CYLEX</span>
                   <span>Active Monthly Users: 30M</span>
                 </h3>
@@ -572,7 +575,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[24].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>DexKnows</span>
                   <span>Active Monthly Users: 2M</span>
                 </h3>
@@ -591,7 +594,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[25].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>eLocal</span>
                   <span>Active Monthly Users: 250,000</span>
                 </h3>
@@ -610,7 +613,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[26].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>EZlocal</span>
                   <span>Active Monthly Users: 500,000</span>
                 </h3>
@@ -627,7 +630,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[27].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Factual</span>
                   <span>Active Monthly Users: 1M</span>
                 </h3>
@@ -647,7 +650,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[28].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>GoLocal247.com</span>
                   <span>Active Monthly Users: 450,000</span>
                 </h3>
@@ -668,7 +671,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[29].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Insider Pages</span>
                   <span>Active Monthly Users: 750,000</span>
                 </h3>
@@ -688,7 +691,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[30].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>The Internet Chamber of Commerce</span>
                   <span>Active Monthly Users: 100,000</span>
                 </h3>
@@ -707,7 +710,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[31].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Kudzu.com</span>
                 </h3>
                 <p className="text-lg">
@@ -724,7 +727,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[32].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Local.com</span>
                   <span>Active Monthly Users: 10M</span>
                 </h3>
@@ -743,7 +746,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[33].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>LocalDatabase.com</span>
                   <span>Active Monthly Users: 100,000</span>
                 </h3>
@@ -762,7 +765,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[34].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>LocalPages</span>
                   <span>Active Monthly Users: 350,000</span>
                 </h3>
@@ -779,7 +782,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[35].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>LocalStack</span>
                   <span>Active Monthly Users: 600,000</span>
                 </h3>
@@ -797,7 +800,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[36].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>MerchantCircle</span>
                   <span>Active Monthly Users: 1M</span>
                 </h3>
@@ -817,7 +820,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[37].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>My Local Services</span>
                   <span>Active Monthly Users: 50,000</span>
                 </h3>
@@ -836,7 +839,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[38].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>n49</span>
                   <span>Active Monthly Users: 300,000</span>
                 </h3>
@@ -854,7 +857,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[39].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Navmii</span>
                   <span>Active Monthly Users: 600,000</span>
                 </h3>
@@ -872,7 +875,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[40].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>HERE</span>
                   <span>Active Monthly Users: 5M</span>
                 </h3>
@@ -892,7 +895,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[41].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Opendi</span>
                   <span>Active Monthly Users: 9M</span>
                 </h3>
@@ -910,7 +913,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[42].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>PointCom</span>
                   <span>Active Monthly Users: 100,000</span>
                 </h3>
@@ -927,7 +930,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[43].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Public Reputation</span>
                 </h3>
                 <p className="text-lg">
@@ -949,7 +952,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[44].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>ShowMeLocal.com</span>
                   <span>Active Monthly Users: 750,000</span>
                 </h3>
@@ -969,7 +972,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[45].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Soleo</span>
                   <span>Active Monthly Users: 3.4M</span>
                 </h3>
@@ -990,7 +993,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[46].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Switchboard</span>
                   <span>Active Monthly Users: 2.7M</span>
                 </h3>
@@ -1008,7 +1011,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[47].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Telenav</span>
                   <span>Active Monthly Users: 5M</span>
                 </h3>
@@ -1028,7 +1031,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[48].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>TomTom</span>
                   <span>Active Monthly Users: 7M</span>
                 </h3>
@@ -1048,7 +1051,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[49].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Topix</span>
                   <span>Active Monthly Users: 6M</span>
                 </h3>
@@ -1068,7 +1071,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[50].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Tupalo</span>
                   <span>Active Monthly Users: 2M</span>
                 </h3>
@@ -1085,7 +1088,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[51].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>USCity.net</span>
                   <span>Active Monthly Users: 450,000</span>
                 </h3>
@@ -1103,7 +1106,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[52].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>VotefortheBest.com</span>
                   <span>Active Monthly Users: 50,000</span>
                 </h3>
@@ -1122,7 +1125,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[53].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Where To?</span>
                   <span>Active Monthly Users: 1M</span>
                 </h3>
@@ -1140,7 +1143,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[54].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>White &amp; Yellow Pages</span>
                   <span>Active Monthly Users: 1M</span>
                 </h3>
@@ -1158,7 +1161,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[55].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>Yalwa</span>
                   <span>Active Monthly Users: 500,000</span>
                 </h3>
@@ -1175,7 +1178,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[56].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>YaSabe</span>
                   <span>Active Monthly Users: 1M</span>
                 </h3>
@@ -1195,7 +1198,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[57].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>YellowMoxie.com</span>
                   <span>Active Monthly Users: 2M</span>
                 </h3>
@@ -1213,7 +1216,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[58].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>YellowPageCity.com</span>
                   <span>Active Monthly Users: 150,000</span>
                 </h3>
@@ -1232,7 +1235,7 @@ const DirectoryListingPage = ({ data: { page, dSubmission, listings } }) => {
                 image={listings.nodes[59].childImageSharp.gatsbyImageData}
               />
               <div className="w-4/5 pl-4">
-                <h3 className="font-RalewayBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
+                <h3 className="font-MontserratBold text-xl text-themeOrange-400 pb-3 flex flex-col lg:flex-row justify-center lg:justify-between">
                   <span>YellowPagesGoesGreen.org</span>
                   <span>Active Monthly Users: 150,000</span>
                 </h3>

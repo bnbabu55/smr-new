@@ -5,54 +5,129 @@
 
 @layer base {
   @font-face {
-    font-family: "Lusitana";
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100;
+    src: url("/fonts/Montserrat-Thin.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 100;
+    src: url("/fonts/Montserrat-ThinItalic.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 200;
+    src: url("/fonts/Montserrat-ExtraLight.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 200;
+    src: url("/fonts/Montserrat-ExtraLightItalic.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    src: url("/fonts/Montserrat-Light.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 300;
+    src: url("/fonts/Montserrat-LightItalic.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
-    src: local("Lusitana"), local("Lusitana"),
-      url("/fonts/Lusitana-Regular.woff2") format("woff2");
+    src: url("/fonts/Montserrat-Regular.woff2") format("woff2");
     font-display: swap;
   }
   @font-face {
-    font-family: "Lusitana";
-    font-style: normal;
-    font-weight: 700;
-    src: local("Lusitana"), local("Lusitana"),
-      url("/fonts/Lusitana-Bold.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Raleway";
-    font-style: normal;
+    font-family: "Montserrat";
+    font-style: italic;
     font-weight: 400;
-    src: url("/fonts/Raleway-Regular.woff2") format("woff2");
+    src: url("/fonts/Montserrat-Italic.woff2") format("woff2");
     font-display: swap;
   }
   @font-face {
-    font-family: "Raleway";
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
-    src: url("/fonts/Raleway-Medium.woff2") format("woff2");
+    src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
     font-display: swap;
   }
   @font-face {
-    font-family: "Raleway";
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 500;
+    src: url("/fonts/Montserrat-MediumItalic.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
-    src: url("/fonts/Raleway-SemiBold.woff2") format("woff2");
+    src: url("/fonts/Montserrat-SemiBold.woff2") format("woff2");
     font-display: swap;
   }
   @font-face {
-    font-family: "Raleway";
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 600;
+    src: url("/fonts/Montserrat-SemiBoldItalic.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    src: url("/fonts/Raleway-Bold.woff2") format("woff2");
+    src: url("/fonts/Montserrat-Bold.woff2") format("woff2");
     font-display: swap;
   }
   @font-face {
-    font-family: "Raleway";
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 700;
+    src: url("/fonts/Montserrat-BoldItalic.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/Montserrat-ExtraBold.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 800;
+    src: url("/fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 900;
-    src: url("/fonts/Raleway-Black.woff2") format("woff2");
+    src: url("/fonts/Montserrat-Black.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 900;
+    src: url("/fonts/Montserrat-BlackItalic.woff2") format("woff2");
     font-display: swap;
   }
 
@@ -61,21 +136,24 @@
   }
 
   body {
-    @apply font-Lusitana;
+    @apply font-Montserrat text-base;
     scroll-behavior: smooth;
   }
 
-  body a {
-    @apply text-[#c01b31] underline;
+  body h1 {
+    @apply pb-5 text-2xl font-bold font-Montserrat;
   }
 
-  body h1 {
-    @apply font-Raleway pb-5 text-2xl font-bold;
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 
 @layer utilities {
-  nav a {
+  body {
+    line-height: 1.75em;
+  }
+  nav ul li a {
     position: relative;
     display: inline-block;
     color: #ffffff;
@@ -90,7 +168,7 @@
     text-decoration: none;
   }
 
-  .footer-nav a {
+  footer nav a {
     position: relative;
     display: inline-block;
     font-size: 1em;
@@ -107,13 +185,14 @@
     text-decoration: none;
   }
 
-  nav a:hover,
-  .footer-nav a:hover {
+  nav ul li:hover > a,
+  footer nav a:hover {
     background-position: 0 100%;
     text-decoration: underline;
   }
 
-  nav a.active {
+  nav ul li a.active,
+  footer nav a.active {
     background: #ffa800;
     background-clip: text;
     -webkit-background-clip: text;
@@ -227,12 +306,12 @@
   }
 
   .comparision-table tr > th {
-    @apply text-themeOrange-400 py-5;
+    @apply py-5 text-themeOrange-400;
   }
 
   .comparision-table th:nth-child(1),
   .comparision-table td:nth-child(1) {
-    @apply text-themeBlue-600 text-left pl-2 w-2/5;
+    @apply w-2/5 pl-2 text-left text-themeBlue-600;
   }
 
   .comparision-table td:nth-child(1) {
@@ -244,11 +323,12 @@
   }
 
   #currentSlide::after {
-    content: "\275E";
-    font-size: 30em;
-    color: rgba(255, 0, 0, 0.15);
+    /* content: "\275E"; */
+    content: "\201D";
+    font-size: 26em;
+    color: rgba(255, 0, 0, 0.1);
     position: absolute;
-    top: -55%;
+    top: -80%;
     right: 0;
   }
 }

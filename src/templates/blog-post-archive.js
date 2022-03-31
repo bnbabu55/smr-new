@@ -6,8 +6,6 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import Categories from "../components/Categories"
 import RecentPosts from "../components/RecentPosts"
-import ContactSection from "../components/ContactSection"
-import SubscriptionForm from "../components/SubscriptionForm"
 
 const BlogIndex = ({
   data,
@@ -19,6 +17,7 @@ const BlogIndex = ({
     currentPage,
     paginationArray,
   },
+  location,
 }) => {
   const posts = data.allWpPost.nodes
   const isFirst = currentPage === 1
@@ -27,7 +26,7 @@ const BlogIndex = ({
 
   if (!posts.length) {
     return (
-      <Layout>
+      <Layout location={location}>
         <Seo seoData={seoData} />
         <div className="w-10/12 mx-auto my-16 text-2xl font-semibold text-gray-600">
           <p>
@@ -40,18 +39,18 @@ const BlogIndex = ({
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={seoData} />
 
       <div className="my-16 text-gray-600">
         <div>
-          <h2 className="text-5xl font-bold tracking-wide text-center font-BebasNeue text-themeBlue-600">
+          <h2 className="text-5xl font-bold tracking-wide text-center font-Montserrat text-themeBlue-600">
             SEARCH MARKETING NEWS
           </h2>
           <p className="my-6 text-2xl font-semibold text-center uppercase font-Montserrat text-themeOrange-400">
             Seo and SEM Marketing & Website Design News
           </p>
-          <p className="my-6 text-lg text-center font-Lato text-themeGray-200">
+          <p className="my-6 text-lg text-center font-Montserrat text-themeGray-200">
             Stay current on leading online marketing trends and the latest
             website development <br />
             practices by opting-in to receive our monthly News posts.
@@ -70,7 +69,7 @@ const BlogIndex = ({
                 const title = post?.title
 
                 return (
-                  <li key={post.uri} className="pb-8">
+                  <li key={post.uri.replace("/blog", "")} className="pb-8">
                     <ul className="flex flex-col md:flex-row">
                       <li className="w-full md:w-2/6">
                         <GatsbyImage
@@ -86,7 +85,10 @@ const BlogIndex = ({
                         >
                           <header>
                             <h2 className="-mt-2">
-                              <Link to={`${post.uri}`} itemProp="url">
+                              <Link
+                                to={`${post.uri.replace("/blog", "")}`}
+                                itemProp="url"
+                              >
                                 <span
                                   itemProp="headline"
                                   className="text-base leading-none tracking-wider uppercase font-MontserratBold text-themeOrange-400"
@@ -95,14 +97,14 @@ const BlogIndex = ({
                                 </span>
                               </Link>
                             </h2>
-                            <p className="pb-2 text-sm font-Lato text-themeGray-200">
+                            <p className="pb-2 text-sm font-Montserrat text-themeGray-200">
                               Posted by{" "}
                               <span>{`${post?.author?.node?.firstName} ${post?.author?.node?.lastName}`}</span>
                             </p>
                           </header>
                           <div
                             itemProp="description"
-                            className="text-sm font-Lato text-themeGray-200"
+                            className="text-sm font-Montserrat text-themeGray-200"
                           >
                             {parse(post?.excerpt, {
                               replace: ({ attribs }) =>
@@ -119,7 +121,6 @@ const BlogIndex = ({
             </ol>
           </div>
           <div className="sidebar">
-            <SubscriptionForm />
             <RecentPosts />
             <Categories />
           </div>
@@ -141,12 +142,7 @@ const BlogIndex = ({
               <Link
                 to={previousPagePath}
                 rel="prev"
-                className="text-themeBlue-200 hover:text-themeBlue-600"
-                style={{
-                  marginTop: "0.1rem",
-                  marginBottom: "0.1rem",
-                  padding: "0.5rem",
-                }}
+                className="hover:text-themeBlue-600 px-3 py-1 rounded-xl font-semibold text-lg font-PTSerif text-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
               >
                 {"<< Prev"}
               </Link>{" "}
@@ -165,18 +161,11 @@ const BlogIndex = ({
                 ) : (
                   <Link
                     to={`${x === 1 ? currentPageBase : currentPageBase + x}`}
-                    className={`${
+                    className={`px-3 py-1 rounded-lg ${
                       x === currentPage
-                        ? "text-white bg-themeBlue-200 hover:bg-themeBlue-600"
+                        ? "text-white bg-themeBlue-200 hover:bg-themeBlue-600 outline outline-1 outline-offset-2 outline-themeBlue-200"
                         : "text-themeBlue-200 hover:text-themeBlue-600"
-                    }
-                `}
-                    style={{
-                      marginTop: "0.1rem",
-                      marginBottom: "0.1rem",
-                      padding: "0.5rem",
-                      textDecoration: "none",
-                    }}
+                    }`}
                   >
                     {x}
                   </Link>
@@ -184,43 +173,12 @@ const BlogIndex = ({
               </li>
             )
           })}
-          {/* {Array.from({ length: totalPages }, (_, i) => (
-            <li
-              key={`pagination-number${i + 1}`}
-              style={{
-                margin: 0,
-              }}
-            >
-              <Link
-                to={`${i === 0 ? currentPageBase : currentPageBase + (i + 1)}`}
-                className={`${
-                  i + 1 === currentPage
-                    ? "text-white bg-themeBlue-200 hover:bg-themeBlue-600"
-                    : "text-themeBlue-200 hover:text-themeBlue-600"
-                }
-                `}
-                style={{
-                  marginTop: "0.1rem",
-                  marginBottom: "0.1rem",
-                  padding: "0.5rem",
-                  textDecoration: "none",
-                }}
-              >
-                {i + 1}
-              </Link>
-            </li>
-          ))} */}
           {!isLast && (
             <li>
               <Link
                 to={nextPagePath}
                 rel="next"
-                className="text-themeBlue-200 hover:text-themeBlue-600"
-                style={{
-                  marginTop: "0.1rem",
-                  marginBottom: "0.1rem",
-                  padding: "0.5rem",
-                }}
+                className="hover:text-themeBlue-600 px-3 py-1 rounded-xl font-semibold text-lg font-PTSerif text-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
               >
                 {"Next >>"}
               </Link>
@@ -228,7 +186,6 @@ const BlogIndex = ({
           )}
         </ul>
       </div>
-      <ContactSection />
     </Layout>
   )
 }

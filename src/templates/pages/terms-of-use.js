@@ -9,19 +9,19 @@ import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
 
-const TermsPage = ({ data: { page, plxImage } }) => {
+const TermsPage = ({ data: { page, plxImage }, location }) => {
   const sectionImage = getImage(plxImage.childImageSharp.gatsbyImageData)
 
   const image2 = convertToBgImage(sectionImage)
 
   return (
-    <Layout className="overflow-x-hidden break-all">
+    <Layout location={location} className="overflow-x-hidden break-all">
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto">
-        <h1 className="font-BebasNeue font-bold text-5xl text-themeOrange-400 text-center py-8">
+        <h1 className="font-Montserrat font-bold text-5xl text-themeOrange-400 text-center py-8">
           SEARCH MARKETING REOSURCE LLC - TERMS
         </h1>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           This page states the Terms and Conditions under which you may utilize
           this Web site. Please read this page carefully. If you do not accept
           the Terms and Conditions stated here, do not use this site. The Search
@@ -33,7 +33,7 @@ const TermsPage = ({ data: { page, plxImage } }) => {
         <h2 className="text-xl text-themeBlue-600 font-bold pb-3">
           Section 1. Use of Content.
         </h2>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           The Company authorizes you to view and download the materials on this
           Web site (the "Web site") solely for your personal, non-commercial
           use. All names, logos and marks appearing in this site, except as
@@ -44,7 +44,7 @@ const TermsPage = ({ data: { page, plxImage } }) => {
           these terms and conditions or in the site content, is strictly
           prohibited.
         </p>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           You may not sell or modify the content of this Web site or reproduce,
           display, publicly perform, distribute, or otherwise use the materials
           in any way for any public or commercial purpose without the Company's
@@ -115,14 +115,14 @@ const TermsPage = ({ data: { page, plxImage } }) => {
         <h2 className="text-xl text-themeBlue-600 font-bold pb-3">
           Section 3. Liability.
         </h2>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           The material in this Web site may contain inaccuracies or
           typographical errors. The Company makes no representations about the
           accuracy, reliability, completeness, or timeliness of the Web site or
           its content. The use of the Web site is at your own risk. Changes are
           periodically made to the Web site and may be made at any time.
         </p>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto uppercase">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto uppercase">
           THE COMPANY DOES NOT WARRANT THAT THE WEB SITE WILL OPERATE ERROR-FREE
           OR THAT THIS WEB SITE AND ITS SERVER ARE FREE OF COMPUTER VIRUSES OR
           OTHER HARMFUL MECHANISMS. IF YOUR USE OF THE WEB SITE RESULTS IN THE
@@ -139,7 +139,7 @@ const TermsPage = ({ data: { page, plxImage } }) => {
         <h2 className="text-xl text-themeBlue-600 font-bold pb-3">
           Section 4. Disclaimer of Consequential Damages.
         </h2>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto uppercase">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto uppercase">
           IN NO EVENT SHALL THE COMPANY, ITS SUPPLIERS, OR ANY THIRD PARTIES
           MENTIONED AT THIS WEB SITE BE LIABLE FOR ANY DAMAGES WHATSOEVER
           (INCLUDING, WITHOUT LIMITATIONS, INCIDENTAL AND CONSEQUENTIAL DAMAGES,
@@ -152,7 +152,7 @@ const TermsPage = ({ data: { page, plxImage } }) => {
         <h2 className="text-xl text-themeBlue-600 font-bold pb-3">
           Section 5. User Submissions.
         </h2>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           Any communication or other material you transmit to the Company via
           electronic mail or otherwise is unsolicited by the Company and is
           deemed non-confidential. The Company does not screen communications in
@@ -164,7 +164,7 @@ const TermsPage = ({ data: { page, plxImage } }) => {
           communication. The Company has no liability or responsibility to users
           for performance or nonperformance of such activities.
         </p>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           The Company reserves the right to expel users and prevent their
           further access to the Web site for violating this Agreement or the law
           and the right to remove, at its sole discretion, communications which
@@ -177,7 +177,7 @@ const TermsPage = ({ data: { page, plxImage } }) => {
         <h2 className="text-xl text-themeBlue-600 font-bold pb-3">
           Section 6. Links to Outside Web Sites.
         </h2>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           The Web site contains links to third party Web sites. These links are
           provided solely as a convenience to you and not as an endorsement by
           the Company of the contents on such third party Web sites. The Company
@@ -189,7 +189,7 @@ const TermsPage = ({ data: { page, plxImage } }) => {
         <h2 className="text-xl text-themeBlue-600 font-bold pb-3">
           Section 7. Limitation of Liability.
         </h2>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           The aggregate liability for the Company to you for all claims arising
           from the use of the materials in this Web site will not be greater
           than the amount you paid to access this Web site.
@@ -197,7 +197,7 @@ const TermsPage = ({ data: { page, plxImage } }) => {
         <h2 className="text-xl text-themeBlue-600 font-bold pb-3">
           Section 8. Indemnity
         </h2>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           You agree to defend, indemnify, and hold harmless the Company, it's
           officers, directors, employees and agents, from and against any
           claims, actions or demands, including without limitation reasonable
@@ -210,7 +210,7 @@ const TermsPage = ({ data: { page, plxImage } }) => {
         <h2 className="text-xl text-themeBlue-600 font-bold pb-3">
           Section 9. Other.
         </h2>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           The Company makes no claims the content is appropriate or may be
           downloaded outside of the United States. Access to this Web site may
           not be legal by certain persons or in certain countries. If you access
@@ -220,7 +220,7 @@ const TermsPage = ({ data: { page, plxImage } }) => {
           laws of the State of California, without respect to its conflict of
           laws principles.
         </p>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           Jurisdiction for any claims arising under this agreement shall lie
           exclusively with the state or federal courts. If any provision of this
           Agreement is found to be invalid by any court having competent
@@ -234,14 +234,14 @@ const TermsPage = ({ data: { page, plxImage } }) => {
         <h2 className="text-xl text-themeBlue-600 font-bold pb-3">
           Section 10. Refund Policy
         </h2>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           Refunds aren't applicable to this business type. We work with clients
           one-on-one to satisfy the work requirements.
         </p>
         <h2 className="text-xl text-themeBlue-600 font-bold pb-3">
           Section 11. Shipping Policy
         </h2>
-        <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+        <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
           Shipping isn't applicable to this business type. We deliver the
           services to the client via a cloud-based delivery portal and updates
           through email.
@@ -254,13 +254,13 @@ const TermsPage = ({ data: { page, plxImage } }) => {
         {...image2}
         preserveStackingContext
         id="parallax-section"
-        className="w-full bg-fixed bg-blend-darken text-white text-center font-LatoBlack flex flex-col gap-y-8 justify-center items-start"
+        className="w-full bg-fixed bg-blend-darken text-white text-center font-MontserratBlack flex flex-col gap-y-8 justify-center items-start"
       >
         <div className="mx-auto flex flex-col justify-center items-center gap-y-8 my-8">
-          <div className="font-BebasNeue font-bold text-5xl text-white py-5">
+          <div className="font-Montserrat font-bold text-5xl text-white py-5">
             ABOUT SEARCH MARKETING RESOURCE, LLC
           </div>
-          <div className="text-sm lg:text-2xl font-Lato text-white italic">
+          <div className="text-sm lg:text-2xl font-Montserrat text-white italic">
             TEAM EXPERIENCE - PROJECT LEADERSHIP - INDUSTRY RECOGNIZED
           </div>
           <p className="w-9/12 mx-auto text-white text-xl pb-3">

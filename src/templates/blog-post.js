@@ -6,8 +6,6 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import Categories from "../components/Categories"
 import RecentPosts from "../components/RecentPosts"
-import ContactSection from "../components/ContactSection"
-import SubscriptionForm from "../components/SubscriptionForm"
 
 const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
   const featuredImage = {
@@ -17,19 +15,25 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
   }
   const title = post?.title
 
+  let regEx = /\/services\//
+  let regEx1 = /\/industry\//
+  let filteredCat = post?.categories?.nodes
+    .filter(y => !y.uri.match(regEx))
+    .filter(y => !y.uri.match(regEx1))
+
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={post?.seo} />
 
       <div className="mt-12 mb-5 text-gray-600">
         <div>
-          <h2 className="text-5xl font-bold tracking-wide text-center font-BebasNeue text-themeBlue-600">
+          <h2 className="text-5xl font-bold tracking-wide text-center font-Montserrat text-themeBlue-600">
             SEARCH MARKETING NEWS
           </h2>
           <p className="my-6 text-2xl font-semibold text-center uppercase font-Montserrat text-themeOrange-400">
             Seo and SEM Marketing & Website Design News
           </p>
-          <p className="my-6 text-lg text-center font-Lato text-themeGray-200">
+          <p className="my-6 text-lg text-center font-Montserrat text-themeGray-200">
             Stay current on leading online marketing trends and the latest
             website development <br />
             practices by opting-in to receive our monthly News posts.
@@ -43,13 +47,13 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                   <li className="w-1/12">
                     <Link
                       to="/news"
-                      className="bg-themeBlue-600 hover:bg-themeBlue-200"
+                      className="hover:bg-themeBlue-600 bg-themeBlue-200"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 460.298 460.297"
                         width="2.25rem"
-                        className="p-1 text-xl text-white rounded-lg fill-current bg-themeBlue-600 hover:bg-themeBlue-200"
+                        className="p-1 text-xl text-white rounded-lg fill-current hover:bg-themeBlue-600 bg-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
                       >
                         <title>News Home</title>
                         <path d="M230.149 120.939L65.986 256.274c0 .191-.048.472-.144.855-.094.38-.144.656-.144.852v137.041c0 4.948 1.809 9.236 5.426 12.847 3.616 3.613 7.898 5.431 12.847 5.431h109.63V303.664h73.097v109.64h109.629c4.948 0 9.236-1.814 12.847-5.435 3.617-3.607 5.432-7.898 5.432-12.847V257.981c0-.76-.104-1.334-.288-1.707L230.149 120.939z" />
@@ -64,7 +68,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                           <Link
                             to={`${previous.uri}`}
                             rel="prev"
-                            className="px-2 py-1 text-white rounded-lg bg-themeBlue-600 hover:bg-themeBlue-200"
+                            className="px-2 py-1 text-white rounded-lg hover:bg-themeBlue-600 bg-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
                           >
                             ← {"Previous"}
                           </Link>
@@ -75,7 +79,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                           <Link
                             to={`${next.uri}`}
                             rel="next"
-                            className="px-2 py-1 text-white rounded-lg bg-themeBlue-600 hover:bg-themeBlue-200"
+                            className="px-2 py-1 text-white rounded-lg hover:bg-themeBlue-600 bg-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
                           >
                             {"Next"} →
                           </Link>
@@ -90,18 +94,18 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                   <h2 className="py-3 -mt-2">
                     <span
                       itemProp="headline"
-                      className="text-3xl leading-none tracking-wide text-left font-LatoBold text-themeBlue-600"
+                      className="text-3xl leading-none tracking-wide text-left font-Montserrat font-bold text-themeBlue-600"
                     >
                       {parse(title)}
                     </span>
                   </h2>
                   <ul className="flex pb-3">
-                    {post?.categories?.nodes.map((cat, index, arr) => {
+                    {filteredCat?.map((cat, index, arr) => {
                       return (
                         <li key={cat?.id + index} className="pb-3">
                           <Link
-                            to={`${cat?.uri}`}
-                            className="text-lg font-Lato text-themeOrange-400"
+                            to={`${cat?.uri.replace("/blog", "")}`}
+                            className="text-lg font-Montserrat text-themeOrange-400"
                           >
                             {`${
                               arr.length !== index + 1
@@ -132,7 +136,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                 >
                   <div
                     itemProp="description"
-                    className="prose text-justify font-Lato md:prose-lg max-w-none"
+                    className="entry-content prose text-justify font-Montserrat md:prose-lg max-w-none"
                   >
                     {parse(post?.content)}
                   </div>
@@ -189,13 +193,11 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
             </ul>
           </div>
           <div className="sidebar">
-            <SubscriptionForm />
             <RecentPosts />
             <Categories />
           </div>
         </div>
       </div>
-      <ContactSection />
     </Layout>
   )
 }

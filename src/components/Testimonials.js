@@ -35,71 +35,91 @@ const Testimonials = () => {
   const handleClick = (e, next) => {
     e.preventDefault()
     let targetSlide = 0
-    const currentTitle = document.querySelectorAll("#title")
+    let targetCard
+    const currentTitle = document.querySelectorAll(".title")
     currentTitle.forEach(function (item) {
-      item.classList.remove("text-[#e55327]")
+      item.classList.remove("text-themeOrange-600")
     })
     const currentSlide = parseInt(
       document.querySelector("#currentSlide").dataset.index
     )
 
-    console.log("currentSlide: " + currentSlide)
-
-    if (next < 0) {
+    if (next === "prev") {
       if (currentSlide <= 0) {
         targetSlide = testimonialSlides.nodes.length - 1
       } else {
         targetSlide = currentSlide - 1
       }
-      setTestimonialSlide(() => ({
-        id: targetSlide,
-        title: testimonialSlides.nodes[targetSlide].frontmatter.title,
-        memberRole: testimonialSlides.nodes[targetSlide].frontmatter.memberRole,
-        body: testimonialSlides.nodes[targetSlide].body,
-      }))
-    } else {
+    } else if (next === "next") {
       if (currentSlide === testimonialSlides.nodes.length - 1) {
         targetSlide = 0
       } else {
         targetSlide = currentSlide + 1
       }
-      setTestimonialSlide(() => ({
-        id: targetSlide,
-        title: testimonialSlides.nodes[targetSlide].frontmatter.title,
-        memberRole: testimonialSlides.nodes[targetSlide].frontmatter.memberRole,
-        body: testimonialSlides.nodes[targetSlide].body,
-      }))
+    } else {
+      targetSlide = next
     }
+    setTestimonialSlide(() => ({
+      id: targetSlide,
+      title: testimonialSlides.nodes[targetSlide].frontmatter.title,
+      memberRole: testimonialSlides.nodes[targetSlide].frontmatter.memberRole,
+      body: testimonialSlides.nodes[targetSlide].body,
+    }))
 
-    currentTitle[targetSlide].classList.add("text-[#e55327]")
+    console.log(
+      `currentSlide: ${currentSlide} clicked ${next} target is ${targetSlide}`
+    )
+
+    currentTitle[targetSlide].classList.add("text-themeOrange-600")
+    targetCard = document.querySelector(
+      `div[name="card"][data-index="${targetSlide}"]`
+    )
+    targetCard.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    })
   }
 
   return (
     <div id="Testimonials" className="py-10 mx-auto overflow-hidden bg-white">
       <div className="container flex w-full mx-auto lg:w-10/12 gap-x-5">
-        <div className="w-1/4 flex">
+        <div className="flex w-1/4">
           <div className="flex flex-col w-1/4 mx-auto">
-            <button onClick={e => handleClick(e, -1)} className="w-full">
-              <span className="before:border-solid before:border-t-8 before:border-r-8 before:border-black before:content-[''] before:inline-block before:h-[1em] before:left-[0.15em] before:relative before:top-[0.15em] before:-rotate-45 before:align-top before:w-[1em]"></span>
+            <button
+              onClick={e => handleClick(e, "prev")}
+              className="w-full"
+              aria-label="up arrow"
+            >
+              <span className="up-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[3vh] before:top-[3vh] before:right-[50%] before:skew-x-0 before:skew-y-[-25deg] after:left-[50%] after:skew-x-0 after:skew-y-[25deg]"></span>
             </button>
-            <button onClick={e => handleClick(e, 1)} className="w-full">
-              <span className="before:border-solid before:border-b-8 before:border-r-8 before:border-black before:content-[''] before:inline-block before:h-[1em] before:left-[0.15em] before:relative before:top-[0.15em] before:rotate-45 before:align-top before:w-[1em]"></span>
+            <button
+              onClick={e => handleClick(e, "next")}
+              className="w-full"
+              aria-label="down arrow"
+            >
+              <span className="down-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[9vh] before:top-[9vh] before:right-[50%] before:skew-x-0 before:skew-y-[25deg] after:left-[50%] after:skew-x-0 after:skew-y-[-25deg]"></span>
             </button>
           </div>
-          <div className="flex flex-col w-3/4 mx-auto">
+          <div className="flex flex-col w-3/4 mx-auto overflow-y-scroll max-h-72 gap-y-3">
             {testimonialSlides?.nodes?.map((testimonialSlide, index) => {
               return (
-                <div key={testimonialSlide.id} className="mb-3">
-                  <div
-                    className={`text-lg font-bold uppercase ${
-                      index === 0 ? "text-[#e55327]" : ""
+                <div
+                  key={testimonialSlide.id}
+                  className="mb-3"
+                  name="card"
+                  data-index={index}
+                >
+                  <button
+                    className={`title text-lg font-semibold font-Montserrat uppercase ${
+                      index === 0 ? "text-themeOrange-600" : ""
                     }`}
-                    id="title"
                     data-index={index}
+                    onClick={e => handleClick(e, index)}
                   >
-                    {testimonialSlide?.frontmatter?.title},
-                  </div>
-                  <div className="text-base">
+                    {testimonialSlide?.frontmatter?.title}
+                  </button>
+                  <div className="text-sm">
                     {testimonialSlide?.frontmatter?.memberRole}
                   </div>
                 </div>
@@ -108,7 +128,7 @@ const Testimonials = () => {
           </div>
         </div>
         <div
-          className="w-3/4 lg:pl-10 pr-2 lg:pr-0 prose-lg text-justify max-w-none"
+          className="w-3/4 pr-2 prose text-justify lg:px-20 max-w-none"
           id="currentSlide"
           data-index={testimonialSlide.id}
         >

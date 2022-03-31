@@ -33,7 +33,7 @@ const FreeAuditForm = ({ home }) => {
           } mx-auto`}
         >
           <form
-            className="audit-form m-10 font-Lato text-base"
+            className="audit-form m-10 font-Montserrat text-base"
             onSubmit={async event => {
               event.preventDefault()
 
@@ -168,13 +168,15 @@ const FreeAuditForm = ({ home }) => {
           </form>
           <div id="response-message" style={{ padding: "20px" }}>
             {formResp.status === "loading" && (
-              <p className="font-Lato text-black">Sending....</p>
+              <p className="font-Montserrat text-black">Sending....</p>
             )}
             {formResp.status === "error" && (
-              <p className="font-Lato text-red-600">{formResp.body_response}</p>
+              <p className="font-Montserrat text-red-600">
+                {formResp.body_response}
+              </p>
             )}
             {formResp.status === "success" && (
-              <p className="font-Lato text-green-600">
+              <p className="font-Montserrat text-green-600">
                 Your form has been submitted successfully, thank you.
               </p>
             )}
@@ -191,7 +193,7 @@ const FreeAuditForm = ({ home }) => {
             </p>
           </div>
         </div>
-        <p className="text-white text-lg font-Lato text-center py-5 mx-5">
+        <p className="text-white text-lg font-Montserrat text-center py-5 mx-5">
           The Search Marketing Resource team will review your website and
           deliver a report that provides both a graded review on how well your
           site has been Search Engine optimized for the keywords or phrases you

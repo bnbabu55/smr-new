@@ -9,7 +9,7 @@ import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
 import ContactForm from "../../components/ContactForm"
 
-const ContactPage = ({ data: { page, bgImage, plxImage } }) => {
+const ContactPage = ({ data: { page, bgImage, plxImage }, location }) => {
   const pluginImage = getImage(bgImage.childImageSharp.gatsbyImageData)
   const sectionImage = getImage(plxImage.childImageSharp.gatsbyImageData)
 
@@ -17,7 +17,7 @@ const ContactPage = ({ data: { page, bgImage, plxImage } }) => {
   const image2 = convertToBgImage(sectionImage)
 
   return (
-    <Layout className="overflow-x-hidden break-all">
+    <Layout location={location} className="overflow-x-hidden break-all">
       <Seo seoData={page?.seo} />
       <BackgroundImage
         Tag="section"
@@ -25,13 +25,13 @@ const ContactPage = ({ data: { page, bgImage, plxImage } }) => {
         {...image}
         preserveStackingContext
         id="ContactPage"
-        className="w-full text-gray-800 font-LatoBlack py-16 flex flex-col gap-y-8 justify-center items-start border-b-4 border-themeGray-50 shadow-themeShadow mb-8"
+        className="w-full text-gray-800 font-MontserratBlack py-16 flex flex-col gap-y-8 justify-center items-start border-b-4 border-themeGray-50 shadow-themeShadow mb-8"
       >
         <div className="flex flex-col justify-center items-center gap-y-8 ml-6 lg:ml-32 my-16">
-          <div className="text-themeBlue-600 text-2xl lg:text-7xl font-LatoBold text-center">
+          <div className="text-themeBlue-600 text-2xl lg:text-7xl font-Montserrat font-bold text-center">
             Call Us Today!
           </div>
-          <div className="text-themeOrange-400 text-sm lg:text-4xl font-LatoLight text-center">
+          <div className="text-themeOrange-400 text-sm lg:text-4xl font-MontserratLight text-center">
             Let’s Talk Today About <br />
             Your Marketing <br />
             Program Or Website Project
@@ -39,7 +39,7 @@ const ContactPage = ({ data: { page, bgImage, plxImage } }) => {
         </div>
       </BackgroundImage>
       <div>
-        <h1 className="w-11/12 mx-auto font-BebasNeue font-bold text-5xl text-themeOrange-400 text-center py-5">
+        <h1 className="w-11/12 mx-auto font-Montserrat font-bold text-5xl text-themeOrange-400 text-center py-5">
           CONTACT SEARCH MARKETING RESOURCE LLC
         </h1>
         <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-y-5 lg:gap-x-5 py-8">
@@ -47,20 +47,20 @@ const ContactPage = ({ data: { page, bgImage, plxImage } }) => {
             <h2 className="font-Montserrat text-2xl text-themeBlue-600 pb-5">
               SALES – SUPPORT – GENERAL INQUIRIES
             </h2>
-            <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+            <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
               Contact the Search Marketing Resource team today regarding any
               offline or online marketing requirement and will respond within
               24-48 hours.
             </p>
-            <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+            <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
               We are not a support ticket queue but a hands-on crew who will
               reply by email or a direct call.
             </p>
-            <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+            <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
               We provide services nationwide and are available from 7am-7pm east
               coast time.
             </p>
-            <p className="pb-3 text-themeGray-200 text-lg font-Lato mx-auto">
+            <p className="pb-3 text-themeGray-200 text-lg font-Montserrat mx-auto">
               We appreciate the opportunity.
             </p>
             <div className="flex">
@@ -195,13 +195,13 @@ const ContactPage = ({ data: { page, bgImage, plxImage } }) => {
         {...image2}
         preserveStackingContext
         id="parallax-section"
-        className="w-full bg-fixed bg-blend-darken text-white text-center font-LatoBlack flex flex-col gap-y-8 justify-center items-start"
+        className="w-full bg-fixed bg-blend-darken text-white text-center font-MontserratBlack flex flex-col gap-y-8 justify-center items-start"
       >
         <div className="mx-auto flex flex-col justify-center items-center gap-y-8 my-8">
-          <div className="font-BebasNeue font-bold text-5xl text-white py-5">
+          <div className="font-Montserrat font-bold text-5xl text-white py-5">
             ABOUT SEARCH MARKETING RESOURCE, LLC
           </div>
-          <div className="text-sm lg:text-2xl font-Lato text-white italic">
+          <div className="text-sm lg:text-2xl font-Montserrat text-white italic">
             TEAM EXPERIENCE - PROJECT LEADERSHIP - INDUSTRY RECOGNIZED
           </div>
           <p className="w-9/12 mx-auto text-white text-xl pb-3">

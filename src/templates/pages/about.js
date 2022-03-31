@@ -7,9 +7,9 @@ import Seo from "../../components/Seo"
 import TeamSection from "../../components/TeamSection"
 import ContactSection from "../../components/ContactSection"
 
-const AboutPage = ({ data: { page } }) => {
+const AboutPage = ({ data: { page }, location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <TeamSection />
       <div className="flex">

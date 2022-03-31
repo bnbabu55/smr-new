@@ -7,13 +7,13 @@ import FreeQuoteSection from "../../components/FreeQuoteSection"
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 
-const MobilePage = ({ data: { page, mobile, checkMark } }) => {
+const MobilePage = ({ data: { page, mobile, checkMark }, location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-full py-10 text-lg">
         <div className="w-11/12 mx-auto">
-          <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center py-12">
+          <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center py-12">
             Mobile Responsive Website Design
           </h1>
           <p className="pb-3">

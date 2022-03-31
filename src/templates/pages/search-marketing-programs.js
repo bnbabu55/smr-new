@@ -7,19 +7,22 @@ import FreeQuoteSection from "../../components/FreeQuoteSection"
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 
-const SMPPage = ({ data: { page, smpIcons, checkMark, analytics } }) => {
+const SMPPage = ({
+  data: { page, smpIcons, checkMark, analytics },
+  location,
+}) => {
   const checkMarkImage = checkMark.childImageSharp.gatsbyImageData
 
   const analyticsImage = analytics.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-11/12 mx-auto py-10">
-        <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center pt-10">
+        <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center pt-10">
           Digital Marketing SEO Program
         </h1>
-        <div className="py-10 text-themeGray-200 text-lg font-Lato grid grid-cols-1 lg:grid-cols-2 gap-x-3">
+        <div className="py-10 text-themeGray-200 text-lg font-Montserrat grid grid-cols-1 lg:grid-cols-2 gap-x-3">
           <p className="col-start-1 col-end-2 row-start-1 row-end-2">
             A significant percentage of new business opportunities are generated
             based on your company’s Search Engine positioning. Improving your

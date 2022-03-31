@@ -1,35 +1,26 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ContactSection from "../../components/ContactSection"
-import FreeAuditForm from "../../components/FreeAuditForm"
-import FreeQuoteSection from "../../components/FreeQuoteSection"
 import HeroBanner from "../../components/HeroBanner"
 import HomeNews from "../../components/HomeNews"
 import HomePortfolio from "../../components/HomePortfolio"
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
-import SMServices from "../../components/SMServices"
-import SolutionSlider from "../../components/SolutionSlider"
-import TeamSlider from "../../components/TeamSlider"
 import Testimonials from "../../components/Testimonials"
-import WebDesign from "../../components/WebDesign"
 import Statistics from "../../components/Statistics"
+import SMServices from "../../components/SMServices"
 
-const HomePage = ({ data: { page } }) => (
-  <Layout>
+const HomePage = ({ data: { page }, location }) => (
+  <Layout location={location}>
     <Seo seoData={page?.seo} />
     <HeroBanner />
-    <SMServices />
-    <WebDesign />
-    <SolutionSlider />
-    <FreeAuditForm home={true} />
-    <FreeQuoteSection />
-    <TeamSlider />
-    <ContactSection />
     <Statistics />
+    <SMServices />
     <Testimonials />
     <HomeNews />
     <HomePortfolio />
+    <button className="font-Montserrat fixed z-[99] top-20 right-0 origin-bottom-right px-5 py-2 font-semibold text-sm uppercase -rotate-90 rounded-tl rounded-tr bg-themeYellow-400">
+      <a href="/search-marketing-website-design-proposal-form/">Quick Quote</a>
+    </button>
   </Layout>
 )
 

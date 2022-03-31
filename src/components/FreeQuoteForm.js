@@ -30,7 +30,7 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
     <div className="pt-10">
       <form
         id="free-quote"
-        className="text-gray-700 free-quote-form flex flex-col justify-center align-center m-10 font-Lato text-base"
+        className="text-gray-700 free-quote-form flex flex-col justify-center align-center m-10 font-Montserrat text-base"
         onSubmit={async event => {
           event.preventDefault()
 
@@ -297,13 +297,15 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
       </form>
       <div id="response-message" style={{ padding: "20px" }}>
         {formResp.status === "loading" && (
-          <p className="font-Lato text-black">Sending....</p>
+          <p className="font-Montserrat text-black">Sending....</p>
         )}
         {formResp.status === "error" && (
-          <p className="font-Lato text-red-600">{formResp.body_response}</p>
+          <p className="font-Montserrat text-red-600">
+            {formResp.body_response}
+          </p>
         )}
         {formResp.status === "success" && (
-          <p className="font-Lato text-green-600">
+          <p className="font-Montserrat text-green-600">
             Your form has been submitted successfully, thank you.
           </p>
         )}

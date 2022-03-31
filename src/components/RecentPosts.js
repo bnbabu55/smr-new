@@ -58,7 +58,7 @@ const RecentPosts = () => {
         return (
           <div key={post.id + "-title"}>
             {renderHeader && (
-              <h3 className="block py-2 mb-2 text-lg font-semibold border-b-2 font-Lato text-themeBlue-600 border-themeBlue-600">
+              <h3 className="block py-2 mb-2 text-lg font-semibold border-b-2 font-Montserrat text-themeBlue-600 border-themeBlue-600">
                 {post?.month}
               </h3>
             )}
@@ -77,23 +77,23 @@ const RecentPosts = () => {
                 >
                   <header>
                     <h2 className="-mt-2">
-                      <Link to={`/news${post?.uri}`} itemProp="url">
+                      <Link to={`${post?.uri}`} itemProp="url">
                         <span
                           itemProp="headline"
-                          className="text-xs tracking-wider uppercase font-MontserratBold text-themeOrange-400"
+                          className="text-xs tracking-wider uppercase font-Montserrat font-bold text-themeOrange-400"
                           style={{ lineHeight: "90%" }}
                         >
                           {parse(title)}
                         </span>
                       </Link>
                     </h2>
-                    <p className="pb-1 text-xs font-Lato text-themeBlue-600">
+                    <p className="pb-1 text-xs font-Montserrat text-themeBlue-600">
                       <span>{post?.date}</span>
                     </p>
                   </header>
                   <div
                     itemProp="description"
-                    className="text-sm font-Lato text-themeGray-200 line-clamp-2"
+                    className="text-sm font-Montserrat text-themeGray-200 line-clamp-2"
                   >
                     {parse(post?.excerpt, {
                       replace: ({ attribs }) =>

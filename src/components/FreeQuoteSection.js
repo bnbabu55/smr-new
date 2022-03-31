@@ -4,7 +4,7 @@ const FreeQuoteSection = () => {
   return (
     <div
       id="FreeQuoteSection"
-      className="py-10 mx-auto text-white font-Lato text-xl text-center"
+      className="py-10 mx-auto text-white font-Montserrat text-xl text-center"
     >
       <div className="flex flex-col lg:flex-row" id="form">
         <div className="bg-themeBlue-600 flex-1 p-8">
@@ -19,7 +19,7 @@ const FreeQuoteSection = () => {
             <p className="py-5 font-bold underline tracking-wider">
               Services to Include
             </p>
-            <div className="flex justify-around text-left font-Lato text-sm md:text-lg">
+            <div className="flex justify-around text-left font-Montserrat text-sm md:text-lg">
               <ul className="list-disc">
                 <li>Assigned SEO Manager</li>
                 <li>Monthly Blog Articles</li>
@@ -64,7 +64,7 @@ const FreeQuoteSection = () => {
             <p className="py-5 font-bold underline tracking-wider">
               Services to Include
             </p>
-            <div className="flex justify-around text-left font-Lato text-sm md:text-lg">
+            <div className="flex justify-around text-left font-Montserrat text-sm md:text-lg">
               <ul className="list-disc">
                 <li>Assigned Project Designer</li>
                 <li>Development Test Manager</li>

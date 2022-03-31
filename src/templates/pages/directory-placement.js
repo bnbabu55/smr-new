@@ -8,6 +8,7 @@ import Seo from "../../components/Seo"
 
 const BusinessDirectoryPage = ({
   data: { page, checkMarks, dSubmission, listings, yext },
+  location,
 }) => {
   const checkMarkBlue = checkMarks.nodes[0].childImageSharp.gatsbyImageData
   const checkMarkOrange = checkMarks.nodes[1].childImageSharp.gatsbyImageData
@@ -15,11 +16,11 @@ const BusinessDirectoryPage = ({
   const yextImage = yext.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <div className="w-full mx-auto text-center py-10">
         <div className="w-11/12 mx-auto">
-          <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center pt-10">
+          <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center pt-10">
             Business Directory Management
           </h1>
           <div className="py-10 text-themeGray-200 text-left text-lg">
@@ -155,7 +156,7 @@ const BusinessDirectoryPage = ({
         </div>
 
         <div className="w-11/12 mx-auto py-5">
-          <h3 className="text-themeOrange-400 text-5xl font-BebasNeue tracking-wide text-center pt-10">
+          <h3 className="text-themeOrange-400 text-5xl font-Montserrat tracking-wide text-center pt-10">
             EFFECTIVE SEO SERVICES
           </h3>
           <div className="flex flex-col lg:flex-row lg:gap-x-5 justify-center items-center">
@@ -175,7 +176,7 @@ const BusinessDirectoryPage = ({
               </p>
             </div>
             <form
-              className="flex-1 text-gray-700 contact-form flex flex-col justify-center align-center m-10 font-Lato text-base"
+              className="flex-1 text-gray-700 contact-form flex flex-col justify-center align-center m-10 font-Montserrat text-base"
               id="scan-form"
               action="https://www.optimizelocation.com/partner/semresourcellc/listing-report.html"
               method="post"

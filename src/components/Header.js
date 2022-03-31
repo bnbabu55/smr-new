@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import DesktopNav from "./DesktopNav"
 import MobileNav from "./MobileNav"
 
-const Header = () => {
+const Header = ({ location }) => {
   const { wpMenu } = useStaticQuery(graphql`
     {
       wpMenu(slug: { eq: "primary" }) {
@@ -21,6 +21,7 @@ const Header = () => {
                 url
                 id
                 path
+                parentId
               }
             }
           }
@@ -37,7 +38,7 @@ const Header = () => {
 
   return (
     <header className="w-full pt-0 mt-0 text-white bg-themeBlue-500">
-      <DesktopNav navMenu={filteredMenu} />
+      <DesktopNav navMenu={filteredMenu} location={location} />
       <MobileNav navMenu={filteredMenu} />
     </header>
   )

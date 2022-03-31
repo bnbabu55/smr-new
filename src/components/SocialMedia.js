@@ -64,7 +64,7 @@ export const SocialMedia = () => {
             >
               <div className="">
                 <div
-                  className={`font-Lato text-left ${
+                  className={`font-Montserrat text-left ${
                     i % 2 === 0 ? "text-themeBlue-600" : "text-themeOrange-400"
                   }`}
                 >

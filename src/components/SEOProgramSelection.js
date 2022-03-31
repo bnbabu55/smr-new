@@ -48,12 +48,12 @@ const SEOProgramSelection = ({ seoImages, useShareableState }) => {
           <p className="font-Montserrat text-base bg-themeBlue-600 text-white text-center py-1 px-2 my-3 mx-4">
             Website Search Optimization
           </p>
-          <p className="font-Lato text-base text-center py-1 px-2 my-3">
+          <p className="font-Montserrat text-base text-center py-1 px-2 my-3">
             Every page of your website is analyzed, reviewed and updated with
             SEO best practices to significally increase your keyword search
             rankings and visibility. 100% Turn-Key.{" "}
             <Link
-              className="font-Lato text-base text-themeOrange-400"
+              className="font-Montserrat text-base text-themeOrange-400"
               to="website-optimization-program.php"
             >
               Read more...
@@ -160,12 +160,12 @@ const SEOProgramSelection = ({ seoImages, useShareableState }) => {
           <p className="font-Montserrat text-sm bg-themeBlue-600 text-white text-center py-1 px-2 my-3 mx-4">
             Website Optimized, SEO Program &amp; Social Media Management
           </p>
-          <p className="font-Lato text-base text-center py-1 px-2 my-3">
+          <p className="font-Montserrat text-base text-center py-1 px-2 my-3">
             This is a full service offering that is ongoing, month to month. All
             efforts from Package #1 are included plus Blog Posts, Business
             Directory Listings and Social Media managed.{" "}
             <Link
-              className="font-Lato text-base text-themeOrange-400"
+              className="font-Montserrat text-base text-themeOrange-400"
               to="website-optimization-program.php"
             >
               Read more...
@@ -307,13 +307,13 @@ const SEOProgramSelection = ({ seoImages, useShareableState }) => {
           <p className="font-Montserrat text-sm bg-themeBlue-600 text-white text-center py-1 px-2 my-3 mx-4">
             Website Optimized, SEO Program, Social Media &amp; Email Marketing
           </p>
-          <p className="font-Lato text-base text-center py-1 px-2 my-3">
+          <p className="font-Montserrat text-base text-center py-1 px-2 my-3">
             This group of services is very effective to increase your keyword
             search rankings quickly but also includes the management of the
             monthly email marketing campaigns. All other SEO services are
             provided as well.{" "}
             <Link
-              className="font-Lato text-base text-themeOrange-400"
+              className="font-Montserrat text-base text-themeOrange-400"
               to="website-optimization-program.php"
             >
               Read more...
@@ -449,13 +449,13 @@ const SEOProgramSelection = ({ seoImages, useShareableState }) => {
           <p className="font-Montserrat text-base bg-themeBlue-600 text-white text-center py-1 px-2 my-3 mx-4">
             Social Media Management
           </p>
-          <p className="font-Lato text-base text-center py-1 px-2 my-3">
+          <p className="font-Montserrat text-base text-center py-1 px-2 my-3">
             All of your social media accounts will be reviewed and updated.
             Keyboard 'rich' industry related articles will be written, submitted
             for your approval and posted. Visitor activity and reviews posted
             will be traced.{" "}
             <Link
-              className="font-Lato text-base text-themeOrange-400"
+              className="font-Montserrat text-base text-themeOrange-400"
               to="website-optimization-program.php"
             >
               Read more...

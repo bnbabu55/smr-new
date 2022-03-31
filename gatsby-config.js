@@ -45,7 +45,12 @@ module.exports = {
         update: false,
       },
     },
-
+    {
+      resolve: "gatsby-plugin-brotli",
+      options: {
+        extensions: ["css", "html", "js", "svg"],
+      },
+    },
     {
       /**
        * First up is the WordPress source plugin that connects Gatsby
@@ -58,13 +63,15 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url: process.env.GATSBY_GRAPHQL_URL || `http://newsmr.test/graphql`,
+        url:
+          process.env.GATSBY_GRAPHQL_URL ||
+          `https://newsmr.devsmr-development.com/blog/graphql`,
         type: {
           Post: {
-            limit: 5,
+            limit: 10,
           },
           Portfolio: {
-            limit: 5,
+            limit: 10,
           },
         },
         schema: {

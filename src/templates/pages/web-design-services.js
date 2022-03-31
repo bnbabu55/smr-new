@@ -16,13 +16,14 @@ SwiperCore.use([Autoplay, Pagination])
 
 const WebDesignPage = ({
   data: { page, bgImage, checkMark, sbClient, slides, clientSlides },
+  location,
 }) => {
   const pluginImage = getImage(bgImage.childImageSharp.gatsbyImageData)
 
   const image = convertToBgImage(pluginImage)
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seoData={page?.seo} />
       <BackgroundImage
         Tag="section"
@@ -30,24 +31,24 @@ const WebDesignPage = ({
         {...image}
         preserveStackingContext
         id="WebDesignPage"
-        className="w-full text-gray-800 font-LatoBlack py-20 flex flex-col gap-y-8 justify-center items-start border-b-4 border-themeGray-50 shadow-themeShadow mb-8"
+        className="w-full text-gray-800 font-MontserratBlack py-20 flex flex-col gap-y-8 justify-center items-start border-b-4 border-themeGray-50 shadow-themeShadow mb-8"
       >
-        <div className="text-themeBlue-600 mt-20 text-2xl lg:text-7xl pl-12 lg:pl-32 font-LatoBold text-center">
+        <div className="text-themeBlue-600 mt-20 text-2xl lg:text-7xl pl-12 lg:pl-32 font-Montserrat font-bold text-center">
           Award Winning <br />
           Website Design !
         </div>
-        <div className="text-themeOrange-400 text-sm lg:text-4xl pl-12 lg:pl-32 font-LatoLight text-center">
+        <div className="text-themeOrange-400 text-sm lg:text-4xl pl-12 lg:pl-32 font-MontserratLight text-center">
           Let Our Team Guide You Through <br />
           Your Website Project
         </div>
       </BackgroundImage>
       <div className="w-11/12 mx-auto">
-        <h1 className="text-themeOrange-400 text-5xl font-BebasNeue font-bold tracking-wide text-center">
+        <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center">
           WEBSITE GRAPHIC DESIGN & DEVELOPMENT
         </h1>
 
         <div className="py-5">
-          <p className="text-themeGray-200 text-lg font-Lato">
+          <p className="text-themeGray-200 text-lg font-Montserrat">
             Our industry recognized website development services deliver leading{" "}
             <Link
               to="/website-development-process/"
@@ -60,7 +61,7 @@ const WebDesignPage = ({
             team through the exciting process of creating your online brand and
             launching a new, dynamic presentation of your products and services.{" "}
           </p>
-          <ul className="w-10/12 mx-auto py-5 grid grid-cols-1 lg:grid-cols-3 text-themeGray-200 text-lg font-Lato">
+          <ul className="w-10/12 mx-auto py-5 grid grid-cols-1 lg:grid-cols-3 text-themeGray-200 text-lg font-Montserrat">
             <li className="flex items-center">
               <GatsbyImage
                 image={checkMark.childImageSharp.gatsbyImageData}
@@ -206,7 +207,7 @@ const WebDesignPage = ({
               <span className="pl-3">Video Libraries</span>
             </li>
           </ul>
-          <p className="text-themeGray-200 text-lg font-Lato pt-3">
+          <p className="text-themeGray-200 text-lg font-Montserrat pt-3">
             Our{" "}
             <Link
               to="/website-development-process/"
@@ -218,7 +219,7 @@ const WebDesignPage = ({
             design mock-ups until we obtain the online presentation that meets
             your requirements.{" "}
           </p>
-          <p className="text-themeGray-200 text-lg font-Lato pt-3">
+          <p className="text-themeGray-200 text-lg font-Montserrat pt-3">
             Additionally, our project management guarantees your new site will
             present your business in a professional manner, carrying your
             ‘brand’ and corporate identity while staying within the project
@@ -322,7 +323,7 @@ const WebDesignPage = ({
           <h3 className="w-11/12 mx-auto text-center flex justify-center items-center gap-x-5 pb-5">
             <Link
               to="/portfolio/"
-              className="font-BebasNeue text-5xl text-white"
+              className="font-Montserrat text-5xl text-white"
             >
               RECENT PROJECTS
             </Link>
