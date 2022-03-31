@@ -3,29 +3,29 @@ import ContactForm from "./ContactForm"
 
 const ContactSection = () => {
   return (
-    <div id="contact" className="text-white py-10 mx-auto">
+    <div id="contact" className="py-10 mx-auto text-white">
       <div className="w-11/12 mx-auto">
-        <div className="mx-auto flex flex-col justify-evenly">
-          <h2 className="mx-auto text-center font-Montserrat text-themeOrange-400 text-5xl">
+        <div className="flex flex-col mx-auto justify-evenly">
+          <h2 className="mx-auto text-5xl text-center font-Montserrat text-themeOrange-400">
             CONTACT US
           </h2>
-          <h3 className="mx-auto text-center font-Montserrat text-themeBlue-600 text-2xl py-5">
+          <h3 className="py-5 mx-auto text-2xl text-center font-Montserrat text-themeBlue-600">
             WEBSITE SEO, DESIGN AND DEVELOPMENT COMPANY
           </h3>
 
-          <p className="mx-auto text-center w-3/5 leading-7 font-Montserrat text-lg text-themeGray-200 pb-5">
+          <p className="w-3/5 pb-5 mx-auto text-lg leading-7 text-center font-Montserrat text-themeGray-200">
             Contact the Search Marketing Resource team to discuss your online
             marketing needs or website development requirements. We will provide
             a detailed proposal or schedule a brief call to help define the
             project deliverables, timeline and budget.
           </p>
         </div>
-        <div className="contact-content w-full flex flex-col lg:flex-row lg:gap-x-16 mx-auto bg-white my-5">
+        <div className="flex flex-col w-full mx-auto my-5 bg-white contact-content lg:flex-row lg:gap-x-16">
           <ContactForm />
-          <div className="w-full mt-5 lg:mt-0 mx-auto font-Montserrat text-themeGray-300">
+          <div className="w-full mx-auto mt-5 lg:mt-0 font-Montserrat text-themeGray-300">
             <div className="flex items-center pb-3">
               <span
-                className="text-themeBlue-600 text-2xl lg:text-5xl"
+                className="text-2xl text-themeBlue-600 lg:text-5xl"
                 role="img"
                 aria-label="home icon"
               >
@@ -38,28 +38,28 @@ const ContactSection = () => {
               </div>
             </div>
             <div
-              className="text-themeBlue-600 text-3xl lg:text-5xl flex items-center pb-3"
+              className="flex items-center pb-3 text-3xl text-themeBlue-600 lg:text-5xl"
               role="img"
               aria-label="phone icon"
             >
               &#x260E;
-              <span className="ml-2 lg:ml-6 text-sm lg:text-xl text-themeGray-300">
+              <span className="ml-2 text-sm lg:ml-6 lg:text-xl text-themeGray-300">
                 {" "}
                 888-842-9033
               </span>
             </div>
             <div
-              className="text-themeBlue-600 text-3xl lg:text-5xl flex items-center pb-3"
+              className="flex items-center pb-3 text-3xl text-themeBlue-600 lg:text-5xl"
               role="img"
               aria-label="email icon"
             >
               &#x2709;
-              <span className="ml-2 lg:ml-6 text-sm lg:text-xl text-themeGray-300">
+              <span className="ml-2 text-sm lg:ml-6 lg:text-xl text-themeGray-300">
                 {" "}
                 info@searchmarketingresource.com
               </span>
             </div>
-            <div className="w-full mt-3 lg:mt-0 text-themeBlue-600 text-sm lg:text-2xl pb-3">
+            <div className="w-full pb-3 mt-3 text-sm lg:mt-0 text-themeBlue-600 lg:text-2xl">
               <div className="pb-3">
                 sales@searchmarketingresource.com <br />
                 <span className="text-themeGray-300">888-842-9033 x 11</span>
@@ -86,7 +86,7 @@ const ContactSection = () => {
                     width="3rem"
                     height="3rem"
                     viewBox="0 0 408.788 408.788"
-                    className="text-facebookBlue text-5xl"
+                    className="text-5xl text-facebookBlue"
                     role="img"
                     aria-label="Facebook Icon"
                   >
@@ -107,7 +107,7 @@ const ContactSection = () => {
                     width="3rem"
                     height="3rem"
                     viewBox="0 0 382 382"
-                    className="text-linkedInBlue text-5xl"
+                    className="text-5xl text-linkedInBlue"
                     role="img"
                     aria-label="LinkedIn Icon"
                   >

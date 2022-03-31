@@ -47,7 +47,7 @@ const HomeNews = () => {
         return (
           <p
             itemProp="description"
-            className="mt-2 text-sm text-justify font-Montserrat line-clamp-3 leading-7"
+            className="mt-2 text-sm leading-7 text-justify font-Montserrat line-clamp-3"
           >
             {domToReact(domNode.children, options)}
           </p>
@@ -67,13 +67,13 @@ const HomeNews = () => {
           <h2 className="pb-8">
             <Link
               to="/news"
-              className="text-4xl font-semibold font-Montserrat uppercase hover:underline"
+              className="text-4xl font-semibold uppercase font-Montserrat hover:underline"
             >
               Latest from the Blog
             </Link>
           </h2>
 
-          <p className="pb-8 text-sm text-center font-Montserrat leading-7">
+          <p className="pb-8 text-sm leading-7 text-center font-Montserrat">
             Stay Current on Search Marketing Resource events, industry news,
             recent projects, the latest design practices and online marketing
             advice <br /> - Opt In on our News Page and receive posts alerts to
@@ -120,7 +120,7 @@ const HomeNews = () => {
                     <Link
                       to={`${post?.uri}`}
                       itemProp="url"
-                      className="w-full text-22 font-semibold text-left font-Montserrat hover:underline"
+                      className="w-full font-semibold text-left text-22 font-Montserrat hover:underline"
                     >
                       {parse(title)}
                     </Link>
@@ -139,7 +139,7 @@ const HomeNews = () => {
                     <Link
                       to={`${post?.uri}`}
                       itemProp="url"
-                      className="flex justify-between items-center w-full px-5 pb-5 text-sm font-semibold text-left font-Montserrat group"
+                      className="flex items-center justify-between w-full px-5 pb-5 text-sm font-semibold text-left font-Montserrat group"
                     >
                       See Full Article
                       <span className="text-2xl group-hover:rotate-180 group-hover:duration-500 group-hover:ease-in-out">

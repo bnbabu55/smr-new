@@ -72,7 +72,7 @@ const SubscriptionForm = () => {
               console.log(error)
             })
         }}
-        className="w-full px-3 py-10 mx-auto bg-themeOrange-300 border border-themeOrange-300 lg:absolute lg:left-0 lg:right-0 lg:z-20 lg:-mt-16 rounded-2xl lg:w-10/12 lg:px-0"
+        className="w-full px-3 py-10 mx-auto border bg-themeOrange-300 border-themeOrange-300 lg:absolute lg:left-0 lg:right-0 lg:z-20 lg:-mt-16 rounded-2xl lg:w-10/12 lg:px-0"
       >
         <div className="flex flex-col items-center justify-between px-8 gap-y-3 lg:gap-y-0 lg:flex-row">
           <label
@@ -87,7 +87,7 @@ const SubscriptionForm = () => {
             name="newsEmail"
             placeholder="enter your email"
             required
-            className="w-full py-3 px-3 text-xs border-gray-300 rounded-full shadow-sm lg:w-4/6 focus:border-themeBlue-200 focus:ring-themeBlue-200"
+            className="w-full px-3 py-3 text-xs border-gray-300 rounded-full shadow-sm lg:w-4/6 focus:border-themeBlue-200 focus:ring-themeBlue-200"
             value={emailValue}
             onChange={event => {
               setEmailValue(event.target.value)

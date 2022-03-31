@@ -4,22 +4,22 @@ const FreeQuoteSection = () => {
   return (
     <div
       id="FreeQuoteSection"
-      className="py-10 mx-auto text-white font-Montserrat text-xl text-center"
+      className="py-10 mx-auto text-xl text-center text-white font-Montserrat"
     >
       <div className="flex flex-col lg:flex-row" id="form">
-        <div className="bg-themeBlue-600 flex-1 p-8">
-          <fieldset className="border-4 border-opacity-50 border-white p-5">
-            <legend className="text-white text-center font-MontserratBold text-xl uppercase px-8">
+        <div className="flex-1 p-8 bg-themeBlue-600">
+          <fieldset className="p-5 border-4 border-white border-opacity-50">
+            <legend className="px-8 text-xl text-center text-white uppercase font-MontserratBold">
               Request SEO Proposal
             </legend>
             <p>
               View our varied Digital Marketing service offerings and select the
               program that best meets your online marketing requirements.
             </p>
-            <p className="py-5 font-bold underline tracking-wider">
+            <p className="py-5 font-bold tracking-wider underline">
               Services to Include
             </p>
-            <div className="flex justify-around text-left font-Montserrat text-sm md:text-lg">
+            <div className="flex justify-around text-sm text-left font-Montserrat md:text-lg">
               <ul className="list-disc">
                 <li>Assigned SEO Manager</li>
                 <li>Monthly Blog Articles</li>
@@ -44,16 +44,16 @@ const FreeQuoteSection = () => {
             <div className="my-5">
               <a
                 href="/search-marketing-website-design-proposal-form"
-                className="w-full text-white uppercase bg-themeOrange-400 font-MontserratSemiBold px-8 py-2 tracking-wider text-lg shadow-2xl mt-5"
+                className="w-full px-8 py-2 mt-5 text-lg tracking-wider text-white uppercase shadow-2xl bg-themeOrange-400 font-MontserratSemiBold"
               >
                 Free Quote
               </a>
             </div>
           </fieldset>
         </div>
-        <div className="bg-themeOrange-400 flex-1 p-8">
-          <fieldset className="border-4 border-opacity-50 border-white p-5 mx-auto">
-            <legend className="text-white text-center font-MontserratBold text-xl uppercase px-8">
+        <div className="flex-1 p-8 bg-themeOrange-400">
+          <fieldset className="p-5 mx-auto border-4 border-white border-opacity-50">
+            <legend className="px-8 text-xl text-center text-white uppercase font-MontserratBold">
               Website Design Quote
             </legend>
             <p>
@@ -61,10 +61,10 @@ const FreeQuoteSection = () => {
               for retail, business-to-business, industrial and consumer focused
               companies.
             </p>
-            <p className="py-5 font-bold underline tracking-wider">
+            <p className="py-5 font-bold tracking-wider underline">
               Services to Include
             </p>
-            <div className="flex justify-around text-left font-Montserrat text-sm md:text-lg">
+            <div className="flex justify-around text-sm text-left font-Montserrat md:text-lg">
               <ul className="list-disc">
                 <li>Assigned Project Designer</li>
                 <li>Development Test Manager</li>
@@ -88,7 +88,7 @@ const FreeQuoteSection = () => {
             </div>
             <div className="my-5">
               <a
-                className="w-full text-white uppercase bg-themeBlue-600 font-MontserratSemiBold px-8 py-2 tracking-wider text-lg shadow-2xl mt-5"
+                className="w-full px-8 py-2 mt-5 text-lg tracking-wider text-white uppercase shadow-2xl bg-themeBlue-600 font-MontserratSemiBold"
                 href="/website-design-search-marketing-quote-form"
               >
                 Free Quote

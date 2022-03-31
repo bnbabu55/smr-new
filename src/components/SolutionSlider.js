@@ -39,10 +39,10 @@ const SolutionSlider = () => {
   return (
     <div
       id="SolutionSlider"
-      className="bg-white text-themeGray-300 py-10 w-full mx-auto"
+      className="w-full py-10 mx-auto bg-white text-themeGray-300"
     >
       <Swiper
-        className="mx-auto w-full"
+        className="w-full mx-auto"
         autoplay
         loop
         breakpoints={{
@@ -63,7 +63,7 @@ const SolutionSlider = () => {
         {solutionSlides.nodes.map(solutionSlide => {
           return (
             <SwiperSlide
-              className="w-full flex flex-col lg:flex-row p-5 lg:border-l lg:border-gray-400"
+              className="flex flex-col w-full p-5 lg:flex-row lg:border-l lg:border-gray-400"
               key={solutionSlide.id}
             >
               <div
@@ -81,7 +81,7 @@ const SolutionSlider = () => {
               <div className="w-full lg:w-3/5">
                 <Link
                   to={`/${solutionSlide.frontmatter.linkedPage}`}
-                  className="font-Montserrat font-bold text-xl text-left uppercase text-themeBlue-600 pb-5"
+                  className="pb-5 text-xl font-bold text-left uppercase font-Montserrat text-themeBlue-600"
                 >
                   {solutionSlide.frontmatter.title}
                 </Link>
@@ -89,7 +89,7 @@ const SolutionSlider = () => {
                   key={solutionSlide.id + "content"}
                   className="mb-5 text-xl"
                 >
-                  <MDXRenderer className="text-lg text-justify prose">
+                  <MDXRenderer className="text-lg prose text-justify">
                     {solutionSlide.body}
                   </MDXRenderer>
                 </div>

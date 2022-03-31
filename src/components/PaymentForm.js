@@ -208,23 +208,23 @@ const PaymentForm = () => {
   }
 
   return (
-    <div className="w-full contact-wrapper mx-auto border border-gray-700 rounded">
+    <div className="w-full mx-auto border border-gray-700 rounded contact-wrapper">
       <form
-        className="text-gray-700 contact-form flex flex-col justify-center align-center m-10 font-Montserrat text-base"
+        className="flex flex-col justify-center m-10 text-base text-gray-700 contact-form align-center font-Montserrat"
         onSubmit={e => submitHandler(formData.stepTwo, e)}
       >
         {step === 1 && (
           <>
-            <div className="font-Montserrat text-lg font-bold pb-5">
+            <div className="pb-5 text-lg font-bold font-Montserrat">
               Step 1 of 2
             </div>
-            <div className="grid gap-6 grid-cols-1 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
               <div className="relative col-start-1 col-end-2 row-start-1 row-end-2">
                 <input
                   id="amount"
                   name="amount"
                   type="text"
-                  className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                  className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                   placeholder="Amount"
                   onChange={e => updateForm("stepOne", e)}
                   value={formData.stepOne.amount.value}
@@ -232,7 +232,7 @@ const PaymentForm = () => {
                 />
                 <label
                   htmlFor="amount"
-                  className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                  className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                 >
                   Amount
                 </label>
@@ -250,7 +250,7 @@ const PaymentForm = () => {
                   id="invoice"
                   name="invoice"
                   type="text"
-                  className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                  className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                   placeholder="Invoice number"
                   onChange={e => updateForm("stepOne", e)}
                   value={formData.stepOne.invoice.value}
@@ -258,7 +258,7 @@ const PaymentForm = () => {
                 />
                 <label
                   htmlFor="invoice"
-                  className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                  className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                 >
                   Invoice
                 </label>
@@ -277,7 +277,7 @@ const PaymentForm = () => {
                   name="comments"
                   type="textarea"
                   rows="6"
-                  className="peer w-full border border-gray-700 text-gray-600 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                  className="w-full text-gray-600 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                   placeholder="Your comments here"
                   onChange={e => updateForm("stepOne", e)}
                   value={formData.stepOne.comments.value}
@@ -285,7 +285,7 @@ const PaymentForm = () => {
                 />
                 <label
                   htmlFor="comments"
-                  className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                  className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                 >
                   Comments
                 </label>
@@ -297,21 +297,21 @@ const PaymentForm = () => {
                   {errors["comments"]}
                 </div>
               </div>
-              <fieldset className="border border-solid border-gray-700 rounded p-3 col-start-1 col-end-2 row-start-4 row-end-5 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3">
+              <fieldset className="col-start-1 col-end-2 row-start-4 row-end-5 p-3 border border-gray-700 border-solid rounded lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3">
                 <legend className="text-base text-gray-600">
                   Payment Type
                 </legend>
-                <div className="flex justify-start items-center">
+                <div className="flex items-center justify-start">
                   <label
                     htmlFor="payType"
-                    className="text-gray-600 text-base pr-3 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:text-gray-600 peer-focus:text-base"
+                    className="pr-3 text-base text-gray-600 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:text-gray-600 peer-focus:text-base"
                   >
                     One Time
                   </label>
                   <input
                     name="payType"
                     type="radio"
-                    className="peer border border-gray-700 text-blue-600 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded-lg shadow-sm"
+                    className="text-blue-600 placeholder-transparent border border-gray-700 rounded-lg shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                     onChange={e => updateForm("stepOne", e)}
                     value={"onetime"}
                     checked={
@@ -321,17 +321,17 @@ const PaymentForm = () => {
                     }
                   />
                 </div>
-                <div className="flex justify-start items-center mt-3">
+                <div className="flex items-center justify-start mt-3">
                   <label
                     htmlFor="payType"
-                    className="text-gray-600 text-base pr-3 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:text-gray-600 peer-focus:text-base"
+                    className="pr-3 text-base text-gray-600 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:text-gray-600 peer-focus:text-base"
                   >
                     Recurring
                   </label>
                   <input
                     name="payType"
                     type="radio"
-                    className="peer border border-gray-700 text-blue-600 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded-lg shadow-sm"
+                    className="text-blue-600 placeholder-transparent border border-gray-700 rounded-lg shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                     onChange={e => updateForm("stepOne", e)}
                     value={"recurring"}
                     checked={
@@ -349,13 +349,13 @@ const PaymentForm = () => {
                     : "hidden"
                 } col-start-1 col-end-2 row-start-5 row-end-6 lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3`}
               >
-                <label htmlFor="frequency" className="text-gray-600 text-base">
+                <label htmlFor="frequency" className="text-base text-gray-600">
                   Frequency
                 </label>
                 <select
                   id="frequency"
                   name="frequency"
-                  className="w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                  className="w-full text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm focus:outline-none focus:border-themeBlue-200"
                   onChange={e => updateForm("stepOne", e)}
                   value={formData.stepOne.frequency.value}
                 >
@@ -367,7 +367,7 @@ const PaymentForm = () => {
                 name="makepayment"
                 type="button"
                 value="NEXT"
-                className="mt-10 px-4 py-2 rounded bg-blue-500 hover:bg-blue-400 text-white font-semibold text-center block w-full focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500 focus:ring-opacity-80 cursor-pointer  col-start-1 col-end-2 row-start-6 row-end-7 lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4"
+                className="block w-full col-start-1 col-end-2 row-start-6 row-end-7 px-4 py-2 mt-10 font-semibold text-center text-white bg-blue-500 rounded cursor-pointer hover:bg-blue-400 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500 focus:ring-opacity-80 lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4"
                 onClick={e => stepChangeHandler(formData.stepOne, e)}
               />
             </div>
@@ -375,43 +375,43 @@ const PaymentForm = () => {
         )}
         {step === 2 && (
           <>
-            <div className="font-Montserrat text-lg font-bold pb-5">
+            <div className="pb-5 text-lg font-bold font-Montserrat">
               Step 2 of 2
             </div>
             <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-x-5">
-              <div className="w-full flex flex-col gap-y-6">
+              <div className="flex flex-col w-full gap-y-6">
                 <div className="flex gap-x-5">
-                  <div className="w-full relative">
+                  <div className="relative w-full">
                     <input
                       id="invoice2"
                       name="invoice2"
                       type="text"
-                      className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                      className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                       placeholder="Invoice number"
                       value={formData.stepOne.invoice.value}
                       readOnly={"readonly"}
                     />
                     <label
                       htmlFor="invoice2"
-                      className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                      className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                     >
                       Invoice
                     </label>
                   </div>
 
-                  <div className="w-full relative">
+                  <div className="relative w-full">
                     <input
                       id="amount2"
                       name="amount2"
                       type="text"
-                      className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                      className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                       placeholder="Amount"
                       value={formData.stepOne.amount.value}
                       readOnly={"readonly"}
                     />
                     <label
                       htmlFor="amount2"
-                      className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                      className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                     >
                       Amount
                     </label>
@@ -422,7 +422,7 @@ const PaymentForm = () => {
                     id="ccNumber"
                     name="ccNumber"
                     type="text"
-                    className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                    className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                     placeholder="Credit Card Number"
                     onChange={e => updateForm("stepTwo", e)}
                     value={formData.stepTwo.ccNumber.value}
@@ -452,7 +452,7 @@ const PaymentForm = () => {
                   />
                   <label
                     htmlFor="ccNumber"
-                    className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
                     Credit Card Number
                   </label>
@@ -465,12 +465,12 @@ const PaymentForm = () => {
                   </div>
                 </div>
                 <div className="flex gap-x-5">
-                  <div className="w-full relative">
+                  <div className="relative w-full">
                     <MaskedInput
                       id="expiry"
                       name="expiry"
                       type="text"
-                      className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                      className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                       placeholder="YYYY-MM"
                       onChange={e => updateForm("stepTwo", e)}
                       value={formData.stepTwo.expiry.value}
@@ -480,7 +480,7 @@ const PaymentForm = () => {
                     />
                     <label
                       htmlFor="expiry"
-                      className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                      className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                     >
                       Expiration Date (YYYY-MM)
                     </label>
@@ -492,13 +492,13 @@ const PaymentForm = () => {
                       {errors["expiry"]}
                     </div>
                   </div>
-                  <div className="w-full relative">
+                  <div className="relative w-full">
                     <MaskedInput
                       id="cvv"
                       name="cvv"
                       type="text"
                       placeholder="CVV"
-                      className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                      className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                       onChange={e => updateForm("stepTwo", e)}
                       value={formData.stepTwo.cvv.value}
                       autoComplete="off"
@@ -507,7 +507,7 @@ const PaymentForm = () => {
                     />
                     <label
                       htmlFor="cvv"
-                      className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                      className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                     >
                       CVV
                     </label>
@@ -525,7 +525,7 @@ const PaymentForm = () => {
                     id="firstName"
                     name="firstName"
                     type="text"
-                    className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                    className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                     placeholder="First Name"
                     onChange={e => updateForm("stepTwo", e)}
                     value={formData.stepTwo.firstName.value}
@@ -533,7 +533,7 @@ const PaymentForm = () => {
                   />
                   <label
                     htmlFor="firstName"
-                    className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
                     First Name
                   </label>
@@ -550,7 +550,7 @@ const PaymentForm = () => {
                     id="lastName"
                     name="lastName"
                     type="text"
-                    className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                    className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                     placeholder="Last Name"
                     onChange={e => updateForm("stepTwo", e)}
                     value={formData.stepTwo.lastName.value}
@@ -558,7 +558,7 @@ const PaymentForm = () => {
                   />
                   <label
                     htmlFor="lastName"
-                    className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
                     Last Name
                   </label>
@@ -572,13 +572,13 @@ const PaymentForm = () => {
                 </div>
               </div>
 
-              <div className="w-full flex flex-col gap-y-6 mt-5 lg:mt-0">
+              <div className="flex flex-col w-full mt-5 gap-y-6 lg:mt-0">
                 <div className="relative">
                   <input
                     id="addr1"
                     name="addr1"
                     type="text"
-                    className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                    className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                     placeholder="Address Line 1"
                     onChange={e => updateForm("stepTwo", e)}
                     value={formData.stepTwo.addr1.value}
@@ -586,7 +586,7 @@ const PaymentForm = () => {
                   />
                   <label
                     htmlFor="addr1"
-                    className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
                     Address Line 1
                   </label>
@@ -604,7 +604,7 @@ const PaymentForm = () => {
                     id="addr2"
                     name="addr2"
                     type="text"
-                    className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                    className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                     placeholder="Address Line 2"
                     onChange={e => updateForm("stepTwo", e)}
                     value={formData.stepTwo.addr2.value}
@@ -612,7 +612,7 @@ const PaymentForm = () => {
                   />
                   <label
                     htmlFor="addr2"
-                    className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
                     Address Line 2
                   </label>
@@ -629,7 +629,7 @@ const PaymentForm = () => {
                     id="city"
                     name="city"
                     type="text"
-                    className="peer h-10 w-full border border-gray-700 text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded shadow-sm"
+                    className="w-full h-10 text-gray-900 placeholder-transparent border border-gray-700 rounded shadow-sm peer focus:outline-none focus:border-themeBlue-200"
                     onChange={e => updateForm("stepTwo", e)}
                     value={formData.stepTwo.city.value}
                     placeholder="City"
@@ -637,7 +637,7 @@ const PaymentForm = () => {
                   />
                   <label
                     htmlFor="city"
-                    className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
                     City
                   </label>
@@ -653,7 +653,7 @@ const PaymentForm = () => {
                   <select
                     id="state"
                     name="state"
-                    className="peer h-10 w-full text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded"
+                    className="w-full h-10 text-gray-900 placeholder-transparent rounded peer focus:outline-none focus:border-themeBlue-200"
                     onChange={e => updateForm("stepTwo", e)}
                     value={formData.stepTwo.state.value}
                   >
@@ -668,7 +668,7 @@ const PaymentForm = () => {
                   </select>
                   <label
                     htmlFor="state"
-                    className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
                     State
                   </label>
@@ -685,7 +685,7 @@ const PaymentForm = () => {
                     id="zip"
                     name="zip"
                     type="text"
-                    className="peer h-10 w-full text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded"
+                    className="w-full h-10 text-gray-900 placeholder-transparent rounded peer focus:outline-none focus:border-themeBlue-200"
                     placeholder="Zip Code"
                     onChange={e => updateForm("stepTwo", e)}
                     value={formData.stepTwo.zip.value}
@@ -706,7 +706,7 @@ const PaymentForm = () => {
                   />
                   <label
                     htmlFor="zip"
-                    className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
                     Zip Code
                   </label>
@@ -724,7 +724,7 @@ const PaymentForm = () => {
               <input
                 type="button"
                 value="Go Back"
-                className="mt-10 px-4 py-2 rounded bg-blue-500 hover:bg-blue-400 text-white font-semibold text-center block w-full focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500 focus:ring-opacity-80 cursor-pointer"
+                className="block w-full px-4 py-2 mt-10 font-semibold text-center text-white bg-blue-500 rounded cursor-pointer hover:bg-blue-400 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500 focus:ring-opacity-80"
                 onClick={() => {
                   setStep(1)
                 }}
@@ -733,7 +733,7 @@ const PaymentForm = () => {
                 name="makepayment"
                 type="submit"
                 value="Submit"
-                className="mt-10 px-4 py-2 rounded bg-blue-500 hover:bg-blue-400 text-white font-semibold text-center block w-full focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500 focus:ring-opacity-80 cursor-pointer"
+                className="block w-full px-4 py-2 mt-10 font-semibold text-center text-white bg-blue-500 rounded cursor-pointer hover:bg-blue-400 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500 focus:ring-opacity-80"
               />
             </div>
           </>
@@ -742,15 +742,15 @@ const PaymentForm = () => {
 
       <div id="response-message" style={{ padding: "20px" }}>
         {formResp.status === "loading" && (
-          <p className="font-Montserrat text-black">Processing....</p>
+          <p className="text-black font-Montserrat">Processing....</p>
         )}
         {formResp.status === "error" && (
-          <p className="font-Montserrat text-red-600">
+          <p className="text-red-600 font-Montserrat">
             {formResp.body_response}
           </p>
         )}
         {formResp.status === "success" && (
-          <p className="font-Montserrat text-green-600">
+          <p className="text-green-600 font-Montserrat">
             {formResp.body_response}
           </p>
         )}

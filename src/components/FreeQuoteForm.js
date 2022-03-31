@@ -30,7 +30,7 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
     <div className="pt-10">
       <form
         id="free-quote"
-        className="text-gray-700 free-quote-form flex flex-col justify-center align-center m-10 font-Montserrat text-base"
+        className="flex flex-col justify-center m-10 text-base text-gray-700 free-quote-form align-center font-Montserrat"
         onSubmit={async event => {
           event.preventDefault()
 
@@ -89,13 +89,13 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
             })
         }}
       >
-        <div className="font-Montserrat font-semibold text-xs text-red-600 pb-4">
+        <div className="pb-4 text-xs font-semibold text-red-600 font-Montserrat">
           Required *
         </div>
-        <div className="grid gap-y-6 lg:gap-y-6 lg:gap-x-6 grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-y-6 lg:gap-y-6 lg:gap-x-6 lg:grid-cols-2">
           <div className="relative w-full col-start-1 col-end-2">
             <input
-              className="peer h-10 w-full text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded"
+              className="w-full h-10 text-gray-900 placeholder-transparent rounded peer focus:outline-none focus:border-themeBlue-200"
               type="text"
               placeholder="First"
               name="firstname"
@@ -108,15 +108,15 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
             />
             <label
               htmlFor="firstname"
-              className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+              className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
             >
               First Name
             </label>
-            <span className="absolute right-2 top-1 text-red-600">*</span>
+            <span className="absolute text-red-600 right-2 top-1">*</span>
           </div>
           <div className="relative w-full col-start-1 col-end-2 row-start-2 row-end-3 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
             <input
-              className="peer h-10 w-full text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded"
+              className="w-full h-10 text-gray-900 placeholder-transparent rounded peer focus:outline-none focus:border-themeBlue-200"
               type="text"
               placeholder="Last"
               name="lastname"
@@ -129,15 +129,15 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
             />
             <label
               htmlFor="lastname"
-              className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+              className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
             >
               Last Name
             </label>
-            <span className="absolute right-2 top-1 text-red-600">*</span>
+            <span className="absolute text-red-600 right-2 top-1">*</span>
           </div>
           <div className="relative w-full col-start-1 col-end-2 row-start-3 row-end-4 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3">
             <input
-              className="peer h-10 w-full text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded"
+              className="w-full h-10 text-gray-900 placeholder-transparent rounded peer focus:outline-none focus:border-themeBlue-200"
               type="tel"
               placeholder="Company"
               name="company"
@@ -150,15 +150,15 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
             />
             <label
               htmlFor="company"
-              className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+              className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
             >
               Company
             </label>
-            <span className="absolute right-2 top-1 text-red-600">*</span>
+            <span className="absolute text-red-600 right-2 top-1">*</span>
           </div>
           <div className="relative w-full col-start-1 col-end-2 row-start-4 row-end-5 lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3">
             <input
-              className="peer h-10 w-full text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded"
+              className="w-full h-10 text-gray-900 placeholder-transparent rounded peer focus:outline-none focus:border-themeBlue-200"
               type="email"
               placeholder="Email"
               name="your-email"
@@ -171,17 +171,17 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
             />
             <label
               htmlFor="your-email"
-              className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+              className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
             >
               Email
             </label>
-            <span className="absolute right-2 top-1 text-red-600">*</span>
+            <span className="absolute text-red-600 right-2 top-1">*</span>
           </div>
-          <div className="program-section flex gap-x-10 py-5 col-start-1 col-end-2 row-start-5 row-end-6 lg:col-span-2 lg:row-start-3 lg:row-end-4 text-xs md:text-base">
+          <div className="flex col-start-1 col-end-2 row-start-5 row-end-6 py-5 text-xs program-section gap-x-10 lg:col-span-2 lg:row-start-3 lg:row-end-4 md:text-base">
             <div className="program-section-heading">
               *Services Selected - Request Quote
             </div>
-            <div className="program-section-content flex flex-col">
+            <div className="flex flex-col program-section-content">
               <label className="inline-flex md:items-center">
                 <input
                   type="radio"
@@ -268,7 +268,7 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
           </div>
           <div className="relative w-full col-start-1 col-end-2 row-start-6 row-end-7 lg:col-span-2 lg:row-start-4 lg:row-end-5">
             <textarea
-              className="peer w-full text-gray-900 placeholder-transparent focus:outline-none focus:border-themeBlue-200 rounded"
+              className="w-full text-gray-900 placeholder-transparent rounded peer focus:outline-none focus:border-themeBlue-200"
               type="textarea"
               placeholder="Message"
               rows="6"
@@ -281,15 +281,15 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
             />
             <label
               htmlFor="message"
-              className="absolute left-2 -top-5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
+              className="absolute text-sm text-gray-600 transition-all left-2 -top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm"
             >
               Message
             </label>
-            <span className="absolute right-2 top-1 text-red-600">*</span>
+            <span className="absolute text-red-600 right-2 top-1">*</span>
           </div>
           <button
             type="submit"
-            className="w-full text-white uppercase bg-themeOrange-400 rounded font-MontserratSemiBold px-8 py-2 tracking-wider text-base shadow-2xl mt-5 col-span-2"
+            className="w-full col-span-2 px-8 py-2 mt-5 text-base tracking-wider text-white uppercase rounded shadow-2xl bg-themeOrange-400 font-MontserratSemiBold"
           >
             Receive my free quote
           </button>
@@ -297,15 +297,15 @@ const FreeQuoteForm = ({ useShareableState, OnlySEO }) => {
       </form>
       <div id="response-message" style={{ padding: "20px" }}>
         {formResp.status === "loading" && (
-          <p className="font-Montserrat text-black">Sending....</p>
+          <p className="text-black font-Montserrat">Sending....</p>
         )}
         {formResp.status === "error" && (
-          <p className="font-Montserrat text-red-600">
+          <p className="text-red-600 font-Montserrat">
             {formResp.body_response}
           </p>
         )}
         {formResp.status === "success" && (
-          <p className="font-Montserrat text-green-600">
+          <p className="text-green-600 font-Montserrat">
             Your form has been submitted successfully, thank you.
           </p>
         )}

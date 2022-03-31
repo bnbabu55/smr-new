@@ -33,17 +33,17 @@ export const FaqSection = () => {
 
   return (
     <>
-      <div id="page-title" className="bg-white py-10">
-        <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center uppercase">
+      <div id="page-title" className="py-10 bg-white">
+        <h1 className="text-5xl font-bold tracking-wide text-center uppercase text-themeOrange-400 font-Montserrat">
           SEO FREQUENTLY ASKED QUESTIONS
         </h1>
       </div>
 
-      <div className="w-11/12 mx-auto py-10" id="faq-questions">
+      <div className="w-11/12 py-10 mx-auto" id="faq-questions">
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>
                   What Is The Difference Between Search Engine Marketing (SEM) &
                   Search Engine Optimization (SEO)
@@ -90,7 +90,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>How Long Before A SEO Program Generates Traffic</span>
                 <ChevronDownIcon
                   className={`${
@@ -137,7 +137,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>What Are Best Search Marketing Services</span>
                 <ChevronDownIcon
                   className={`${
@@ -168,7 +168,7 @@ export const FaqSection = () => {
                     new Search Engine algorithms are adopted.
                   </p>
                   <p className="pb-5">Services should include:</p>
-                  <div className="flex flex-col md:flex-row justify-around">
+                  <div className="flex flex-col justify-around md:flex-row">
                     <ul className="list-square">
                       <li>SEO Website Analysis</li>
                       <li>Keyword Phrase Research</li>
@@ -195,7 +195,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>What is Search Optimized Webpage Copy</span>
                 <ChevronDownIcon
                   className={`${
@@ -251,7 +251,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span> What is Meta Content</span>
                 <ChevronDownIcon
                   className={`${
@@ -323,7 +323,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>The Importance Of SEO Keyword Selection</span>
                 <ChevronDownIcon
                   className={`${
@@ -388,7 +388,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>Do You Need To Post Blog (News) Articles</span>
                 <ChevronDownIcon
                   className={`${
@@ -444,7 +444,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>Why Is Social Media Important</span>
                 <ChevronDownIcon
                   className={`${
@@ -501,7 +501,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>How To Publish Optimized Press Releases For SEO</span>
                 <ChevronDownIcon
                   className={`${
@@ -562,7 +562,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>Why Are Backlinks Important & How To Create Them</span>
                 <ChevronDownIcon
                   className={`${
@@ -591,7 +591,7 @@ export const FaqSection = () => {
                     is of an actual company doing business. The main validators
                     are –
                   </p>
-                  <ul className="second-ul p-0 pb-5">
+                  <ul className="p-0 pb-5 second-ul">
                     <li>- Business Directory accuracy</li>
                     <li>
                       - Backlinks (your website URL) in copy found on other
@@ -623,7 +623,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>Importance Of Business Directories & NAP Details</span>
                 <ChevronDownIcon
                   className={`${
@@ -711,7 +711,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>Tracking The Success Of Your SEO Program</span>
                 <ChevronDownIcon
                   className={`${
@@ -755,7 +755,7 @@ export const FaqSection = () => {
                     available 24/7 in a SEO Performance dashboard. The metrics
                     tracked include –
                   </p>
-                  <div className="ul-left pb-5 flex flex-col md:flex-row justify-evenly">
+                  <div className="flex flex-col pb-5 ul-left md:flex-row justify-evenly">
                     <ul className="m-0 list-square">
                       <li>Keyword Phrase Search Rankings </li>
                       <li>
@@ -797,7 +797,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>
                   Why You Need A Search Marketing Company & SEO Manager
                 </span>
@@ -857,7 +857,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>
                   How To Qualify Your Website Traffic – Higher Conversion Rates
                 </span>
@@ -884,7 +884,7 @@ export const FaqSection = () => {
                     For a SEO program to be successful, a chain of events needs
                     to occur –
                   </p>
-                  <ol className="pb-5 list-decimal list-inside ml-2">
+                  <ol className="pb-5 ml-2 list-decimal list-inside">
                     <li>Significantly increase your keyword search rankings</li>
                     <li>
                       Generate more ‘click throughs’ (organic traffic) to your
@@ -937,7 +937,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>
                   Measuring The Business Leads Generated By Your Website
                 </span>
@@ -977,7 +977,7 @@ export const FaqSection = () => {
                     are, not just to continue grouping all sales activity
                     together.
                   </p>
-                  <ol className="pb-5 list-decimal list-outside ml-6">
+                  <ol className="pb-5 ml-6 list-decimal list-outside">
                     <li>
                       Website Traffic. With a redesign and the Search Engine
                       optimization of your website, your site traffic should
@@ -1034,7 +1034,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>Understanding SEO Terms – What Do They Mean</span>
                 <ChevronDownIcon
                   className={`${
@@ -1080,7 +1080,7 @@ export const FaqSection = () => {
                     completed. A cursory knowledge of the following should be
                     provided by your SEO program manager:
                   </p>
-                  <table className="w-full text-left pb-5">
+                  <table className="w-full pb-5 text-left">
                     <tr>
                       <td>- Title Tags</td>
                       <td>- Header Tags</td>
@@ -1117,7 +1117,7 @@ export const FaqSection = () => {
         <Disclosure as="div" className="my-4">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left text-themeBlue-600 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xl font-medium text-left bg-purple-100 rounded-lg text-themeBlue-600 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>How Well Is Your Website Search Engine Optimized</span>
                 <ChevronDownIcon
                   className={`${

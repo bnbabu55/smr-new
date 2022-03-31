@@ -45,7 +45,7 @@ export const SocialMedia = () => {
   return (
     <>
       <div>
-        <figure className="overflow-hidden w-full">
+        <figure className="w-full overflow-hidden">
           <GatsbyImage
             image={bgImages.nodes[0].childImageSharp.gatsbyImageData}
             alt="Social Media Info"
@@ -68,10 +68,10 @@ export const SocialMedia = () => {
                     i % 2 === 0 ? "text-themeBlue-600" : "text-themeOrange-400"
                   }`}
                 >
-                  <h2 className=" text-3xl font-bold">
+                  <h2 className="text-3xl font-bold ">
                     {socialItem.frontmatter.title}
                   </h2>
-                  <MDXRenderer className="text-lg py-5">
+                  <MDXRenderer className="py-5 text-lg">
                     {socialItem.body}
                   </MDXRenderer>
                 </div>
