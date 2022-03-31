@@ -47,13 +47,13 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                   <li className="w-1/12">
                     <Link
                       to="/news"
-                      className="bg-themeBlue-600 hover:bg-themeBlue-200"
+                      className="hover:bg-themeBlue-600 bg-themeBlue-200"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 460.298 460.297"
                         width="2.25rem"
-                        className="p-1 text-xl text-white rounded-lg fill-current bg-themeBlue-600 hover:bg-themeBlue-200"
+                        className="p-1 text-xl text-white rounded-lg fill-current hover:bg-themeBlue-600 bg-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
                       >
                         <title>News Home</title>
                         <path d="M230.149 120.939L65.986 256.274c0 .191-.048.472-.144.855-.094.38-.144.656-.144.852v137.041c0 4.948 1.809 9.236 5.426 12.847 3.616 3.613 7.898 5.431 12.847 5.431h109.63V303.664h73.097v109.64h109.629c4.948 0 9.236-1.814 12.847-5.435 3.617-3.607 5.432-7.898 5.432-12.847V257.981c0-.76-.104-1.334-.288-1.707L230.149 120.939z" />
@@ -68,7 +68,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                           <Link
                             to={`${previous.uri}`}
                             rel="prev"
-                            className="px-2 py-1 text-white rounded-lg bg-themeBlue-600 hover:bg-themeBlue-200"
+                            className="px-2 py-1 text-white rounded-lg hover:bg-themeBlue-600 bg-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
                           >
                             ← {"Previous"}
                           </Link>
@@ -79,7 +79,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                           <Link
                             to={`${next.uri}`}
                             rel="next"
-                            className="px-2 py-1 text-white rounded-lg bg-themeBlue-600 hover:bg-themeBlue-200"
+                            className="px-2 py-1 text-white rounded-lg hover:bg-themeBlue-600 bg-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
                           >
                             {"Next"} →
                           </Link>

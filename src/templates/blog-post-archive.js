@@ -142,12 +142,7 @@ const BlogIndex = ({
               <Link
                 to={previousPagePath}
                 rel="prev"
-                className="text-themeBlue-200 hover:text-themeBlue-600"
-                style={{
-                  marginTop: "0.1rem",
-                  marginBottom: "0.1rem",
-                  padding: "0.5rem",
-                }}
+                className="hover:text-themeBlue-600 px-3 py-1 rounded-xl font-semibold text-lg font-PTSerif text-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
               >
                 {"<< Prev"}
               </Link>{" "}
@@ -166,18 +161,11 @@ const BlogIndex = ({
                 ) : (
                   <Link
                     to={`${x === 1 ? currentPageBase : currentPageBase + x}`}
-                    className={`${
+                    className={`px-3 py-1 rounded-lg ${
                       x === currentPage
-                        ? "text-white bg-themeBlue-200 hover:bg-themeBlue-600"
+                        ? "text-white bg-themeBlue-200 hover:bg-themeBlue-600 outline outline-1 outline-offset-2 outline-themeBlue-200"
                         : "text-themeBlue-200 hover:text-themeBlue-600"
-                    }
-                `}
-                    style={{
-                      marginTop: "0.1rem",
-                      marginBottom: "0.1rem",
-                      padding: "0.5rem",
-                      textDecoration: "none",
-                    }}
+                    }`}
                   >
                     {x}
                   </Link>
@@ -190,12 +178,7 @@ const BlogIndex = ({
               <Link
                 to={nextPagePath}
                 rel="next"
-                className="text-themeBlue-200 hover:text-themeBlue-600"
-                style={{
-                  marginTop: "0.1rem",
-                  marginBottom: "0.1rem",
-                  padding: "0.5rem",
-                }}
+                className="hover:text-themeBlue-600 px-3 py-1 rounded-xl font-semibold text-lg font-PTSerif text-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
               >
                 {"Next >>"}
               </Link>

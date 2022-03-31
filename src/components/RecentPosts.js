@@ -80,7 +80,7 @@ const RecentPosts = () => {
                       <Link to={`${post?.uri}`} itemProp="url">
                         <span
                           itemProp="headline"
-                          className="text-xs tracking-wider uppercase font-MontserratBold text-themeOrange-400"
+                          className="text-xs tracking-wider uppercase font-Montserrat font-bold text-themeOrange-400"
                           style={{ lineHeight: "90%" }}
                         >
                           {parse(title)}
