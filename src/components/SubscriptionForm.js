@@ -85,7 +85,7 @@ const SubscriptionForm = () => {
             type="email"
             id="newsEmail"
             name="newsEmail"
-            placeholder="enter your email"
+            placeholder="Email"
             required
             className="w-full px-3 py-3 text-xs border-gray-300 rounded-full shadow-sm lg:w-4/6 focus:border-themeBlue-200 focus:ring-themeBlue-200"
             value={emailValue}
