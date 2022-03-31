@@ -47,18 +47,18 @@ const SMServices = () => {
             <BgImage
               image={pluginImage}
               key={smSlide.id}
-              className="flex items-center w-full py-10 mx-auto bg-cover bg-scroll"
+              className="flex items-center w-full py-10 mx-auto bg-scroll bg-cover"
             >
               <div className="flex flex-col items-center justify-center w-full px-3 py-5 mx-auto lg:py-0 lg:items-start lg:justify-start lg:px-0 lg:w-10/12 gap-y-5">
-                <h3 className="text-22 font-bold uppercase font-Montserrat">
+                <h3 className="font-bold uppercase text-22 font-Montserrat">
                   {smSlide.frontmatter.title}
                 </h3>
-                <div className="py-5 text-sm lg:w-2/3 leading-7">
+                <div className="py-5 text-sm leading-7 lg:w-2/3">
                   <MDXRenderer>{smSlide.body}</MDXRenderer>
                 </div>
                 <Link
                   to={smSlide.frontmatter.websiteUrl}
-                  className="cursor-pointer underline text-sm font-semibold"
+                  className="text-sm font-semibold underline cursor-pointer"
                 >
                   Read more about our {smSlide.frontmatter.title} offerings
                 </Link>
@@ -73,15 +73,15 @@ const SMServices = () => {
               className="flex items-center w-full py-10 mx-auto"
             >
               <div className="flex flex-col items-center justify-center w-full px-3 py-5 mx-auto lg:py-0 lg:items-end lg:justify-end lg:px-0 lg:w-10/12 gap-y-5">
-                <h3 className="text-22 font-bold uppercase font-Montserrat">
+                <h3 className="font-bold uppercase text-22 font-Montserrat">
                   {smSlide.frontmatter.title}
                 </h3>
-                <div className="py-5 text-sm lg:w-2/3 leading-7">
+                <div className="py-5 text-sm leading-7 lg:w-2/3">
                   <MDXRenderer>{smSlide.body}</MDXRenderer>
                 </div>
                 <Link
                   to={smSlide.frontmatter.websiteUrl}
-                  className="cursor-pointer underline text-sm font-semibold"
+                  className="text-sm font-semibold underline cursor-pointer"
                 >
                   Read more about our {smSlide.frontmatter.title} offerings
                 </Link>

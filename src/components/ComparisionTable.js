@@ -3,9 +3,9 @@ import React from "react"
 const ComparisionTable = () => {
   return (
     <div className="comparision-table text-themeOrange-400 shadow-themeShadow">
-      <table className="w-full table-fixed border-collapse font-Montserrat font-semibold text-sm text-center">
+      <table className="w-full text-sm font-semibold text-center border-collapse table-fixed font-Montserrat">
         <thead>
-          <tr className="font-bold text-xs md:text-lg bg-gray-200">
+          <tr className="text-xs font-bold bg-gray-200 md:text-lg">
             <th>Services</th>
             <th>Silver</th>
             <th>Gold</th>

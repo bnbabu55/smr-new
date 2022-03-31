@@ -23,8 +23,8 @@ const FreeAuditForm = ({ home }) => {
         home ? "bg-themeOrange-700" : "bg-themeBlue-600"
       } border-gray-300`}
     >
-      <div className="top_content flex flex-col justify-center items-center">
-        <div className="pt-8 text-white text-2xl text-center font-MontserratBold pb-5">
+      <div className="flex flex-col items-center justify-center top_content">
+        <div className="pt-8 pb-5 text-2xl text-center text-white font-MontserratBold">
           Is Your Website Search Engine Optimized? Get a Free Website SEO Audit!
         </div>
         <div
@@ -33,7 +33,7 @@ const FreeAuditForm = ({ home }) => {
           } mx-auto`}
         >
           <form
-            className="audit-form m-10 font-Montserrat text-base"
+            className="m-10 text-base audit-form font-Montserrat"
             onSubmit={async event => {
               event.preventDefault()
 
@@ -93,11 +93,11 @@ const FreeAuditForm = ({ home }) => {
             }}
           >
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
-              <div className="order-1 font-MontserratBold text-2xl uppercase text-white md:col-span-2 lg:col-span-1">
+              <div className="order-1 text-2xl text-white uppercase font-MontserratBold md:col-span-2 lg:col-span-1">
                 Free Site Audit!
               </div>
               <input
-                className="order-1 w-full border border-black p-3 rounded"
+                className="order-1 w-full p-3 border border-black rounded"
                 type="text"
                 placeholder="First Name"
                 name="first-name"
@@ -108,7 +108,7 @@ const FreeAuditForm = ({ home }) => {
                 }}
               />
               <input
-                className="w-full order-1 border border-black p-3 rounded"
+                className="order-1 w-full p-3 border border-black rounded"
                 type="text"
                 placeholder="Last Name"
                 name="last-name"
@@ -119,7 +119,7 @@ const FreeAuditForm = ({ home }) => {
                 }}
               />
               <input
-                className="w-full order-1 border border-black p-3 rounded"
+                className="order-1 w-full p-3 border border-black rounded"
                 type="text"
                 placeholder="e.g http(s)://example.com"
                 name="your-website"
@@ -129,9 +129,9 @@ const FreeAuditForm = ({ home }) => {
                   setWebUrlValue(event.target.value)
                 }}
               />
-              <div className="order-2 lg:order-1 text-white">Recaptcha</div>
+              <div className="order-2 text-white lg:order-1">Recaptcha</div>
               <input
-                className="w-full order-1 border border-black p-3 rounded"
+                className="order-1 w-full p-3 border border-black rounded"
                 type="email"
                 placeholder="Email"
                 name="your-email"
@@ -142,7 +142,7 @@ const FreeAuditForm = ({ home }) => {
                 }}
               />
               <input
-                className="w-full order-1 border border-black p-3 rounded"
+                className="order-1 w-full p-3 border border-black rounded"
                 type="tel"
                 placeholder="Phone"
                 name="your-phone"
@@ -168,15 +168,15 @@ const FreeAuditForm = ({ home }) => {
           </form>
           <div id="response-message" style={{ padding: "20px" }}>
             {formResp.status === "loading" && (
-              <p className="font-Montserrat text-black">Sending....</p>
+              <p className="text-black font-Montserrat">Sending....</p>
             )}
             {formResp.status === "error" && (
-              <p className="font-Montserrat text-red-600">
+              <p className="text-red-600 font-Montserrat">
                 {formResp.body_response}
               </p>
             )}
             {formResp.status === "success" && (
-              <p className="font-Montserrat text-green-600">
+              <p className="text-green-600 font-Montserrat">
                 Your form has been submitted successfully, thank you.
               </p>
             )}
@@ -193,7 +193,7 @@ const FreeAuditForm = ({ home }) => {
             </p>
           </div>
         </div>
-        <p className="text-white text-lg font-Montserrat text-center py-5 mx-5">
+        <p className="py-5 mx-5 text-lg text-center text-white font-Montserrat">
           The Search Marketing Resource team will review your website and
           deliver a report that provides both a graded review on how well your
           site has been Search Engine optimized for the keywords or phrases you

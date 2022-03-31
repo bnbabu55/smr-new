@@ -98,10 +98,10 @@ const Footer = () => {
         </div>
         <div className="flex flex-col w-full gap-3 pl-2 mx-auto lg:pl-0 lg:w-10/12 lg:flex-row">
           <div className="flex flex-col w-full gap-y-2">
-            <div className="uppercase text-22 font-semibold tracking-wide">
+            <div className="font-semibold tracking-wide uppercase text-22">
               Website SEO, design and development company
             </div>
-            <div className="flex gap-x-3 py-3 items-center">
+            <div className="flex items-center py-3 gap-x-3">
               <a
                 href="https://www.facebook.com/Search-Marketing-Resource-108196670966/?ref=py_c"
                 target="_blank"
@@ -250,7 +250,7 @@ const Footer = () => {
             </div>
           </div>
           <nav className="w-full">
-            <h2 className="pb-5 text-22 font-semibold">Quicklinks</h2>
+            <h2 className="pb-5 font-semibold text-22">Quicklinks</h2>
             {wpMenu?.menuItems?.nodes?.length > 0 ? (
               <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
                 {wpMenu?.menuItems?.nodes.map(menu => {
@@ -269,7 +269,7 @@ const Footer = () => {
                     <Link
                       key={menu?.id}
                       to={pageAnchor}
-                      className="text-sm text-white rounded font-Montserrat font-semibold"
+                      className="text-sm font-semibold text-white rounded font-Montserrat"
                       activeClassName="active"
                     >
                       {menu?.label}
@@ -279,11 +279,11 @@ const Footer = () => {
               </div>
             ) : null}
           </nav>
-          <ul className="text-sm flex flex-col gap-y-5">
+          <ul className="flex flex-col text-sm gap-y-5">
             <li>
               <a
                 href="mailto:sales@searchmarketingresource.com"
-                className="hover:text-themeYellow-400 block pb-2"
+                className="block pb-2 hover:text-themeYellow-400"
               >
                 sales@searchmarketingresource.com
               </a>
@@ -297,7 +297,7 @@ const Footer = () => {
             <li>
               <a
                 href="mailto:support@searchmarketingresource.com"
-                className="hover:text-themeYellow-400 block pb-2"
+                className="block pb-2 hover:text-themeYellow-400"
               >
                 support@searchmarketingresource.com
               </a>
@@ -311,7 +311,7 @@ const Footer = () => {
             <li>
               <a
                 href="mailto:accounting@searchmarketingresource.com"
-                className="hover:text-themeYellow-400 block pb-2"
+                className="block pb-2 hover:text-themeYellow-400"
               >
                 accounting@searchmarketingresource.com
               </a>

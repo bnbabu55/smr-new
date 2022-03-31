@@ -34,7 +34,7 @@ const Categories = () => {
   function renderCategory() {
     let catGroups = groupBy(catRowSize, filteredCat)
     return (
-      <ul className="w-100 flex gap-x-6 font-Montserrat text-sm text-themeOrange-400">
+      <ul className="flex text-sm w-100 gap-x-6 font-Montserrat text-themeOrange-400">
         {catGroups.map(renderRow)}
       </ul>
     )
@@ -55,7 +55,7 @@ const Categories = () => {
       <li key={cat.id + index} className="pb-3">
         <Link
           to={`${cat.uri.replace("/blog", "")}`}
-          className="font-Montserrat font-semibold text-sm text-themeOrange-400"
+          className="text-sm font-semibold font-Montserrat text-themeOrange-400"
         >
           {cat.name}
         </Link>
@@ -76,7 +76,7 @@ const Categories = () => {
 
   return (
     <div className="category">
-      <h3 className="font-Montserrat font-bold text-lg text-themeBlue-600 py-5">
+      <h3 className="py-5 text-lg font-bold font-Montserrat text-themeBlue-600">
         Categories
       </h3>
       {catComponent}

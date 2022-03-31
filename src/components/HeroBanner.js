@@ -66,9 +66,9 @@ const HeroBanner = () => {
     <BgImage
       image={pluginImage}
       id="hero-banner"
-      className="flex flex-col items-start justify-center bg-contain bg-top"
+      className="flex flex-col items-start justify-center bg-top bg-contain"
     >
-      <div className="flex items-center justify-between px-5 pt-5 lg:pt-20 mx-auto">
+      <div className="flex items-center justify-between px-5 pt-5 mx-auto lg:pt-20">
         <div className="w-full mx-auto px-5 lg:px-0 lg:w-[60%] text-right uppercase font-Montserrat font-bold text-white lg:text-[69px] text-2xl">
           <div className=" relative flex flex-col justify-center items-center z-[1]">
             <span className="hidden lg:block absolute z-[1] w-[150px] h-[150px] -top-[108px] -left-[5px] bg-themeYellow-400 before:content-[''] before:absolute before:w-[90px] before:h-[90px] before:top-[30px] before:left-[30px] before:bg-[#01487e] before:z-[2] after:content-[''] after:absolute after:w-[85px] after:h-[60px] after:top-[90px] after:left-[65px] after:bg-[#01487e] after:z-[3]" />
@@ -98,7 +98,7 @@ const HeroBanner = () => {
                   alt={card.frontmatter.altTxt}
                   className="w-2/5"
                 />
-                <h3 className="w-3/5 text-22 px-2 font-semibold font-Montserrat">
+                <h3 className="w-3/5 px-2 font-semibold text-22 font-Montserrat">
                   {card.frontmatter.title}
                 </h3>
               </div>
@@ -107,7 +107,7 @@ const HeroBanner = () => {
               </div>
               <Link
                 to={card.frontmatter.websiteUrl}
-                className="mt-auto cursor-pointer text-left w-full text-sm font-semibold flex justify-between items-center"
+                className="flex items-center justify-between w-full mt-auto text-sm font-semibold text-left cursor-pointer"
               >
                 Get More Info
                 <span className="text-2xl group-hover:rotate-180 group-hover:duration-500 group-hover:ease-in-out">
@@ -120,10 +120,10 @@ const HeroBanner = () => {
       </div>
       <div className="grid w-full grid-cols-2 grid-rows-4 gap-5 px-5 mx-auto lg:grid-cols-4 lg:grid-rows-2 lg:w-10/12">
         <div className="col-span-2 row-span-2">
-          <h3 className="text-22 font-semibold uppercase font-Montserrat">
+          <h3 className="font-semibold uppercase text-22 font-Montserrat">
             Digital Marketing Services
           </h3>
-          <p className="py-5 text-sm font-Montserrat leading-7">
+          <p className="py-5 text-sm leading-7 font-Montserrat">
             Award winning search optimized website development services,
             professionaly designed with industry leading graphics, and
             functionality. Our site presentations focus on your target audience
@@ -169,7 +169,7 @@ const HeroBanner = () => {
           </ul>
         </div>
         <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
-          <h3 className="text-22 font-semibold uppercase font-Montserrat">
+          <h3 className="font-semibold uppercase text-22 font-Montserrat">
             Digital Marketing
           </h3>
           <p className="py-5 text-sm leading-7 font-Montserrat">
@@ -177,7 +177,7 @@ const HeroBanner = () => {
           </p>
         </div>
         <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
-          <h3 className="text-22 font-semibold uppercase font-Montserrat">
+          <h3 className="font-semibold uppercase text-22 font-Montserrat">
             Digital Marketing
           </h3>
           <p className="py-5 text-sm leading-7 font-Montserrat">
@@ -185,7 +185,7 @@ const HeroBanner = () => {
           </p>
         </div>
         <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
-          <h3 className="text-22 font-semibold uppercase font-Montserrat">
+          <h3 className="font-semibold uppercase text-22 font-Montserrat">
             Digital Marketing
           </h3>
           <p className="py-5 text-sm leading-7 font-Montserrat">
@@ -193,7 +193,7 @@ const HeroBanner = () => {
           </p>
         </div>
         <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
-          <h3 className="text-22 font-semibold uppercase font-Montserrat">
+          <h3 className="font-semibold uppercase text-22 font-Montserrat">
             Digital Marketing
           </h3>
           <p className="py-5 text-sm leading-7 font-Montserrat">

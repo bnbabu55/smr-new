@@ -34,7 +34,7 @@ const HomePortfolio = () => {
           <div className="flex items-center justify-center pb-8 text-center">
             <Link
               to={`/portfolio`}
-              className="text-4xl font-semibold font-Montserrat uppercase hover:underline"
+              className="text-4xl font-semibold uppercase font-Montserrat hover:underline"
             >
               Portfolio
             </Link>

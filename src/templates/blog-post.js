@@ -94,7 +94,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                   <h2 className="py-3 -mt-2">
                     <span
                       itemProp="headline"
-                      className="text-3xl leading-none tracking-wide text-left font-Montserrat font-bold text-themeBlue-600"
+                      className="text-3xl font-bold leading-none tracking-wide text-left font-Montserrat text-themeBlue-600"
                     >
                       {parse(title)}
                     </span>
@@ -136,7 +136,7 @@ const BlogPostTemplate = ({ data: { previous, next, post }, location }) => {
                 >
                   <div
                     itemProp="description"
-                    className="entry-content prose text-justify font-Montserrat md:prose-lg max-w-none"
+                    className="prose text-justify entry-content font-Montserrat md:prose-lg max-w-none"
                   >
                     {parse(post?.content)}
                   </div>

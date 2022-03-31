@@ -45,36 +45,36 @@ export const TeamSection = () => {
         className="bg-white border-b-4 border-themeGray-50 shadow-themeShadow"
       >
         <div className="relative">
-          <figure className="overflow-hidden w-full">
+          <figure className="w-full overflow-hidden">
             <GatsbyImage
               image={bgImages.nodes[0].childImageSharp.gatsbyImageData}
               alt="About slider 1"
             />
           </figure>
-          <div className="title absolute top-5 left-40 lg:top-1/4 lg:left-1/3 text-themeBlue-600 text-2xl lg:text-7xl font-Montserrat font-bold text-center">
+          <div className="absolute text-2xl font-bold text-center title top-5 left-40 lg:top-1/4 lg:left-1/3 text-themeBlue-600 lg:text-7xl font-Montserrat">
             Industry Recognized <br />
             Team Leadership
           </div>
-          <div className="subtitle absolute top-2/3 right-5 lg:right-20 text-themeOrange-400 text-sm lg:text-4xl font-MontserratLight text-center">
+          <div className="absolute text-sm text-center subtitle top-2/3 right-5 lg:right-20 text-themeOrange-400 lg:text-4xl font-MontserratLight">
             Experienced & Professional Project Leaders, <br />
             Website Developers & SEO Managers
           </div>
         </div>
       </div>
 
-      <div className="w-11/12 mx-auto py-10">
+      <div className="w-11/12 py-10 mx-auto">
         <div className="top_padding_page top_padding page_content_website faq-page top-space">
           <div className="wrapper">
             <div className="top_content">
-              <h1 className="text-themeOrange-400 text-5xl font-Montserrat font-bold tracking-wide text-center">
+              <h1 className="text-5xl font-bold tracking-wide text-center text-themeOrange-400 font-Montserrat">
                 ABOUT SEARCH MARKETING RESOURCE
               </h1>
             </div>
             <div className="py-5">
-              <h2 className="text-themeBlue-600 text-2xl font-MontserratSemiBold uppercase pb-5">
+              <h2 className="pb-5 text-2xl uppercase text-themeBlue-600 font-MontserratSemiBold">
                 SEARCH MARKETING RESOURCE'S MISSION
               </h2>
-              <p className="text-themeGray-200 text-lg font-Montserrat">
+              <p className="text-lg text-themeGray-200 font-Montserrat">
                 Our team’s mission is to significantly promote our client’s web
                 presence above the competition and gain a measurable increased
                 level of online visibility in their vertical market. Every day,
@@ -83,7 +83,7 @@ export const TeamSection = () => {
                 better communication with their target audience and obtaining
                 top keyword rankings with the Search Engines.
               </p>
-              <p className="text-themeGray-200 text-lg font-Montserrat pt-3">
+              <p className="pt-3 text-lg text-themeGray-200 font-Montserrat">
                 Our goal and objective is to generate ongoing revenue growth for
                 every business we represent and deliver a return on investment
                 for all services provided.
@@ -94,13 +94,13 @@ export const TeamSection = () => {
         <div className="team_design light_grey_bg extra-work">
           <div className="wrapper">
             <div className="top_content team_lead">
-              <h2 className="text-themeOrange-400 text-5xl font-Montserrat font-bold text-left py-5">
+              <h2 className="py-5 text-5xl font-bold text-left text-themeOrange-400 font-Montserrat">
                 TEAM LEADERSHIP
               </h2>
-              <h3 className="text-themeBlue-600 text-2xl font-MontserratSemiBold uppercase text-left pb-5">
+              <h3 className="pb-5 text-2xl text-left uppercase text-themeBlue-600 font-MontserratSemiBold">
                 MEET OUR PROJECT MANAGERS
               </h3>
-              <p className="text-themeGray-200 text-lg font-Montserrat pb-10">
+              <p className="pb-10 text-lg text-themeGray-200 font-Montserrat">
                 Our team leaders have significant tenure in their chosen career
                 disciplines. This experience is augmented by the 100’s of
                 projects each has completed while here at Search Marketing
@@ -115,19 +115,19 @@ export const TeamSection = () => {
           {teamMembers.nodes.map(teamMember => {
             return (
               <div
-                className="mdl_cont_section bgnone ab-bg py-5"
+                className="py-5 mdl_cont_section bgnone ab-bg"
                 key={teamMember.id}
                 id={teamMember.id}
               >
                 <div className="conts_wrapper">
                   <div className="content_pnl">
-                    <h2 className="text-themeBlue-600 text-2xl font-MontserratSemiBold uppercase text-left">
+                    <h2 className="text-2xl text-left uppercase text-themeBlue-600 font-MontserratSemiBold">
                       {teamMember.title}
                     </h2>
-                    <span className="text-themeGray-200 text-lg font-Montserrat">
+                    <span className="text-lg text-themeGray-200 font-Montserrat">
                       <i>{teamMember.memberRole}</i>
                     </span>
-                    <div className="text-themeGray-200 text-lg font-Montserrat pt-5">
+                    <div className="pt-5 text-lg text-themeGray-200 font-Montserrat">
                       {parse(teamMember.content)}
                     </div>
                   </div>

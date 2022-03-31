@@ -8,9 +8,9 @@
   SMR site with Gatsby frontend and WordPress backend.
 </h1>
 
-This is a digital marketing agency site developed with Gatsby frontend and WordPress backend. Pages, Menus, Custom Posts and Blogs come from WordPress directly. This is built as as a static site as most of the content is static. 
+This is a digital marketing agency site developed with Gatsby frontend and WordPress backend. Pages, Menus, Custom Posts and Blogs come from WordPress directly. This is built as as a static site as most of the content is static.
 
-As this site is deployed in a regular shared hosting, building the site every time a new blog is posted is  our only challenge. Versus, deploying it in a service like Netlify/Gatsby Cloud/vercel, where the build is automated and deployed.
+As this site is deployed in a regular shared hosting, building the site every time a new blog is posted is our only challenge. Versus, deploying it in a service like Netlify/Gatsby Cloud/vercel, where the build is automated and deployed.
 
 ## 🧐 What's inside?
 
@@ -72,4 +72,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-wordpress-blog)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
 # smr-new

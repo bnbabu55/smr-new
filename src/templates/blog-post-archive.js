@@ -142,7 +142,7 @@ const BlogIndex = ({
               <Link
                 to={previousPagePath}
                 rel="prev"
-                className="hover:text-themeBlue-600 px-3 py-1 rounded-xl font-semibold text-lg font-PTSerif text-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
+                className="px-3 py-1 text-lg font-semibold hover:text-themeBlue-600 rounded-xl font-PTSerif text-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
               >
                 {"<< Prev"}
               </Link>{" "}
@@ -178,7 +178,7 @@ const BlogIndex = ({
               <Link
                 to={nextPagePath}
                 rel="next"
-                className="hover:text-themeBlue-600 px-3 py-1 rounded-xl font-semibold text-lg font-PTSerif text-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
+                className="px-3 py-1 text-lg font-semibold hover:text-themeBlue-600 rounded-xl font-PTSerif text-themeBlue-200 hover:outline hover:outline-1 hover:outline-offset-2 hover:outline-themeBlue-200"
               >
                 {"Next >>"}
               </Link>
