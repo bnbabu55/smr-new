@@ -7,7 +7,6 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
 const PaymentForm = () => {
   const { executeRecaptcha } = useGoogleReCaptcha()
-  const [token, setToken] = useState("")
 
   const states = [
     { value: "AL", label: "Alabama" },
@@ -141,9 +140,8 @@ const PaymentForm = () => {
       return
     }
     // This is the same as grecaptcha.execute on traditional html script tags
-    const result = await executeRecaptcha("smr_payment_form")
-    setToken(result)
-    console.log("received token: " + result)
+    const token = await executeRecaptcha("smr_payment_form")
+    console.log("received token: " + token)
 
     if (token.length > 0) {
       console.log("recaptcha failed, form not submitted")
@@ -166,7 +164,7 @@ const PaymentForm = () => {
       city: formData.stepTwo.city.value,
       state: formData.stepTwo.state.value,
       zip: formData.stepTwo.zip.value,
-      recaptchaToken: result,
+      recaptchaToken: token,
     }
 
     console.log("Form data before api call: " + JSON.stringify(submitForm))

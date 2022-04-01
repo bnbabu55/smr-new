@@ -14,7 +14,6 @@ const ContactForm = () => {
     body_response: "",
   })
   const { executeRecaptcha } = useGoogleReCaptcha()
-  const [token, setToken] = useState("")
 
   return (
     <div className="w-full mx-auto border border-gray-700 rounded contact-wrapper">
@@ -28,18 +27,17 @@ const ContactForm = () => {
             return
           }
           // This is the same as grecaptcha.execute on traditional html script tags
-          const result = await executeRecaptcha("smr_contact_form")
-          setToken(result)
-          console.log("received token: " + result)
+          const token = await executeRecaptcha("smr_contact_form")
+          console.log("received token: " + token)
 
-          if (result.length <= 0) {
+          if (token.length <= 0) {
             console.log("recaptcha failed, form not submitted")
             return
           }
 
           const myForm = event.target
           const formData = new FormData(myForm)
-          formData.append("_wpcf7_recaptcha_response", result)
+          formData.append("_wpcf7_recaptcha_response", token)
 
           setFormResp({ ...formResp, status: "loading" })
 

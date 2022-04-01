@@ -14,7 +14,6 @@ const FreeAuditForm = ({ home }) => {
     body_response: "",
   })
   const { executeRecaptcha } = useGoogleReCaptcha()
-  const [token, setToken] = useState("")
 
   return (
     <div
@@ -42,18 +41,17 @@ const FreeAuditForm = ({ home }) => {
                 return
               }
               // This is the same as grecaptcha.execute on traditional html script tags
-              const result = await executeRecaptcha("smr_audit_form")
-              setToken(result)
-              console.log("received token: " + result)
+              const token = await executeRecaptcha("smr_audit_form")
+              console.log("received token: " + token)
 
-              if (result.length <= 0) {
+              if (token.length <= 0) {
                 console.log("recaptcha failed, form not submitted")
                 return
               }
 
               const myForm = event.target
               const formData = new FormData(myForm)
-              formData.append("_wpcf7_recaptcha_response", result)
+              formData.append("_wpcf7_recaptcha_response", token)
 
               setFormResp({ ...formResp, status: "loading" })
 
