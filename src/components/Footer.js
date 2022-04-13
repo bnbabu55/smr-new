@@ -325,12 +325,12 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex items-center justify-center py-3 m-auto text-sm text-black bg-white footer-copyright font-Montserrat">
+      <div className="flex items-center justify-center py-3 m-auto text-xs text-black bg-white footer-copyright font-Montserrat">
         <div className="copyright-smr pl-11">
           Copyright © {new Date().getFullYear()}{" "}
           <Link
             to="/"
-            className="text-sm text-black font-Montserrat hover:text-themeOrange-200"
+            className="text-xs font-semibold text-black font-Montserrat hover:text-themeBlue-600"
           >
             Search Marketing Resource LLC -{" "}
           </Link>
