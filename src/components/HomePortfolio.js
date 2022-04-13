@@ -55,7 +55,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[0].name}
                 image={portfolioImages.nodes[0].childImageSharp.gatsbyImageData}
-                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
+                className="hover:scale-125 duration-300 ease-in-out"
               />
             </Link>
             <Link
@@ -66,7 +66,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[1].name}
                 image={portfolioImages.nodes[1].childImageSharp.gatsbyImageData}
-                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
+                className="hover:scale-125 duration-300 ease-in-out"
               />
             </Link>
             <Link
@@ -77,7 +77,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[2].name}
                 image={portfolioImages.nodes[2].childImageSharp.gatsbyImageData}
-                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
+                className="hover:scale-125 duration-300 ease-in-out"
               />
             </Link>
             <Link
@@ -88,7 +88,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[3].name}
                 image={portfolioImages.nodes[3].childImageSharp.gatsbyImageData}
-                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
+                className="hover:scale-125 duration-300 ease-in-out"
               />
             </Link>
             <Link
@@ -99,7 +99,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[4].name}
                 image={portfolioImages.nodes[4].childImageSharp.gatsbyImageData}
-                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
+                className="hover:scale-125 duration-300 ease-in-out"
               />
             </Link>
             <Link
@@ -110,7 +110,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[5].name}
                 image={portfolioImages.nodes[5].childImageSharp.gatsbyImageData}
-                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
+                className="hover:scale-125 duration-300 ease-in-out"
               />
             </Link>
             <Link
@@ -121,7 +121,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[6].name}
                 image={portfolioImages.nodes[6].childImageSharp.gatsbyImageData}
-                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
+                className="hover:scale-125 duration-300 ease-in-out"
               />
             </Link>
             <Link
@@ -132,7 +132,7 @@ const HomePortfolio = () => {
               <GatsbyImage
                 alt={portfolioImages.nodes[7].name}
                 image={portfolioImages.nodes[7].childImageSharp.gatsbyImageData}
-                className="hover:scale-125 hover:duration-300 hover:ease-in-out"
+                className="hover:scale-125 duration-300 ease-in-out"
               />
             </Link>
           </div>
