@@ -1,10 +1,11 @@
 <svg id="svglogo" version="1.1" width="189.472" height="105.972" xmlns="http://www.w3.org/2000/svg">
    <style id="style2">
-      @media (prefers-color-scheme:light) {
+      @media (prefers-color-scheme: light) {
          #rectborder {
             stroke: #ffa800;
             stroke-width: 5.9922;
             stroke-linejoin: round;
+            fill: transparent;
          }
 
          #logotext path {
@@ -12,11 +13,12 @@
          }
       }
 
-      @media (prefers-color-scheme:dark) {
+      @media (prefers-color-scheme: dark) {
          #rectborder {
             stroke: #ffffff;
             stroke-width: 5.9922;
             stroke-linejoin: round;
+            fill: transparent;
          }
 
          #logotext path {
@@ -36,9 +38,9 @@
             result="litPaint" id="feComposite12" />
       </filter>
    </defs>
-   <path id="rectborder" style="fill:transparent;"
+   <path id="rectborder"
       d="M13.54 2.996h162.391c5.842 0 10.545 4.46 10.545 9.998v79.984c0 5.539-4.703 9.998-10.545 9.998H13.541c-5.842 0-10.545-4.46-10.545-9.998V12.994c0-5.539 4.703-9.998 10.545-9.998z" />
-   <g aria-label="SMR" id="logotext" style="fill:#01487e;filter:url(#MyFilter)" class="heavy">
+   <g aria-label="SMR" id="logotext">
       <path
          d="M57.97 60.705q0 8.593-7.304 13.984Q43.4 80.041 30.9 80.041q-7.227 0-12.617-1.25-5.352-1.29-10.04-3.243V61.603h1.641q4.649 3.711 10.391 5.703 5.781 1.992 11.094 1.992 1.367 0 3.594-.234 2.226-.234 3.632-.781 1.72-.703 2.813-1.758Q42.54 65.47 42.54 63.4q0-1.914-1.641-3.281-1.602-1.406-4.727-2.149-3.28-.78-6.953-1.445-3.632-.703-6.836-1.758-7.343-2.383-10.586-6.445-3.203-4.102-3.203-10.156 0-8.125 7.266-13.243 7.305-5.156 18.75-5.156 5.742 0 11.328 1.133 5.625 1.094 9.727 2.773v13.399h-1.602q-3.516-2.813-8.633-4.688-5.078-1.914-10.39-1.914-1.875 0-3.75.274-1.836.234-3.555.937-1.523.586-2.617 1.797-1.094 1.172-1.094 2.695 0 2.305 1.758 3.555 1.758 1.211 6.64 2.227 3.204.664 6.133 1.289 2.969.625 6.367 1.719 6.68 2.187 9.844 5.976 3.203 3.75 3.203 9.766z"
          filter="url(#MyFilter)" />

@@ -125,6 +125,7 @@ module.exports = {
         icon_options: {
           purpose: `any maskable`,
         },
+        cache_busting_mode: "none",
       },
     },
 
@@ -142,10 +143,17 @@ module.exports = {
     `gatsby-plugin-perf-budgets`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
     `gatsby-plugin-advanced-sitemap`,
-    `gatsby-plugin-offline`,
-    /**
-     * this (optional) plugin enables Progressive Web App + Offline functionality
-     * To learn more, visit: https://gatsby.dev/offline
-     */
+    {
+      /**
+       * this (optional) plugin enables Progressive Web App + Offline functionality
+       * To learn more, visit: https://gatsby.dev/offline
+       */
+      resolve: "gatsby-plugin-offline",
+      options: {
+        workboxConfig: {
+          globPatterns: ["**/icon-path*"],
+        },
+      },
+    },
   ],
 }
