@@ -83,8 +83,8 @@ const Testimonials = () => {
 
   return (
     <div id="Testimonials" className="py-10 mx-auto overflow-hidden bg-white">
-      <div className="container flex w-full mx-auto lg:w-10/12 gap-x-5">
-        <div className="flex w-1/4">
+      <div className="container flex flex-col-reverse w-full px-3 mx-auto lg:px-0 lg:flex-row lg:w-10/12 gap-x-5">
+        <div className="flex w-full pt-10 lg:pt-0 lg:w-1/4">
           <div className="flex flex-col w-1/4 mx-auto">
             <button
               onClick={e => handleClick(e, "prev")}
@@ -101,7 +101,7 @@ const Testimonials = () => {
               <span className="down-arrow relative after:absolute before:absolute after:content-[''] before:content-[''] after:w-[1em] after:h-[0.75em] before:w-[1em] before:h-[0.75em] after:bg-black before:bg-black after:z-[100] before:z-[100] after:top-[9vh] before:top-[9vh] before:right-[50%] before:skew-x-0 before:skew-y-[25deg] after:left-[50%] after:skew-x-0 after:skew-y-[-25deg]"></span>
             </button>
           </div>
-          <div className="flex flex-col w-3/4 mx-auto overflow-y-scroll max-h-72 gap-y-3">
+          <div className="flex flex-col w-full mx-auto overflow-y-scroll lg:w-3/4 max-h-72 gap-y-3">
             {testimonialSlides?.nodes?.map((testimonialSlide, index) => {
               return (
                 <div
@@ -128,7 +128,7 @@ const Testimonials = () => {
           </div>
         </div>
         <div
-          className="w-3/4 pr-2 prose text-justify lg:px-20 max-w-none"
+          className="w-full px-3 pr-2 mx-auto prose text-justify lg:w-3/4 lg:px-20 max-w-none"
           id="currentSlide"
           data-index={testimonialSlide.id}
         >

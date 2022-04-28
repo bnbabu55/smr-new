@@ -168,7 +168,7 @@ const HeroBanner = () => {
             </li>
           </ul>
         </div>
-        <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
+        <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400 hover:bg-themeYellow-400 hover:text-gray-800">
           <h3 className="font-semibold uppercase text-22 font-Montserrat">
             Digital Marketing
           </h3>
@@ -176,7 +176,7 @@ const HeroBanner = () => {
             Award winning search optimized website development services.
           </p>
         </div>
-        <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
+        <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400 hover:bg-themeYellow-400 hover:text-gray-800">
           <h3 className="font-semibold uppercase text-22 font-Montserrat">
             Digital Marketing
           </h3>
@@ -184,7 +184,7 @@ const HeroBanner = () => {
             Award winning search optimized website development services.
           </p>
         </div>
-        <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
+        <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400 hover:bg-themeYellow-400 hover:text-gray-800">
           <h3 className="font-semibold uppercase text-22 font-Montserrat">
             Digital Marketing
           </h3>
@@ -192,7 +192,7 @@ const HeroBanner = () => {
             Award winning search optimized website development services.
           </p>
         </div>
-        <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400">
+        <div className="col-span-1 row-span-1 p-5 text-white bg-themeBlue-400 hover:bg-themeYellow-400 hover:text-gray-800">
           <h3 className="font-semibold uppercase text-22 font-Montserrat">
             Digital Marketing
           </h3>

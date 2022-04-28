@@ -91,7 +91,7 @@ const HomeNews = () => {
             const title = post?.title
             return (
               <li key={post.id} className="flex w-full">
-                <ul className="flex flex-col gap-3 overflow-hidden bg-white shadow-xl rounded-3xl">
+                <ul className="flex flex-col gap-3 overflow-hidden bg-white shadow-xl rounded-3xl group">
                   <li className="flex items-start justify-start mb-3">
                     <Link
                       to={`${post?.uri}`}
@@ -120,7 +120,7 @@ const HomeNews = () => {
                     <Link
                       to={`${post?.uri}`}
                       itemProp="url"
-                      className="w-full font-semibold text-left text-22 font-Montserrat hover:underline"
+                      className="w-full font-semibold text-left text-22 font-Montserrat hover:underline group-hover:text-themeBlue-600"
                     >
                       {parse(title)}
                     </Link>
@@ -139,10 +139,10 @@ const HomeNews = () => {
                     <Link
                       to={`${post?.uri}`}
                       itemProp="url"
-                      className="flex items-center justify-between w-full px-5 pb-5 text-sm font-semibold text-left font-Montserrat group"
+                      className="flex items-center justify-between w-full px-5 pb-5 text-sm font-semibold text-left font-Montserrat group-hover:text-themeBlue-600"
                     >
                       See Full Article
-                      <span className="text-2xl group-hover:rotate-180 group-hover:duration-500 group-hover:ease-in-out">
+                      <span className="text-2xl duration-500 ease-in-out group-hover:rotate-180 group-hover:text-themeBlue-600">
                         &#10230;
                       </span>
                     </Link>
